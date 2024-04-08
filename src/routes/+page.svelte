@@ -3,7 +3,6 @@
 	import '$lib/styles/styles.css';
   import Header from '$lib/components/Header.svelte';
   import Footer from '$lib/components/Footer.svelte';
-  import QuizButton from '$lib/components/QuizButton.svelte';
 </script>
 
 <Header />
