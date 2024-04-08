@@ -1,5 +1,6 @@
 <!-- CheckboxCard.svelte -->
 <script>
+	import '$lib/styles/colors.css'
 	export let answer = '';
 	export let letter = '';
 	export let checked = false;
@@ -70,9 +71,9 @@
 		}
 	}
 
-	.card label.checked {
-		background-color: var(--yellow);
-	}
+	/*.card label.checked {*/
+	/*	background-color: var(--yellow);*/
+	/*}*/
 
 	.letter {
 		text-transform: uppercase;
