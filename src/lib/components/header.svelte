@@ -21,6 +21,7 @@
 <script>
     import { goto } from "$app/navigation";
     import '$lib/styles/styles.css'
+    import MainButton from "$lib/components/MainButton.svelte";
 </script>
 
 <header>
@@ -30,7 +31,7 @@
         <div>
             <button class="nav-style" on:click={() => goto('about')}>A propos</button>
             <button class="nav-style" on:click={() => goto('gamePresentation')}>Le jeu</button>
-            <button class="nav-style" on:click={() => goto('gameRessources')}>Les ressources du jeu</button>
+            <MainButton buttonSize="small">Ressources</MainButton>
         </div>
     </div>
     <hr>

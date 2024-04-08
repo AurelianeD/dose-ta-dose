@@ -1,8 +1,9 @@
 <script lang="ts">
     import '$lib/styles/fonts.css'
+    export let buttonSize: 'small' | 'big' = 'small'
 </script>
 
-<button class="container main-button">
+<button class={`main-button-${buttonSize} container main-button`}>
     <slot />
 </button>
 
