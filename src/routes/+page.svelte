@@ -3,6 +3,7 @@
 	import '$lib/styles/styles.css';
   import Header from '$lib/components/Header.svelte';
   import Footer from '$lib/components/Footer.svelte';
+	import PointQuiz from '$lib/components/pointQuiz.svelte';
 </script>
 
 <Header />
