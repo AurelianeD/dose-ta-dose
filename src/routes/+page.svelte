@@ -1,7 +1,10 @@
 <script>
 	import { goto } from '$app/navigation';
 	import '$lib/styles/styles.css';
+	import Header from '$lib/components/header.svelte';
 </script>
+
+<Header />
 
 <h1>Welcome to Dose ta dose</h1>
 <button on:click={() => goto('game')}>Le jeu (inviduel)</button>
