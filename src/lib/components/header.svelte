@@ -55,6 +55,10 @@
         cursor: pointer;
     }
 
+    .encadre:active{
+        background-color: #F3C10F;
+    }
+
     .mobile{
         display: none;
     }
