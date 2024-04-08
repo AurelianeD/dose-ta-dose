@@ -25,8 +25,8 @@
 
 <header>
     <div class="flex-header">
-        <img src="/static/images/logo.svg" alt="logo dose ta dose">
-    
+        <img src="/images/logo.svg" alt="logo dose ta dose">
+
         <div>
             <button class="nav-style" on:click={() => goto('about')}>A propos</button>
             <button class="nav-style" on:click={() => goto('gamePresentation')}>Le jeu</button>
