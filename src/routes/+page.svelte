@@ -1,7 +1,7 @@
 <script>
 	import { goto } from '$app/navigation';
 	import '$lib/styles/styles.css';
-	import Header from '$lib/components/Header.svelte';
+  import Header from '$lib/components/Header.svelte';
   import Footer from '$lib/components/Footer.svelte';
 </script>
 
