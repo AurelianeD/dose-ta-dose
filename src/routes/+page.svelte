@@ -1,12 +1,8 @@
 <script>
 	import { goto } from '$app/navigation';
 	import '$lib/styles/styles.css';
-<<<<<<< HEAD
-	import Header from '$lib/components/Header.svelte';
-=======
   import Header from '$lib/components/Header.svelte';
   import Footer from '$lib/components/Footer.svelte';
->>>>>>> 44c62d676698d04c39eef2cac126ab64d58fdc3e
 </script>
 
 <Header />
