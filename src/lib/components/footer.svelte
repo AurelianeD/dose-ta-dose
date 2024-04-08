@@ -26,13 +26,14 @@
 		margin-top: 100px;
 	}
 	.copyright {
-		font-family: 'DM Sans';
+    font-family: "DM Sans", sans-serif;
 		text-transform: uppercase;
 		font-weight: 600;
 		font-size: 16px;
 	}
 
 	.nav-style {
+    font-family: "DM Sans", sans-serif;
 		background: none;
 		border: none;
 		text-transform: uppercase;
