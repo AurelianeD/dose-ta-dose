@@ -1,7 +1,8 @@
 <script>
 	import { goto } from '$app/navigation';
 	import '$lib/styles/styles.css';
-	import Header from '$lib/components/header.svelte';
+	import Header from '$lib/components/Header.svelte';
+  import Footer from '$lib/components/Footer.svelte';
 </script>
 
 <Header />
@@ -13,3 +14,5 @@
 <button on:click={() => goto('legalNotice')}>Mentions légales</button>
 <button on:click={() => goto('about')}>A propos</button>
 <button on:click={() => goto('ressources')}>Ressources</button>
+
+<Footer/>
