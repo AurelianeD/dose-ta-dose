@@ -1,9 +1,10 @@
 <script lang="ts">
     import '$lib/styles/fonts.css'
     export let buttonSize: 'small' | 'big' = 'small'
+    export let onClick: () => void;
 </script>
 
-<button class={`main-button-${buttonSize} container main-button`}>
+<button class={`main-button-${buttonSize} container main-button`} on:click={onClick}>
     <slot />
 </button>
 
