@@ -85,7 +85,7 @@
         .mobile-nav{
             display: flex;
             flex-direction: column;
-            margin-top: 30px;
+            padding-top: 30px;
             position: fixed;
             top: 70px;
             width: 100%;
