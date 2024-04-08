@@ -1,18 +1,28 @@
 <script>
-	import { goto } from '$app/navigation';
 	import '$lib/styles/styles.css';
   import Header from '$lib/components/Header.svelte';
   import Footer from '$lib/components/Footer.svelte';
+    import Link from "$lib/components/Link.svelte";
 </script>
 
 <Header />
 
 <h1>Welcome to Dose ta dose</h1>
-<button on:click={() => goto('game')}>Le jeu (inviduel)</button>
-<button on:click={() => goto('gameRessources')}>Les ressources du jeu</button>
-<button on:click={() => goto('gamePresentation')}>Le jeu (présentation)</button>
-<button on:click={() => goto('legalNotice')}>Mentions légales</button>
-<button on:click={() => goto('about')}>A propos</button>
-<button on:click={() => goto('ressources')}>Ressources</button>
+<div class="flex">
+    <Link path="game" textUnderline="Le jeu" text="(inviduel)" />
+    <Link path="gamePresentation" textUnderline="Le jeu" text="(présentation)" />
+    <Link path="gameRessources" textUnderline="Les ressources" text="du jeu" />
+    <Link path="legalNotice" textUnderline="Mentions" text="légales" />
+    <Link path="about" textUnderline="A" text="propos" />
+    <Link path="ressources" textUnderline="Je m'informe " text="sur l'alcool" />
+</div>
+
+<style>
+    .flex{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+</style>
 
 <Footer/>
