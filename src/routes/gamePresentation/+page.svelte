@@ -64,7 +64,7 @@
         align-items: center;
         font-size: clamp(12px, 3vw, 18px);
         gap: 15px;
-        margin: 15px 0;
+        margin: 25px 0;
     }
 
     .ligne-instruction{
