@@ -4,13 +4,21 @@
 	import type {QuizData} from '$lib/data/quiz'
 	import QuizButton from '$lib/components/QuizButton.svelte';
 	import MainButton from '$lib/components/MainButton.svelte';
+	import PointQuiz from "$lib/components/PointQuiz.svelte";
+	import MisePoint from "$lib/components/MisePoint.svelte";
 	export let questionNumber: number;
-	export let onChangeQuestion: () => void;
+	export let onChangeQuestion: (value: number) => void;
 	export let onEnd: () => void;
+	export let isPresentation: boolean;
+	export let points: number;
 
 	let showAnswer = false;
+	let bet = [0,0,0];
 
+	$: leftPointToBet = 10 - bet.reduce((prev, curr) => prev + curr)
 	$: data = quizData[questionNumber] as QuizData;
+	$: goodAnswer = data.choices.find(item => item.isGoodAnswer === true)
+	$: goodAnswerIndex = data.choices.indexOf(goodAnswer)
 
 	function scrollToView(){
 		setTimeout(() => {
@@ -40,17 +48,34 @@
 	<h2 class="title">{data.question}</h2>
 	<div class="choicesContainer">
 		{#each data.choices as choice, index}
-			<QuizButton answer={choice.text} letter={index + 1} checked={showAnswer && choice.isGoodAnswer} disabled={true}/>
+			<div>
+				<QuizButton
+					answer={choice.text}
+					letter={index + 1}
+					checked={showAnswer && choice.isGoodAnswer}
+					disabled={true}
+				/>
+				{#if !isPresentation}
+					<MisePoint {leftPointToBet} onBet={(value) => bet[index] = value} />
+				{/if}
+			</div>
 		{/each}
 	</div>
 	{#if !showAnswer}
 		<div class="button">
 			<MainButton onClick={() => {
 				showAnswer = true;
-				scrollToView()
-			}}>Voir la réponse</MainButton>
+				scrollToView();
+			}}>{isPresentation ? 'Voir la réponse' : 'Valider'}</MainButton>
 		</div>
-	{:else}
+	{/if}
+	{#if !isPresentation}
+		<div class="points">
+			<p class="textLeft">Tu as 10 points à miser par questions.</p>
+			<PointQuiz {points} />
+		</div>
+	{/if}
+	{#if showAnswer}
 		<div class="answerContainer" id="top">
 			<p class="answerTitle">Réponse</p>
 			<div class="textContainer">
@@ -72,7 +97,7 @@
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
-		margin-top: 200px;
+		margin: 200px 100px 100px;
 	}
 	.choicesContainer {
 		display: flex;
@@ -89,11 +114,6 @@
 		max-width: 60%;
 		line-height: 40px;
 	}
-	.text{
-		font-family: "DM Sans", sans-serif;
-		font-size: 32px;
-		font-weight: 300;
-	}
 	.answerTitle{
 		font-family: "DM Sans", sans-serif;
 		font-size: 24px;
@@ -105,5 +125,11 @@
 		gap: 50px;
 		flex-direction: column;
 		margin: 100px 0;
+	}
+	.points{
+		align-self: flex-start;
+	}
+	.textLeft{
+		text-align: left;
 	}
 </style>

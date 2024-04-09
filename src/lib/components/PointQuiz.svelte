@@ -1,21 +1,18 @@
-<script>
-    import { goto } from "$app/navigation";
-    import { onMount } from "svelte";
-
-    export let nbPoints= 70;
+<script lang="ts">
+    export let points: number;
 </script>
 
 <div class="pointsQuiz">
     <div class="points">
         <div class="nbPoints">
-            {nbPoints}
+            {points}
         </div>
         <div class="texte">
             points restant
         </div>
     </div>
     <div class="barre">
-        <div class="progress" style="width: {nbPoints}%;"></div>
+        <div class="progress" style="width: {points}%;"></div>
     </div>
 </div>
 

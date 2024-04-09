@@ -1,20 +1,33 @@
 <script lang="ts">
-    import { goto } from "$app/navigation";
-    import { onMount } from "svelte";
-
-    let activeIndex = -1; 
+    let activeIndex = -1;
+    let active: boolean = false;
+    export let leftPointToBet: number;
+    export let onBet: (value: number) => void;
 
     function toggleMise(index:number) {
-        activeIndex = index; 
+        activeIndex = index;
+        active = true;
     }
+
 
 </script>
 
-<div class="mise">
-    <p>Miser</p>
+<div class="mise" class:borderYellow={active === true}>
+    <p>Je mise :</p>
     <div class="valeurs">
         {#each [0, 5, 10] as valeur, index}
-            <button class="valeurs-btn" class:valeurs-btn-act={activeIndex === index} on:click={() => toggleMise(index)}>{valeur}</button>
+            <button
+                class="valeurs-btn"
+                class:valeurs-btn-disable={leftPointToBet < valeur && activeIndex !== index}
+                class:valeurs-btn-act={activeIndex === index}
+                on:click={() => {
+                    toggleMise(index)
+                    onBet(valeur)
+                }}
+                disabled={leftPointToBet < valeur}
+            >
+                {valeur}
+            </button>
         {/each}
     </div>
     <p>points</p>
@@ -32,11 +45,13 @@
         background-color: var(--beige);
         gap: 24px;
     }
+    .borderYellow{
+        border: solid var(--yellow) 2px
+    }
 
     .mise p{
-        font-weight: 800;
-        font-size: 20px;
-        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 18px;
     }
 
     .valeurs{
@@ -78,5 +93,4 @@
         color: #fff;
 		background-color: var(--yellow-clicked);
 	}
-
 </style>
