@@ -113,11 +113,11 @@
     import { onMount } from "svelte";
 
     let isMenuOpen = false;
-    let arrowSvg = "/static/images/fleche-bas.svg";
+    let arrowSvg = "/images/fleche-bas.svg";
 
     function toggleMenu(){
         isMenuOpen = !isMenuOpen;
-        arrowSvg = isMenuOpen ? "/static/images/fleche-haut.svg" : "/static/images/fleche-bas.svg";
+        arrowSvg = isMenuOpen ? "/images/fleche-haut.svg" : "/images/fleche-bas.svg";
     }
 
     function handleResize() {
@@ -137,7 +137,7 @@
 <header>
     <div class="flex-header">
         <button class="nav-style" on:click={() => goto('/')}>
-            <img src="/static/images/logo.svg" alt="logo dose ta dose">
+            <img src="/images/logo.svg" alt="logo dose ta dose">
         </button>
 
         <button class="mobile" on:click={toggleMenu}>

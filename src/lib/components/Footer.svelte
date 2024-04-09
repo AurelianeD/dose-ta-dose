@@ -12,7 +12,7 @@
 		<button class="nav-style" on:click={() => goto('')}>Plan du site</button>
 		<button class="nav-style" on:click={() => goto('legalNotice')}>Mentions légales</button>
 	</div>
-	<img class="logo-footer" src="/static/images/logo-footer.svg" alt="logo dose ta dose" />
+	<img class="logo-footer" src="/images/logo-footer.svg" alt="logo dose ta dose" />
 </footer>
 
 <style>
