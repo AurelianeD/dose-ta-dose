@@ -5,7 +5,6 @@
 	import Link from '$lib/components/Link.svelte';
 </script>
 
-<Header />
 <div class="contenu">
     <h1>A <span class="encadre">propos</span></h1>
     <div class="paragraphe">
@@ -21,8 +20,6 @@
         </ul>
     </div>
 </div>
-
-<Footer/>
 
 <style>
     .contenu{
