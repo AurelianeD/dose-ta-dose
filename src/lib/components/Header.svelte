@@ -1,89 +1,62 @@
-<script>
+<script lang="ts">
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
+    
+    let isMenuOpen = false;
+	let arrowSvg = '/images/fleche-bas.svg';
+    
+    function toggleMenu() {
+        isMenuOpen = !isMenuOpen;
+		arrowSvg = isMenuOpen ? '/images/fleche-haut.svg' : '/images/fleche-bas.svg';
+        
+        // Obtenir le menu
+        const menu = document.querySelector('.menu') as HTMLElement | null;
+        if (menu) {
+            // Ajouter ou retirer la classe 'open' en fonction de isMenuOpen
+            menu.classList.toggle('open', isMenuOpen);
+        }
+    }
 
-	let isMenuOpen = false;
-	let arrowSvg = '/static/images/fleche-bas.svg';
-
-	function toggleMenu() {
-		isMenuOpen = !isMenuOpen;
-		arrowSvg = isMenuOpen ? '/static/images/fleche-haut.svg' : '/static/images/fleche-bas.svg';
-	}
-
-	function handleResize() {
-		if (window.innerWidth > 1000) {
-			isMenuOpen = false;
-		}
-	}
-
-	onMount(() => {
-		// Vérifier si window est défini (pas disponible côté serveur)
-		if (typeof window !== 'undefined') {
-			window.addEventListener('resize', handleResize);
-		}
-	});
+    function handleItemClick(route: string) {
+        goto(route);
+        toggleMenu();
+    }
 </script>
 
-<header>
-	<div class="flex-header">
-		<button class="nav-style" on:click={() => goto('/')}>
-			<img src="/static/images/logo.svg" alt="logo dose ta dose" />
-		</button>
 
-		<button class="mobile" on:click={toggleMenu}>
-			<span class="nav-style">menu</span>
-			<img src={arrowSvg} alt="" />
-		</button>
-		<div class="btn-nav desktop-nav">
-			<button class="nav-style underline" on:click={() => goto('about')}>à propos</button>
-			<button class="nav-style underline" on:click={() => goto('ressources')}>ressources</button>
-			<button class="nav-style underline" on:click={() => goto('/#jeu')}>Le test</button>
-			<button class="nav-style encadre" on:click={() => goto('guideAtelier')}>organiser un atelier</button>
-		</div>
-	</div>
-	<hr class="ligne" />
-	<nav class:open={isMenuOpen}>
-		<div class="btn-nav mobile-nav" style="display: {isMenuOpen ? 'flex' : 'none'};">
-			<button
-				class="nav-style"
-				on:click={() => {
-					goto('about');
-					toggleMenu();
-				}}>à propos</button
-			>
-			<hr />
-			<button
-				class="nav-style"
-				on:click={() => {
-					goto('guideAtelier');
-					toggleMenu();
-				}}>organiser un atelier</button
-			>
-			<hr />
-			<button
-				class="nav-style"
-				on:click={() => {
-					goto('/#jeu');
-					toggleMenu();
-				}}>Le jeu</button
-			>
-			<hr />
-			<button
-				class="nav-style"
-				on:click={() => {
-					goto('ressources');
-					toggleMenu();
-				}}>ressources</button
-			>
-			<hr />
-		</div>
-	</nav>
+
+
+<header>
+    <div class="flex-header">
+        <button class="nav-style" on:click={() => goto('/')}>
+            <img src="/images/logo.svg" alt="logo dose ta dose" />
+        </button>
+        <nav>
+            <ul class="menu" class:open={isMenuOpen}>
+                <li><button class="nav-style underline" on:click={() => handleItemClick('about')}>à propos</button></li>
+				<hr class="display-mobile">
+                <li><button class="nav-style underline" on:click={() => handleItemClick('ressources')}>ressources</button></li>
+				<hr class="display-mobile">
+                <li><button class="nav-style underline" on:click={() => handleItemClick('/#jeu')}>Le test</button></li>
+				<hr class="display-mobile">
+                <li><button class="nav-style encadre" on:click={() => handleItemClick('guideAtelier')}>organiser un atelier</button></li>
+				<hr class="display-mobile">
+            </ul>
+            <button class="mobile" on:click={toggleMenu}>
+                <span class="nav-style">menu</span>
+                <img src={arrowSvg} alt="" />
+            </button>
+        </nav>
+    </div>
+    <hr class="ligne">
 </header>
+
 
 <style>
 	header{
 		position: fixed;
 		width: 100%;
+		z-index: 999;
 	}
 	.flex-header {
 		background-color: var(--white);
@@ -91,6 +64,11 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: 20px 5vw;
+	}
+	.menu{
+		display: flex;
+		gap: 24px;
+		align-items: center;
 	}
 
 	.ligne {
@@ -121,7 +99,7 @@
 		content: '';
 		position: absolute;
 		left: 0;
-		bottom: 0;
+		bottom: -8px;
 		width: 100%;
 		height: 3px;
 		transition: background-color 0.3s ease;
@@ -151,11 +129,38 @@
 		display: none;
 	}
 
-	.mobile-nav {
-		display: none;
-	}
-
 	@media screen and (max-width: 1000px) {
+		.menu {
+			display: flex;
+			flex-direction: column;
+			gap: 24px;
+			align-items: center;
+			position: fixed;
+			top: -100%; /* Positionnez le menu sous le header par défaut */
+			left: 0;
+			width: 100%;
+			background-color: var(--white);
+			opacity: 0.95;
+			transition: top 0.5s ease; 
+			padding-top: 32px;
+			z-index: -1; 
+		}
+
+		.menu.open {
+			top: 83px;
+			z-index: -1; 
+		}
+
+		.encadre{
+			background: none;
+			font-weight: 500;
+		}
+		.encadre:hover{
+			background: none;
+		}
+		.underline::after {
+			display: none;
+		}
 		.mobile {
 			display: flex;
 			align-items: center;
@@ -168,24 +173,6 @@
 			font-size: 16px;
 			text-transform: uppercase;
 		}
-
-		.desktop-nav {
-			display: none;
-		}
-
-		.mobile-nav {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			padding-top: 30px;
-			position: fixed;
-			top: 70px;
-			width: 100%;
-			background-color: var(--white);
-			opacity: 0.95;
-			z-index: 1000;
-		}
-
 		hr {
 			width: 60%;
 			border: 1px solid var(--black);
