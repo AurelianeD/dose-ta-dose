@@ -6,11 +6,6 @@
 	import MisePoint from '$lib/components/MisePoint.svelte';
 	import QuizButton from '$lib/components/QuizButton.svelte';
 </script>
-<QuizButton></QuizButton>
-<MisePoint/>
-
-<QuizButton></QuizButton>
-<MisePoint/>
 
 <div class="contenu">
     <h1>A <span class="encadre">propos</span></h1>
