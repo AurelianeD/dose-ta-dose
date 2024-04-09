@@ -36,11 +36,9 @@
 		</button>
 		<div class="btn-nav desktop-nav">
 			<button class="nav-style underline" on:click={() => goto('about')}>à propos</button>
-			<button class="nav-style underline" on:click={() => goto('guideAtelier')}
-				>organiser un atelier</button
-			>
-			<button class="nav-style underline" on:click={() => goto('/#jeu')}>Le jeu</button>
-			<button class="nav-style encadre" on:click={() => goto('ressources')}>ressources</button>
+			<button class="nav-style underline" on:click={() => goto('ressources')}>ressources</button>
+			<button class="nav-style underline" on:click={() => goto('/#jeu')}>Le test</button>
+			<button class="nav-style encadre" on:click={() => goto('guideAtelier')}>organiser un atelier</button>
 		</div>
 	</div>
 	<hr class="ligne" />
@@ -83,6 +81,10 @@
 </header>
 
 <style>
+	header{
+		position: fixed;
+		width: 100%;
+	}
 	.flex-header {
 		background-color: var(--white);
 		display: flex;
