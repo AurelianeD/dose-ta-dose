@@ -154,7 +154,7 @@
             <hr>
             <button class="nav-style" on:click={() => goto('gamePresentation')}>Le jeu</button>
             <hr>
-            <button class="nav-style" on:click={() => goto('gameRessources')}>ressources</button>
+            <button class="nav-style" on:click={() => goto('ressources')}>ressources</button>
             <hr>
         </div>
     </nav>
