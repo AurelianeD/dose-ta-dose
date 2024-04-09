@@ -10,7 +10,7 @@
 	<Link path="game" textUnderline="Le jeu" text="(inviduel)" />
 	<Link path="gamePresentation" textUnderline="Le jeu" text="(présentation)" />
 	<Link path="gameRessources" textUnderline="Les ressources" text="du jeu" />
-  <Link path="guideAtelier" textUnderline="Guide d'atelier" text="de prévention" />
+	<Link path="guideAtelier" textUnderline="Guide d'atelier" text="de prévention" />
 </div>
 <Header />
 
@@ -23,7 +23,7 @@
 			<Link path="#" textUnderline="Je me renseigne" text="(élève)" />
 		</div>
 	</div>
-	<img src="/static/images/illu-home.svg" alt="" />
+	<img class="img-home" src="/static/images/illu-home.svg" alt="" />
 </section>
 <section class="prevention">
 	<h2>Prévenir pour mieux <span class="yellow-bg">agir.</span></h2>
@@ -85,7 +85,8 @@
 	</div>
 
 	<div class="right-part">
-		<img src="/static/images/infographie.png" alt="" />
+		<img src="/static/images/infographie-1.jpg" alt="" />
+		<img src="/static/images/infographie-2.jpg" alt="" />
 	</div>
 </section>
 <section class="about">
@@ -114,11 +115,11 @@
 		line-height: 130%;
 		font-size: 20px;
 	}
-	.flex-top-link{
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
+	.flex-top-link {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
 	.flex {
 		display: flex;
 		flex-direction: column;
@@ -212,6 +213,10 @@
 		gap: 128px;
 	}
 
+	.ressources .right-part {
+		display: flex;
+		gap: 32px;
+	}
 	.ressource-text {
 		margin: 50px 0;
 		line-height: 130%;
@@ -237,4 +242,106 @@
 		margin: 48px 0;
 		line-height: 130%;
 	}
+
+	@media screen and (min-width: 0px) and (max-width: 800px) {
+		.subtitle {
+			width: 90%;
+			font-size: 20px;
+		}
+
+		/* Home Page */
+		.top-home-page {
+			margin-top: 45px;
+			padding: 0 5vw;
+			flex-direction: column;
+		}
+		.img-home {
+			margin-top: 48px;
+			width: 90vw;
+      max-width: 500px;
+		}
+
+		.prevention {
+			margin-top: 64px;
+		}
+    .box-prevention h3 {
+		text-align: left;
+	}
+		.flex-prevention {
+			margin-top: 48px;
+			flex-direction: column;
+			padding: 0 5vw;
+		}
+
+		.instruction-text {
+			height: 70px;
+			margin-left: 5px;
+			margin-top: 24px;
+			margin-bottom: 10px;
+		}
+		.box-prevention {
+			width: 90vw;
+		}
+		.statistique {
+			margin-top: 64px;
+			padding: 0 5vw;
+			flex-direction: column;
+			gap: 32px;
+		}
+
+		.box-stat {
+			width: 90vw;
+		}
+
+		.ressources {
+			flex-direction: column;
+			margin-top: 64px;
+			padding: 0 5vw;
+			gap: 64px;
+		}
+
+		.ressources .right-part {
+			flex-wrap: wrap;
+		}
+    .ressources .right-part img{
+      width: 30vw;
+      min-width: 300px;
+    }
+		.about {
+			margin-top: 64px;
+		}
+		.about-box {
+			width: 90vw;
+		}
+    .about h2{
+      text-align: left;
+    }
+		.about-text {
+			margin: 32px 0;
+		}
+	}
+
+  @media screen and (min-width: 800px) and (max-width: 1250px) {
+		.img-home {
+			width: 40vw;
+		}
+    .top-home-page {
+		  padding: 0 5vw;
+	}
+
+    .flex-prevention {
+      justify-content: space-between;
+      margin-top: 64px;
+      padding: 0 10vw;
+	}
+  .box-prevention {
+		width: 50vw;
+	}
+  .instruction-text {
+		height: 50px;
+	}
+  .box-prevention h3 {
+    height: 70px;
+	}
+  }
 </style>

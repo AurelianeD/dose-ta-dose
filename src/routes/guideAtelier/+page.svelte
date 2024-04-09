@@ -8,14 +8,14 @@
 
 <Header />
 
-<section class="top-home-page">
+<section class="top-page">
 	<div class="left-part">
 		<h1>Guide d’atelier de prévention</h1>
 		<p class="subtitle">
 			Pizza ipsum dolor meat lovers buffalo. Lovers red Bianca anchovies deep large beef. Broccoli.
 		</p>
 	</div>
-	<img src="/static/images/illu-home.svg" alt="" />
+	<img class="img-top" src="/static/images/illu-home.svg" alt="" />
 </section>
 <section class="description">
 	<h2>Comment bien préparer un atelier</h2>
@@ -106,7 +106,7 @@
 		background-color: var(--yellow);
 		padding: 0 5px;
 	} */
-	.top-home-page {
+	.top-page {
 		margin-top: 128px;
 		padding: 0 5vw;
 		display: flex;
@@ -156,5 +156,9 @@
 }
 .semibold{
   font-weight: 600;
+}
+
+@media screen and (min-width: 0px) and (max-width: 800px) {
+
 }
 </style>

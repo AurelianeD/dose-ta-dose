@@ -20,6 +20,7 @@ h3{
 	font-weight: 600;
 	color: var(--black);
 	font-size: 22px;
+  line-height: 130%;
 }
 
 p{
