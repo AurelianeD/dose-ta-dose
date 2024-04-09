@@ -58,22 +58,20 @@
 	<div class="box-stat">
 		<p class="number-stat">44%</p>
 		<p class="text-stat">
-			des élèves de 6ème ont déjà goûté à l’alcool <span class="source">(OFDT, 2020)</span>
+			des élèves de 6ème ont déjà goûté à l’alcool <a class="source" href="https://www.ofdt.fr/" target="_blank">(OFDT, 2020)</a>
 		</p>
 	</div>
 	<div class="box-stat">
 		<p class="number-stat">1 élève sur 5</p>
 		<p class="text-stat">
-			a connu une alcoolisation ponctuelle importante dans le mois. <span class="source"
-				>(drogues.gouv)</span
-			>
+			a connu une alcoolisation ponctuelle importante dans le mois. <a class="source" href="https://www.drogues.gouv.fr/" target="_blank">(drogues.gouv)</a>
 		</p>
 	</div>
 	<div class="box-stat">
 		<p class="number-stat">5 à 10 ans</p>
 		<p class="text-stat">
 			c’est la tranche d’âge de l’initiation à la consommation d’alcool chez les enfants par leur
-			famille. <span class="source">(drogues.gouv)</span>
+			famille. <a class="source" href="https://www.drogues.gouv.fr/" target="_blank">(drogues.gouv)</a>
 		</p>
 	</div>
 </section>
@@ -169,6 +167,7 @@
 
 	.source {
 		font-weight: 200;
+		text-decoration: none;
 	}
 
 	.prevention {
