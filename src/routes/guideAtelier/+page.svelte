@@ -12,7 +12,7 @@
 			Pizza ipsum dolor meat lovers buffalo. Lovers red Bianca anchovies deep large beef. Broccoli.
 		</p>
 	</div>
-	<img class="img-top" src="/static/images/illu-home.svg" alt="" />
+	<img class="img-top" src="/images/illu-home.svg" alt="" />
 </section>
 <section class="description">
 	<h2>Comment bien préparer un atelier</h2>
@@ -31,17 +31,17 @@
 	<div class="flex-docs">
 		<div class="box-docs">
 			<p class="title-docs">Règles du jeu</p>
-			<img src="/static/images/jetons-docs.jpg" alt="" />
+			<img src="/images/jetons-docs.jpg" alt="" />
 			<Link path="game" textUnderline="Télécharger" text="(pdf)" />
 		</div>
 		<div class="box-docs">
 			<p class="title-docs">Jetons (50 points)</p>
-			<img src="/static/images/jetons-docs.jpg" alt="" />
+			<img src="/images/jetons-docs.jpg" alt="" />
 			<Link path="game" textUnderline="Télécharger" text="(pdf)" />
 		</div>
 		<div class="box-docs">
 			<p class="title-docs">Flyer</p>
-			<img src="/static/images/jetons-docs.jpg" alt="" />
+			<img src="/images/jetons-docs.jpg" alt="" />
 			<Link path="game" textUnderline="Télécharger" text="(pdf)" />
 		</div>
 	</div>

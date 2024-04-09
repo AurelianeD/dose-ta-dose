@@ -23,7 +23,7 @@
 			<Link path="/ressources" textUnderline="Je me renseigne" text="(élève)" />
 		</div>
 	</div>
-	<img class="img-home" src="/static/images/illu-home.svg" alt="" />
+	<img class="img-home" src="/images/illu-home.svg" alt="" />
 </section>
 <section class="prevention">
 	<h2>Prévenir pour mieux <span class="yellow-bg">agir.</span></h2>
@@ -85,8 +85,8 @@
 	</div>
 
 	<div class="right-part">
-		<img src="/static/images/infographie-1.jpg" alt="" />
-		<img src="/static/images/infographie-2.jpg" alt="" />
+		<img src="/images/infographie-1.jpg" alt="" />
+		<img src="/images/infographie-2.jpg" alt="" />
 	</div>
 </section>
 <section class="about">

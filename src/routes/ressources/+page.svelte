@@ -7,21 +7,21 @@
         <h1><span class="encadre">Thématique</span></h1>
         <div class="thematiques">
             <div class="sujet">
-                <img src="/static/images/illustration-intestin.svg" alt="">
+                <img src="/images/illustration-intestin.svg" alt="">
                 <div class="contenu">
                     <h2>Les effets de l'alcool sur la santé</h2>
                     <Link path="ressources/effetAlcool" textUnderline="Je m'informe" text="sur l'alcool" />
                 </div>
             </div>
             <div class="sujet">
-                <img src="/static/images/illustration-pression.svg" alt="">
+                <img src="/images/illustration-pression.svg" alt="">
                 <div class="contenu">
                     <h2>Pression sociale et alcool</h2>
                     <Link path="ressources/pressionSociale" textUnderline="Je m'informe" text="sur l'alcool" />
                 </div>
             </div>
             <div class="sujet">
-                <img src="/static/images/illustration-aide.svg" alt="">
+                <img src="/images/illustration-aide.svg" alt="">
                 <div class="contenu">
                     <h2>Aide</h2>
                     <Link path="ressources/aide" textUnderline="Je m'informe" text="sur l'alcool" />
