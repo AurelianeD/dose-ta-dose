@@ -25,7 +25,7 @@
 	</div>
 	<img class="img-home" src="/static/images/illu-home.svg" alt="" />
 </section>
-<section class="prevention">
+<section class="prevention" id="jeu">
 	<h2>Prévenir pour mieux <span class="yellow-bg">agir.</span></h2>
 	<div class="flex-prevention">
 		<div class="box-prevention">
