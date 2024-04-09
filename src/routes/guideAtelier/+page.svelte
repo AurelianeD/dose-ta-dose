@@ -98,10 +98,10 @@
 	}
 
 	/* Home Page */
-	/* .yellow-bg {
+	.yellow-bg {
 		background-color: var(--yellow);
 		padding: 0 5px;
-	} */
+	}
 	.top-page {
 		margin-top: 128px;
 		padding: 0 5vw;
