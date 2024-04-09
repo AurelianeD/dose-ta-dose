@@ -1,18 +1,8 @@
 <script>
 	import '$lib/styles/styles.css';
-	import Header from '$lib/components/Header.svelte';
-	import Footer from '$lib/components/Footer.svelte';
 	import Link from '$lib/components/Link.svelte';
 	import ChoiceButton from '$lib/components/ChoiceButton.svelte';
 </script>
-
-<div class="flex">
-	<Link path="game" textUnderline="Le jeu" text="(inviduel)" />
-	<Link path="gamePresentation" textUnderline="Le jeu" text="(présentation)" />
-	<Link path="gameRessources" textUnderline="Les ressources" text="du jeu" />
-	<Link path="guideAtelier" textUnderline="Guide d'atelier" text="de prévention" />
-</div>
-<Header />
 
 <section class="top-home-page">
 	<div class="left-part">
@@ -101,7 +91,6 @@
 	</div>
 </section>
 
-<Footer />
 
 <style>
 	h1 {

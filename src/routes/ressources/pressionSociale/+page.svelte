@@ -1,11 +1,7 @@
 <script>
 	import '$lib/styles/styles.css';
-  import Header from '$lib/components/Header.svelte';
-  import Footer from '$lib/components/Footer.svelte';
-	import Link from '$lib/components/Link.svelte';
 </script>
 
-<Header />
 <div class="contenu">
     <h1><span class="encadre">Pression sociale</span> et alcool</h1>
     <div class="paragraphe">
@@ -37,7 +33,6 @@
         </ul>
     </div>
 </div>
-<Footer/>
 
 <style>
     .contenu{
@@ -75,7 +70,7 @@
     .bold{
       font-weight: 600;
     }
-    
+
     @media screen and (max-width: 1000px){
       .contenu{
         max-width: 70vw;

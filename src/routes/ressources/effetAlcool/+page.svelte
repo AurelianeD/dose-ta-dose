@@ -1,11 +1,7 @@
 <script>
 	import '$lib/styles/styles.css';
-  import Header from '$lib/components/Header.svelte';
-  import Footer from '$lib/components/Footer.svelte';
-	import Link from '$lib/components/Link.svelte';
 </script>
 
-<Header />
 <div class="contenu">
     <h1>Les effets de l'alcool sur <span class="encadre">ta santé</span></h1>
     <p>Boire trop d'alcool, c'est comme jouer avec sa santé : ça peut vraiment mal tourner.<br>En effet, la consommation excessive d'alcool peut avoir des répercussions graves sur la santé. Perturbations du cerveau, altération de l'humeur, du comportement, de la clarté de pensée. <br><br> Mais voyons cela plus en détail :</p>
@@ -26,7 +22,6 @@
         <p>L'alcool peut affaiblir ton armure contre les maladies, ce qui peut rendre ton corps plus vulnérable face à des ennemis comme la pneumonie ou la tuberculose, qui sont des maladies extrêmement  dangereuses pour ton corps.</p>
     </div>
 </div>
-<Footer/>
 
 <style>
     .contenu{

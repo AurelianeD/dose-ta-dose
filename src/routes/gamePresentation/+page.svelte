@@ -1,12 +1,8 @@
 <script>
-	import { goto } from '$app/navigation';
 	import '$lib/styles/styles.css';
-	import Header from '$lib/components/Header.svelte';
-	import Footer from '$lib/components/Footer.svelte';
     import MainButton from '$lib/components/MainButton.svelte'
 </script>
 
-<Header/>
 
 <div class="content">
     <h1>Drop ta <span class="encadre">Dose.</span></h1>
@@ -20,7 +16,6 @@
     <MainButton>démarrer le jeu</MainButton>
 </div>
 
-<Footer/>
 
 <style>
 

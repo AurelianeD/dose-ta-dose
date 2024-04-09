@@ -1,11 +1,8 @@
 <script>
 	import '$lib/styles/styles.css';
-  import Header from '$lib/components/Header.svelte';
-  import Footer from '$lib/components/Footer.svelte';
 	import Link from '$lib/components/Link.svelte';
 </script>
 
-<Header />
     <div class="content">
         <h1><span class="encadre">Thématique</span></h1>
         <div class="thematiques">
@@ -33,7 +30,6 @@
         </div>
     </div>
 
-<Footer/>
 
 <style>
     .content{
