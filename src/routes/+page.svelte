@@ -10,6 +10,7 @@
 	<Link path="game" textUnderline="Le jeu" text="(inviduel)" />
 	<Link path="gamePresentation" textUnderline="Le jeu" text="(présentation)" />
 	<Link path="gameRessources" textUnderline="Les ressources" text="du jeu" />
+  <Link path="guideAtelier" textUnderline="Guide d'atelier" text="de prévention" />
 </div>
 <Header />
 
@@ -111,7 +112,7 @@
 		width: 70%;
 		font-weight: 600;
 		line-height: 130%;
-		font-size: 24px;
+		font-size: 20px;
 	}
 	.flex-top-link{
     display: flex;

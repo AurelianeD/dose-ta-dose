@@ -4,12 +4,13 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 5vw;
+        padding: 20px 5vw;
     }
 
     .ligne{
         width: 90%;
         border: 1px solid var(--black);
+        margin: 0 auto 0 auto;
     }
 
     .btn-nav{
@@ -136,13 +137,14 @@
 <header>
     <div class="flex-header">
         <img src="/static/images/logo.svg" alt="logo dose ta dose">
-    
+
         <button class="mobile" on:click={toggleMenu}>
             <span class="nav-style">menu</span>
             <img src={arrowSvg} alt="">
         </button>
         <div class="btn-nav desktop-nav">
             <button class="nav-style underline" on:click={() => goto('about')}>à propos</button>
+            <button class="nav-style underline" on:click={() => goto('guideAtelier')}>organiser un atelier</button>
             <button class="nav-style underline" on:click={() => goto('gamePresentation')}>Le jeu</button>
             <button class="nav-style encadre" on:click={() => goto('gameRessources')}>ressources</button>
         </div>
@@ -151,6 +153,8 @@
     <nav class:open={isMenuOpen}>
         <div class="btn-nav mobile-nav" style="display: {isMenuOpen ? 'flex' : 'none'};">
             <button class="nav-style" on:click={() => goto('about')}>à propos</button>
+            <hr>
+            <button class="nav-style" on:click={() => goto('guideAtelier')}>organiser un atelier</button>
             <hr>
             <button class="nav-style" on:click={() => goto('gamePresentation')}>Le jeu</button>
             <hr>
