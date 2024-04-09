@@ -3,7 +3,6 @@
 	import Link from '$lib/components/Link.svelte';
 </script>
 
-<h1>Welcome to Dose ta dose</h1>
 <div class="flex">
 	<Link path="game" textUnderline="Le jeu" text="(inviduel)" />
 	<Link path="gamePresentation" textUnderline="Le jeu" text="(présentation)" />
@@ -18,5 +17,6 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
+		flex: 1
 	}
 </style>
