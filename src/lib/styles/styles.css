@@ -1,3 +1,5 @@
 @import '$lib/styles/reset.css';
 @import '$lib/styles/colors.css';
 @import '$lib/styles/fonts.css';
+
+html, body { min-height: 100vh; }

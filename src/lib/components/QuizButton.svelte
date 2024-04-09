@@ -1,13 +1,15 @@
 <!-- CheckboxCard.svelte -->
 <script>
+	import '$lib/styles/colors.css';
 	export let answer = '';
 	export let letter = '';
 	export let checked = false;
+	export let disabled = false;
 </script>
 
 <div class="card">
 	<label style="display: flex; align-items: center;" class:checked>
-		<input type="checkbox" bind:checked style="display: none;" />
+		<input type="checkbox" bind:checked style="display: none;" {disabled}  />
 		<div class="letter">{letter}.</div>
 		<div class="answer">{answer}</div>
 		{#if checked}
@@ -70,9 +72,9 @@
 		}
 	}
 
-	.card label.checked {
-		background-color: var(--yellow);
-	}
+	/*.card label.checked {*/
+	/*	background-color: var(--yellow);*/
+	/*}*/
 
 	.letter {
 		text-transform: uppercase;
@@ -105,32 +107,32 @@
 		.card label {
 			width: 250px;
 		}
-    .card:active {
-		transform-origin: 125px;
-	}
+		.card:active {
+			transform-origin: 125px;
+		}
 	}
 	@media screen and (min-width: 301px) and (max-width: 500px) {
 		.card label {
 			width: 350px;
 		}
-    .card:active {
-		transform-origin: 175px;
+		.card:active {
+			transform-origin: 175px;
+		}
 	}
-	}
-  @media screen and (min-width: 501px) and (max-width: 800px) {
+	@media screen and (min-width: 501px) and (max-width: 800px) {
 		.card label {
 			width: 60vw;
 		}
-    .card:active {
-		transform-origin: 30vw;
+		.card:active {
+			transform-origin: 30vw;
+		}
 	}
-	}
-  @media screen and (min-width: 801px) and (max-width: 1000px) {
+	@media screen and (min-width: 801px) and (max-width: 1000px) {
 		.card label {
 			width: 40vw;
 		}
-    .card:active {
-		transform-origin: 20vw;
-	}
+		.card:active {
+			transform-origin: 20vw;
+		}
 	}
 </style>

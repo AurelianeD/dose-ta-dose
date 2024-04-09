@@ -1,12 +1,8 @@
 <script>
 	import '$lib/styles/styles.css';
-	import Header from '$lib/components/Header.svelte';
-	import Footer from '$lib/components/Footer.svelte';
 	import Link from '$lib/components/Link.svelte';
 	import MainButton from '$lib/components/MainButton.svelte';
 </script>
-
-<Header />
 
 <section class="top-page">
 	<div class="left-part">
@@ -86,7 +82,6 @@
     <MainButton buttonSize="big">démarrer l’atelier</MainButton>
   </div>
 </section>
-<Footer />
 
 <style>
 	h1 {
