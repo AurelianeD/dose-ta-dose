@@ -7,21 +7,21 @@
         <h1><span class="encadre">Thématique</span></h1>
         <div class="thematiques">
             <div class="sujet">
-                <img src="/static/images/illu-home.svg" alt="">
+                <img src="/static/images/illustration-intestin.svg" alt="">
                 <div class="contenu">
                     <h2>Les effets de l'alcool sur la santé</h2>
                     <Link path="ressources/effetAlcool" textUnderline="Je m'informe" text="sur l'alcool" />
                 </div>
             </div>
             <div class="sujet">
-                <img src="/static/images/illu-home.svg" alt="">
+                <img src="/static/images/illustration-pression.svg" alt="">
                 <div class="contenu">
                     <h2>Pression sociale et alcool</h2>
                     <Link path="ressources/pressionSociale" textUnderline="Je m'informe" text="sur l'alcool" />
                 </div>
             </div>
             <div class="sujet">
-                <img src="/static/images/illu-home.svg" alt="">
+                <img src="/static/images/illustration-aide.svg" alt="">
                 <div class="contenu">
                     <h2>Aide</h2>
                     <Link path="ressources/aide" textUnderline="Je m'informe" text="sur l'alcool" />
@@ -33,7 +33,7 @@
 
 <style>
     .content{
-        max-width: 73vw;
+        max-width: 75vw;
         margin: auto;
         margin-top: 80px;
     }
@@ -47,12 +47,12 @@
         display: flex;
         flex-wrap: wrap;
         margin-top: 100px;
-        gap: 50px 30px;
+        gap: 50px;
     }
 
     .sujet{
         display: flex;
-        gap: 20px;
+        gap: 30px;
         align-items: center;
         width: 540px;
     }
