@@ -10,7 +10,7 @@
 
 <section class="top-page">
 	<div class="left-part">
-		<h1>Guide d’atelier de prévention</h1>
+		<h1>Guide d’atelier de <span class="yellow-bg">prévention</span></h1>
 		<p class="subtitle">
 			Pizza ipsum dolor meat lovers buffalo. Lovers red Bianca anchovies deep large beef. Broccoli.
 		</p>
