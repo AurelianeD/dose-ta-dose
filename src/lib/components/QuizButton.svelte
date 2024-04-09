@@ -4,11 +4,12 @@
 	export let answer = '';
 	export let letter = '';
 	export let checked = false;
+	export let disabled = false;
 </script>
 
 <div class="card">
 	<label style="display: flex; align-items: center;" class:checked>
-		<input type="checkbox" bind:checked style="display: none;" />
+		<input type="checkbox" bind:checked style="display: none;" {disabled}  />
 		<div class="letter">{letter}.</div>
 		<div class="answer">{answer}</div>
 		{#if checked}

@@ -24,6 +24,7 @@
 		align-items: center;
 		margin: 0 auto;
 		gap: 8px;
+		cursor: pointer;
 	}
 	.containerText {
 		display: flex;

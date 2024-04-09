@@ -4,7 +4,7 @@
 	const currentYear = new Date().getFullYear();
 </script>
 
-<footer>
+<footer id="footer">
 	<p class="copyright">© Dose ta dose {currentYear}</p>
 	<div class="flex-nav">
 		<button class="nav-style" on:click={() => goto('about')}>A propos</button>

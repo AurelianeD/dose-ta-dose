@@ -5,7 +5,7 @@ h1 {
 	font-family: 'DM Sans', sans-serif;
 	font-weight: 600;
 	color: var(--yellow);
-	font-size: 32px;
+	font-size: 56px;
 	line-height: 130%;
 }
 
@@ -13,7 +13,7 @@ h2 {
 	font-family: 'DM Sans', sans-serif;
 	font-weight: 600;
 	color: var(--black);
-	font-size: 28px;
+	font-size: 32px;
 }
 
 h3 {
@@ -46,4 +46,15 @@ a {
 	font-family: 'DM Sans', sans-serif;
 	font-weight: 400;
 	color: var(--black);
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+	overflow-wrap: break-word;
+}
+
+.bigText{
+	font-family: "DM Sans", sans-serif;
+	font-size: 32px;
+	font-weight: 300;
+	color: var(--black)
 }
