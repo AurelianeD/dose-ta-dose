@@ -84,6 +84,7 @@
 	header{
 		position: fixed;
 		width: 100%;
+    z-index: 999;
 	}
 	.flex-header {
 		background-color: var(--white);

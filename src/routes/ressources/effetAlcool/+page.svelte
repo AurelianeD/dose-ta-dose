@@ -59,8 +59,12 @@
 
 <style>
 	.nav-ressource {
+    background-color: #FFF;
+    width: 90vw;
+    position: fixed;
 		padding: 30px 5vw;
 		display: flex;
+    align-items: center;
 		justify-content: space-between;
 	}
 
@@ -73,7 +77,7 @@
 		font-size: 20px;
 	}
 	.top-home-page {
-		margin-top: 128px;
+		margin-top: 158px;
 		padding: 0 10vw;
 		display: flex;
 		align-items: center;
