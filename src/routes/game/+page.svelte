@@ -1,6 +1,7 @@
 <script>
 	import '$lib/styles/styles.css';
     import MainButton from '$lib/components/MainButton.svelte'
+    import {goto} from "$app/navigation";
 </script>
 
 
@@ -12,7 +13,7 @@
         <li><span class="circle">2</span><span class="ligne-instruction">Créer des équipes et leur fournir les jetons pour un total de 100 points.</span></li>
         <li><span class="circle">3</span><span class="ligne-instruction">Ayez le plus haut score à la fin des dix questions !</span></li>
     </ul>
-    <MainButton>démarrer le jeu</MainButton>
+    <MainButton onClick={() => goto('/game/start/')}>démarrer le jeu</MainButton>
 </div>
 
 
