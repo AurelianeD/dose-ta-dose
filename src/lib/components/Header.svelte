@@ -27,7 +27,7 @@
 <header>
     <div class="flex-header">
         <button class="nav-style" on:click={() => goto('/')}>
-            <img src="/static/images/logo.svg" alt="logo dose ta dose">
+            <img src="/images/logo.svg" alt="logo dose ta dose">
         </button>
 
         <button class="mobile" on:click={toggleMenu}>
