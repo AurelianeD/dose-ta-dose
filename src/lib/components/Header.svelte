@@ -35,7 +35,7 @@
         content: "";
         position: absolute;
         left: 0;
-        bottom: 0px;
+        bottom: 0;
         width: 100%;
         height: 3px;
         transition: background-color 0.3s ease;
