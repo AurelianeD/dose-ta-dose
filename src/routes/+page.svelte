@@ -1,7 +1,17 @@
-<script>
+<script lang="ts">
 	import '$lib/styles/styles.css';
 	import Link from '$lib/components/Link.svelte';
 	import ChoiceButton from '$lib/components/ChoiceButton.svelte';
+	import {onMount} from "svelte";
+
+	let footer: HTMLElement;
+
+	onMount(() => {
+		footer = document.getElementById('footer')
+		if(footer){
+			footer.style.display = 'flex'
+		}
+	})
 </script>
 
 <section class="top-home-page">
@@ -9,8 +19,8 @@
 		<h1>Dose <br /> ta dose</h1>
 		<p class="subtitle">Le site pour s’informer et tester ses connaissances sur l’alcool.</p>
 		<div class="flex-top-link">
-			<Link path="#" textUnderline="Guide d’atelier" text="de prévention" />
-			<Link path="#" textUnderline="Je me renseigne" text="(élève)" />
+			<Link path="/guideAtelier" textUnderline="Guide d’atelier" text="de prévention" />
+			<Link path="/ressources" textUnderline="Je me renseigne" text="(élève)" />
 		</div>
 	</div>
 	<img class="img-home" src="/static/images/illu-home.svg" alt="" />
@@ -23,7 +33,7 @@
 			<p class="instruction-text">
 				<span class="underline-span">Téléchargez et imprimez les imprimables</span> nécessaires au préalable.
 			</p>
-			<ChoiceButton path="#">
+			<ChoiceButton path="/gamePresentation">
 				<span slot="title">Démarrer l’atelier</span>
 				<span slot="description">Animation</span>
 			</ChoiceButton>
@@ -33,7 +43,7 @@
 			<p class="instruction-text">
 				<span class="underline-span">Consultez les ressources</span> présentes sur le site.
 			</p>
-			<ChoiceButton path="#" buttonType="secondary">
+			<ChoiceButton path="/game" buttonType="secondary">
 				<span slot="title">Tester mes connaissances</span>
 				<span slot="description">Autonomie</span>
 			</ChoiceButton>
@@ -108,11 +118,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: 16px;
-	}
-	.flex {
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
 	}
 
 	/* Home Page */

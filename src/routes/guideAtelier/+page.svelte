@@ -2,6 +2,7 @@
 	import '$lib/styles/styles.css';
 	import Link from '$lib/components/Link.svelte';
 	import MainButton from '$lib/components/MainButton.svelte';
+	import {goto} from "$app/navigation";
 </script>
 
 <section class="top-page">
@@ -64,7 +65,7 @@
       <li><p><span class="semibold">Les équipes jouent en même temps</span> et répondent donc à la même question. À chaque tour une question à choix multiple est posée sur le thème de la prévention contre l’alcool.</p></li>
       <li><p>Après un temps de réflexion, chaque équipe dépose ses points sur <span class="semibold">LA ou LES réponse(s)</span> qu’elle pense correcte(s).</p></li>
       <li><p>Chaque point posé sur la mauvaise réponse est alors <span class="semibold">définitivement perdu.</span></p></li>
-      <li><p>Les équipes reprennent leurs points qui ont été misés sur LA ou LES bonne(s) réponse, puis jouent de la même manière lors des questions suivantes. Et ainsi de suite jusqu’à la <span class="semibold">10ème question.</span></p></li>
+      <li><p>Les équipes reprennent leurs points qui ont été misés sur LA ou LES bonne(s) réponse, puis jouent de la même manière lors des questions suivantes. Et ainsi de suite jusqu’à la <span class="semibold">10ème question.</span></p></li>
     </ul>
     <h3>Règle importante :</h3>
     <ul>
@@ -75,11 +76,11 @@
       <li><p>L’équipe qui aura le <span class="semibold">plus de points de sobriété</span> gagne la partie.</p></li>
     </ul>
     <div style="margin-top: 32px;">
-      <Link path="game" textUnderline="Télécharger" text="les règles(pdf)" />
+      <Link path="#" textUnderline="Télécharger" text="les règles(pdf)" />
     </div>
 	</div>
   <div class="button-center">
-    <MainButton buttonSize="big">démarrer l’atelier</MainButton>
+    <MainButton onClick={() => goto('/gamePresentation/presentation')} buttonSize="big">démarrer l’atelier</MainButton>
   </div>
 </section>
 
