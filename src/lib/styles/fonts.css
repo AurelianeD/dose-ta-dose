@@ -14,12 +14,14 @@ h2 {
 	font-weight: 600;
 	color: var(--black);
 	font-size: 28px;
+  line-height: 130%;
 }
 h3{
 	font-family: 'DM Sans', sans-serif;
 	font-weight: 600;
 	color: var(--black);
 	font-size: 22px;
+  line-height: 130%;
 }
 
 p{
