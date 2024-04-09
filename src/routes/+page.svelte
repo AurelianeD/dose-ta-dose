@@ -14,6 +14,10 @@
 	})
 </script>
 
+<svelte:head>
+	<title>Dose ta dose</title>
+</svelte:head>
+
 <section class="top-home-page">
 	<div class="left-part">
 		<h1>Dose <br /> ta dose</h1>

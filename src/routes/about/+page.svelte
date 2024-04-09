@@ -3,6 +3,8 @@
   import Header from '$lib/components/Header.svelte';
   import Footer from '$lib/components/Footer.svelte';
 	import Link from '$lib/components/Link.svelte';
+	import MisePoint from '$lib/components/MisePoint.svelte';
+	import QuizButton from '$lib/components/QuizButton.svelte';
 </script>
 
 <div class="contenu">
