@@ -75,4 +75,14 @@
     .bold{
       font-weight: 600;
     }
+    
+    @media screen and (max-width: 1000px){
+      .contenu{
+        max-width: 70vw;
+      }
+
+      .paragraphe{
+        max-width: 80vw;
+      }
+    }
 </style>

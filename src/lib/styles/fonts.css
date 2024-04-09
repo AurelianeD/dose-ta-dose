@@ -13,8 +13,7 @@ h2 {
 	font-family: 'DM Sans', sans-serif;
 	font-weight: 600;
 	color: var(--black);
-	font-size: 28px;
-  line-height: 130%;
+	font-size: clamp(16px, 3vw, 28px);
 }
 h3{
 	font-family: 'DM Sans', sans-serif;

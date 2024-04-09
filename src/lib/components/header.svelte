@@ -136,7 +136,9 @@
 
 <header>
     <div class="flex-header">
-        <img src="/static/images/logo.svg" alt="logo dose ta dose">
+        <button class="nav-style" on:click={() => goto('/')}>
+            <img src="/static/images/logo.svg" alt="logo dose ta dose">
+        </button>
 
         <button class="mobile" on:click={toggleMenu}>
             <span class="nav-style">menu</span>
@@ -146,7 +148,7 @@
             <button class="nav-style underline" on:click={() => goto('about')}>à propos</button>
             <button class="nav-style underline" on:click={() => goto('guideAtelier')}>organiser un atelier</button>
             <button class="nav-style underline" on:click={() => goto('gamePresentation')}>Le jeu</button>
-            <button class="nav-style encadre" on:click={() => goto('gameRessources')}>ressources</button>
+            <button class="nav-style encadre" on:click={() => goto('ressources')}>ressources</button>
         </div>
     </div>
     <hr class="ligne">
