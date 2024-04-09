@@ -79,10 +79,10 @@
       <Link path="#" textUnderline="Télécharger" text="les règles(pdf)" />
     </div>
 	</div>
-  <div class="button-center">
-    <MainButton onClick={() => goto('/gamePresentation/presentation')} buttonSize="big">démarrer l’atelier</MainButton>
-  </div>
 </section>
+<div class="button-center">
+  <MainButton onClick={() => goto('/gamePresentation/presentation')} buttonSize="big">démarrer l’atelier</MainButton>
+</div>
 
 <style>
 	h1 {
@@ -146,7 +146,6 @@
   }
 .button-center{
   margin-top: 98px;
-  width: 90vw;
   display: flex;
   justify-content: center;
 }
