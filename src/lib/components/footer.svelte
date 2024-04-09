@@ -26,14 +26,14 @@
 		margin-top: 100px;
 	}
 	.copyright {
-    font-family: "DM Sans", sans-serif;
+		font-family: 'DM Sans', sans-serif;
 		text-transform: uppercase;
 		font-weight: 600;
 		font-size: 16px;
 	}
 
 	.nav-style {
-    font-family: "DM Sans", sans-serif;
+		font-family: 'DM Sans', sans-serif;
 		background: none;
 		border: none;
 		text-transform: uppercase;
@@ -53,9 +53,9 @@
 		.nav-style {
 			font-size: 14px;
 		}
-    .logo-footer {
-      width: 70vw;
-    }
+		.logo-footer {
+			width: 70vw;
+		}
 	}
 	@media screen and (max-width: 1000px) {
 		.copyright {

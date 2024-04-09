@@ -16,34 +16,34 @@ h2 {
 	font-size: 28px;
 }
 
-h3{
+h3 {
 	font-family: 'DM Sans', sans-serif;
 	font-weight: 600;
 	color: var(--black);
 	font-size: 24px;
 }
 
-p{
+p {
 	margin: 0;
 }
 
-.main-button{
-	font-family: "DM Sans", sans-serif;
+.main-button {
+	font-family: 'DM Sans', sans-serif;
 	font-weight: 900;
 	color: var(--black);
 	text-transform: uppercase;
 }
 
-.main-button-big{
+.main-button-big {
 	font-size: 24px;
 }
 
-.main-button-small{
+.main-button-small {
 	font-size: 16px;
 }
 
-a{
-	font-family: "DM Sans", sans-serif;
+a {
+	font-family: 'DM Sans', sans-serif;
 	font-weight: 400;
 	color: var(--black);
 }

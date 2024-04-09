@@ -1,6 +1,6 @@
 <!-- CheckboxCard.svelte -->
 <script>
-	import '$lib/styles/colors.css'
+	import '$lib/styles/colors.css';
 	export let answer = '';
 	export let letter = '';
 	export let checked = false;
@@ -106,32 +106,32 @@
 		.card label {
 			width: 250px;
 		}
-    .card:active {
-		transform-origin: 125px;
-	}
+		.card:active {
+			transform-origin: 125px;
+		}
 	}
 	@media screen and (min-width: 301px) and (max-width: 500px) {
 		.card label {
 			width: 350px;
 		}
-    .card:active {
-		transform-origin: 175px;
+		.card:active {
+			transform-origin: 175px;
+		}
 	}
-	}
-  @media screen and (min-width: 501px) and (max-width: 800px) {
+	@media screen and (min-width: 501px) and (max-width: 800px) {
 		.card label {
 			width: 60vw;
 		}
-    .card:active {
-		transform-origin: 30vw;
+		.card:active {
+			transform-origin: 30vw;
+		}
 	}
-	}
-  @media screen and (min-width: 801px) and (max-width: 1000px) {
+	@media screen and (min-width: 801px) and (max-width: 1000px) {
 		.card label {
 			width: 40vw;
 		}
-    .card:active {
-		transform-origin: 20vw;
-	}
+		.card:active {
+			transform-origin: 20vw;
+		}
 	}
 </style>
