@@ -37,7 +37,7 @@
 
 <style>
     .content{
-        max-width: 75vw;
+        max-width: 80vw;
         margin: auto;
         margin-top: 80px;
     }
@@ -58,7 +58,7 @@
         display: flex;
         gap: 30px;
         align-items: center;
-        width: 540px;
+        width: 500px;
     }
 
     .sujet img{
