@@ -53,4 +53,14 @@
         flex-direction: column;
         gap: 20px;
     }
+
+    @media screen and (max-width: 1000px){
+      .contenu{
+        max-width: 70vw;
+      }
+
+      p{
+        max-width: 80vw;
+      }
+    }
 </style>

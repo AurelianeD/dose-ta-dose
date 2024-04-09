@@ -62,14 +62,14 @@
     }
 
     .sujet img{
-        width: 200px;
+        width: clamp(100px, 20vw, 200px);
         height: auto;
     }
 
     .contenu{
         display: flex;
         flex-direction: column;
-        gap: 25px;
+        gap: clamp(10px, 20vw, 25px);
     }
 
 </style>
