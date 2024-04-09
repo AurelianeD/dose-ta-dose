@@ -10,16 +10,27 @@
 <div class="contenu">
     <h1>A <span class="encadre">propos</span></h1>
     <div class="paragraphe">
-      <p>Potter ipsum wand elf parchment wingardium. Lion spell beaded grayback umbrella boy norwegian fawkes cakes. Beaded map whomping aurors ginny mimubulus cores cabinet giant lies. Every stan goblin suck bedroom lady juice forbidden weekly.<br><br>Lorem ipsum dolor sit amet consectetur. Massa feugiat rhoncus mi congue fames mattis non nibh. Lacus tellus aenean risus pellentesque risus massa faucibus nec nullam. Ornare viverra nibh praesent sed pharetra rutrum ante maecenas. A amet.</p>
+      <h2>Notre équipe</h2>
+      <ul>
+        <li><span class="bold">Safiya SEDDIKI</span> <br>Rédactrice web SEO & Rédactrice de contenus</li>
+        <li><span class="bold">Joséphine SAINT-YGNAN</span> <br>Chargée de communication & Rédactrice de contenus</li>
+        <li><span class="bold">Camille DAGUIN</span> <br>Chargée de communication & Rédactrice de contenus</li>
+        <li><span class="bold">Hugo MENSAH</span> <br> Graphiste & Créateur de contenus </li>
+        <li><span class="bold">Leily COQUARD MISONO</span> <br>Graphiste & Créateur de contenus</li>
+        <li><span class="bold">Auréliane DOR</span> <br>Développeur web</li>
+        <li><span class="bold">Line CABARET</span> <br>Développeur web</li>
+        <li><span class="bold">Thomas RIQUIER</span> <br>Développeur web</li>
+        <li><span class="bold">Justine GELIS</span> <br>Designer</li>
+        <li><span class="bold">Noémie NUNEZ</span> <br>Designer</li>
+      </ul>
     </div>
     <div class="paragraphe">
-        <h2>Mimubulus cores cabinet giant</h2>
-        <p>Lorem ipsum dolor sit amet consectetur. Massa feugiat rhoncus mi congue fames mattis non nibh. Lacus tellus aenean risus pellentesque risus massa faucibus nec nullam. Ornare viverra nibh praesent sed pharetra rutrum ante maecenas.</p>
-        <ul>
-          <li> <Link path="https://alcooliques-anonymes.fr/" textUnderline="Massa" text="consectetur" /> </li>
-          <li> <Link path="https://www.vielibre.org/" textUnderline="Pellentesque" text="rutrum ante" /> </li>
-          <li> <Link path="https://www.lesamisdelasante.org/" textUnderline="Congue pharetra" text="rutrum ante" /> </li>
-        </ul>
+        <h2>Notre mission</h2>
+        <p>Notre projet découle d'un constat simple : au collège l'alcool est un sujet tabou, et pourtant nombreux sont les élèves concernés !</p>
+    </div>
+    <div class="paragraphe">
+        <h2>Notre but</h2>
+        <p>Dose ta dose c'est un projet étudiant, à but non lucratif ! Notre but : sensibiliser les collégiens au sujet de l'alcoolisme. Nous connaissons tous quelqu'un qui est concerné par des problèmes d'alcool et ceux, dès le collège sans savoir comment l'accompagner au mieux. Et pourtant au collège ce sujet est très tabou ! C'est pourquoi sur ce site, vous trouverez également un jeu afin de vous évaluer sur vos connaissances !</p>
     </div>
 </div>
 
@@ -51,9 +62,13 @@
 
     li{
       margin: 20px 40px;
-        line-height: 140%;
+      line-height: 140%;
       list-style-type: disc;
       font-family: 'DM Sans', sans-serif;
+    }
+
+    .bold{
+      font-weight: 600;
     }
 
     @media screen and (max-width: 1000px){
