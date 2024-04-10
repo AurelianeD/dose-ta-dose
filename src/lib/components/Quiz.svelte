@@ -106,4 +106,19 @@
 		flex-direction: column;
 		margin: 100px 0;
 	}
+	@media screen and (min-width: 0px) and (max-width: 1000px) {
+		.container {
+			margin-top: 60px;
+		}
+		.title{
+			margin-bottom: 32px
+		}
+		.choicesContainer {
+			flex-direction: column;
+			gap: 10px;
+		}
+		.answerContainer{
+			margin: 50px 0;
+		}
+	}
 </style>
