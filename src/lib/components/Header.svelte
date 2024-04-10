@@ -33,13 +33,13 @@
         </button>
         <nav>
             <ul class="menu" class:open={isMenuOpen}>
-                <li><button class="nav-style underline" on:click={() => handleItemClick('about')}>à propos</button></li>
+                <li><button class="nav-style underline" on:click={() => handleItemClick('/about')}>à propos</button></li>
 				<hr class="display-mobile">
-                <li><button class="nav-style underline" on:click={() => handleItemClick('ressources')}>ressources</button></li>
+                <li><button class="nav-style underline" on:click={() => handleItemClick('/ressources')}>ressources</button></li>
 				<hr class="display-mobile">
                 <li><button class="nav-style underline" on:click={() => handleItemClick('/#jeu')}>Le test</button></li>
 				<hr class="display-mobile">
-                <li><button class="nav-style encadre" on:click={() => handleItemClick('guideAtelier')}>organiser un atelier</button></li>
+                <li><button class="nav-style encadre" on:click={() => handleItemClick('/guideAtelier')}>organiser un atelier</button></li>
 				<hr class="display-mobile">
             </ul>
             <button class="mobile" on:click={toggleMenu}>
