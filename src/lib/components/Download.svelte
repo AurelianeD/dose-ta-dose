@@ -73,7 +73,7 @@
 		transition: 0.3s;
 	}
     .bar{
-        position: fixed;
+        position: absolute;
 		margin-top: 18px;
     }
 	.container:hover .arrow {
