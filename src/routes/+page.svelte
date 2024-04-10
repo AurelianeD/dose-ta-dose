@@ -87,8 +87,12 @@
 	</div>
 
 	<div class="right-part">
-		<img src="/images/infographie-1.jpg" alt="" />
-		<img src="/images/infographie-2.jpg" alt="" />
+		<a href="/pdf/Infographie_1.pdf" target="_blank">
+			<img src="/images/Infographie_1.png" alt="" />
+		</a>
+		<a href="/pdf/Infographie_2.pdf" target="_blank">
+			<img src="/images/Infographie_2.png" alt="" />
+		</a>
 	</div>
 </section>
 <section class="about">
@@ -213,6 +217,9 @@
 	.ressources .right-part {
 		display: flex;
 		gap: 32px;
+	}
+	.right-part img{
+		width: 200px;
 	}
 	.ressource-text {
 		margin: 50px 0;
