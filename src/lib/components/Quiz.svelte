@@ -72,7 +72,7 @@
 						showAnswer = true;
 						scrollToView();
 					}}
-					disabled={leftPointToBet > 0}
+					disabled={leftPointToBet > 0 && !isPresentation}
 				>{isPresentation ? 'Voir la réponse' : 'Valider'}</MainButton>
 		{/if}
 	</div>
