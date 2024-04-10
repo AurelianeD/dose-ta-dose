@@ -9,6 +9,7 @@
 		<p class="subtitle">
 			Je ne sais quoi mettre ici
 		</p>
+		<Link path="game" textUnderline="Tout" text="télécharger (pdf)" />
 	</div>
 	<img class="img-home" src="/images/illu-ressources-3.svg" alt="" />
 </section>
