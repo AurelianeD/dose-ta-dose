@@ -16,30 +16,48 @@
 <section class="contenu">
 	<h2>Les infographies</h2>
 	<div class="documents">
-		<a href="/pdf/Infographie_1.pdf" target="_blank">
-			<img src="/images/Infographie_1.png" alt="" />
-		</a>
-		<a href="/pdf/Infographie_2.pdf" target="_blank">
-			<img src="/images/Infographie_2.png" alt="" />
-		</a>
+		<div class="box-docs">
+			<a href="/pdf/Infographie_1.pdf" target="_blank">
+				<img src="/images/Infographie_1.png" alt="" />
+			</a>
+			<Link path="game" textUnderline="Télécharger" text="(pdf)" />
+		</div>
+		<div class="box-docs">
+			<a href="/pdf/Infographie_2.pdf" target="_blank">
+				<img src="/images/Infographie_2.png" alt="" />
+			</a>
+			<Link path="game" textUnderline="Télécharger" text="(pdf)" />
+		</div>
 	</div>
 	<h2>Affiche</h2>
 	<div class="documents">
-		<a href="/pdf/Affiche.pdf" target="_blank">
-			<img src="/images/Affiche.jpg" alt="" />
-		</a>
+		<div class="box-docs">
+			<a href="/pdf/Affiche.pdf" target="_blank">
+				<img src="/images/Affiche.jpg" alt="" />
+			</a>
+			<Link path="game" textUnderline="Télécharger" text="(pdf)" />
+		</div>
 	</div>
 	<h2>Les flyers</h2>
 	<div class="flyers">
-		<a href="/pdf/Flyer_1.pdf" target="_blank">
-			<img src="images/flyers_1.png" alt="" />
-		</a>
-		<a href="/pdf/flyer_2.pdf" target="_blank">
-			<img src="images/flyers_2.png" alt="" />
-		</a>
-		<a href="/pdf/flyer_3.pdf" target="_blank">
-			<img src="images/flyers_3.png" alt="" />
-		</a>
+		<div class="box-docs">
+			<a href="/pdf/Flyer_1.pdf" target="_blank">
+				<img src="images/flyers_1.png" alt="" />
+			</a>
+			<Link path="game" textUnderline="Télécharger" text="(pdf)" />
+		</div>
+		<div class="box-docs">
+			<a href="/pdf/flyer_2.pdf" target="_blank">
+				<img src="images/flyers_2.png" alt="" />
+			</a>
+			<Link path="game" textUnderline="Télécharger" text="(pdf)" />
+		</div>
+		<div class="box-docs">
+			<a href="/pdf/flyer_3.pdf" target="_blank">
+				<img src="images/flyers_3.png" alt="" />
+			</a>
+			<Link path="game" textUnderline="Télécharger" text="(pdf)" />
+		</div>
 	</div>
   <h3 class="only-mobile">N’hésite pas à découvrir nos autres thématiques !</h3>
 	<div class="flex-link only-mobile">
@@ -84,6 +102,12 @@
 	.contenu h2 {
 		margin-top: 80px;
 		margin-bottom: 40px;
+	}
+	.box-docs{
+		display: flex;
+		gap: 16px;
+		flex-direction: column;
+		align-items: center;
 	}
 
 	.documents{
