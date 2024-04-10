@@ -1,19 +1,25 @@
 <script lang="ts">
 	import '$lib/styles/styles.css'
 	import  {quizData} from '$lib/data/quiz';
+	import {beforeNavigate} from "$app/navigation";
 	import type {QuizData} from '$lib/data/quiz'
 	import QuizButton from '$lib/components/QuizButton.svelte';
 	import MainButton from '$lib/components/MainButton.svelte';
 	import PointQuiz from "$lib/components/PointQuiz.svelte";
 	import MisePoint from "$lib/components/MisePoint.svelte";
+	import Modale from "$lib/components/Modale.svelte";
 	export let questionNumber: number;
 	export let onChangeQuestion: (value: number) => void;
 	export let onEnd: () => void;
 	export let isPresentation: boolean;
 	export let points: number;
 
+
+
+
 	let showAnswer = false;
 	let bet = [0,0,0];
+	let isModalOpen = false;
 
 	$: leftPointToBet = 10 - bet.reduce((prev, curr) => prev + curr)
 	$: data = quizData[questionNumber] as QuizData;
@@ -43,6 +49,21 @@
 			onChangeQuestion(lostPoints);
 		}
 	}
+
+	function openModal(){
+		isModalOpen = true;
+	}
+
+	function closeModal(){
+		isModalOpen = false;
+	}
+
+	beforeNavigate(navigation => {
+		if(!isPresentation && !isModalOpen){
+			navigation.cancel()
+			openModal();
+		}
+	})
 
 
 </script>
@@ -96,6 +117,8 @@
 		</div>
 	{/if}
 </div>
+
+<Modale {isModalOpen} on:close={closeModal} />
 
 <style>
 	.container {
