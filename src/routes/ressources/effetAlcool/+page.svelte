@@ -19,7 +19,7 @@
 			Boire trop d'alcool, c'est comme jouer avec sa santé&nbsp;: ça peut vraiment mal tourner..
 		</p>
 	</div>
-	<img class="img-home" src="/images/illu-ressources-1.png" alt="" />
+	<img class="img-home" src="/images/illu-ressources-1.svg" alt="" />
 </section>
 
 <section class="contenu">
@@ -45,7 +45,8 @@
 	</p>
 	<h3>Des risques de cancers</h3>
 	<p>
-		Savais-tu que boire trop d'alcool peut aussi augmenter le risque d'avoir certains cancers ? <br/>
+		Savais-tu que boire trop d'alcool peut aussi augmenter le risque d'avoir certains cancers ? <br
+		/>
 		Oui, même ceux qu'on n'imagine pas, comme ceux de la bouche, de la gorge, du foie, du sein, et d'autres
 		parties du corps.
 	</p>
@@ -55,16 +56,24 @@
 		vulnérable face à des ennemis comme la pneumonie ou la tuberculose, qui sont des maladies
 		extrêmement dangereuses pour ton corps.
 	</p>
+  <h3 class="only-mobile">N’hésite pas à découvrir nos autres thématiques !</h3>
+	<div class="flex-link only-mobile">
+    <Link path="pressionSociale" textUnderline="Pression sociale" text="et alcool" />
+    <Link path="nosConseil" textUnderline="Nos" text="conseils" />
+    <Link path="aide" textUnderline="Avoir de" text="l'aide" />
+  </div>
 </section>
-
 <style>
+  .only-mobile{
+    display: none;
+  }
 	.nav-ressource {
-    background-color: #FFF;
-    width: 90vw;
-    position: fixed;
+		background-color: #fff;
+		width: 90vw;
+		position: fixed;
 		padding: 30px 5vw;
 		display: flex;
-    align-items: center;
+		align-items: center;
 		justify-content: space-between;
 	}
 
@@ -90,16 +99,16 @@
 		justify-content: start;
 	}
 	.contenu {
-    margin-left: 20vw;
+		margin-left: 20vw;
 		margin-top: 50px;
 		gap: 40px;
 	}
-  .contenu h2{
-    margin-top: 48px;
-    margin-bottom: 32px;
-  }
+	.contenu h2 {
+		margin-top: 48px;
+		margin-bottom: 32px;
+	}
 	.contenu p {
-    margin: 48px 0 32px 0;
+		margin: 48px 0 32px 0;
 		max-width: 40vw;
 		line-height: 130%;
 	}
@@ -109,9 +118,46 @@
 		padding: 0 5px;
 	}
 
-	@media screen and (max-width: 1000px) {
-		p {
-			max-width: 80vw;
+	@media screen and (min-width: 0px) and (max-width: 800px) {
+
+    .only-mobile{
+      display: block;
+    }
+    .flex-link {
+      margin-top: 32px;
+      gap: 16px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1{
+      text-align: center;
+    }
+    /* Home Page */
+    .top-home-page {
+        margin-top: 65px;
+        padding: 0 5vw;
+        flex-direction: column;
+      }
+		.img-home {
+			margin-top: 48px;
+			width: 90vw;
+      max-width: 500px;
+		}
+
+		.nav-ressource {
+      display: none;
+		}
+
+		.subtitle {
+			width: 90%;
+		}
+
+		.contenu {
+			margin-left: 5vw;
+		}
+		.contenu p {
+			max-width: 90vw;
 		}
 	}
 </style>
