@@ -1,5 +1,6 @@
 <script>
 	import Link from '$lib/components/Link.svelte';
+	import Download from '$lib/components/Download.svelte';
 	import '$lib/styles/styles.css';
 </script>
 
@@ -9,7 +10,7 @@
 		<p class="subtitle">
 			Je ne sais quoi mettre ici
 		</p>
-		<Link path="game" textUnderline="Tout" text="télécharger (pdf)" />
+		<Download  path="game" textUnderline="Tout" text="télécharger" textSubtitle="325Mo - pdf"/>
 	</div>
 	<img class="img-home" src="/images/illu-ressources-3.svg" alt="" />
 </section>
@@ -21,13 +22,13 @@
 			<a href="/pdf/Infographie_1.pdf" target="_blank">
 				<img src="/images/Infographie_1.png" alt="" />
 			</a>
-			<Link path="game" textUnderline="Télécharger" text="(pdf)" />
+			<Download  path="game" textUnderline="télécharger" text="(pdf)" textSubtitle="325Mo"/>
 		</div>
 		<div class="box-docs">
 			<a href="/pdf/Infographie_2.pdf" target="_blank">
 				<img src="/images/Infographie_2.png" alt="" />
 			</a>
-			<Link path="game" textUnderline="Télécharger" text="(pdf)" />
+			<Download  path="game" textUnderline="télécharger" text="(pdf)" textSubtitle="325Mo"/>
 		</div>
 	</div>
 	<h2>Affiche</h2>
@@ -36,7 +37,7 @@
 			<a href="/pdf/Affiche.pdf" target="_blank">
 				<img src="/images/Affiche.jpg" alt="" />
 			</a>
-			<Link path="game" textUnderline="Télécharger" text="(pdf)" />
+			<Download  path="game" textUnderline="télécharger" text="(pdf)" textSubtitle="325Mo"/>
 		</div>
 	</div>
 	<h2>Les flyers</h2>
@@ -45,19 +46,19 @@
 			<a href="/pdf/Flyer_1.pdf" target="_blank">
 				<img src="images/flyers_1.png" alt="" />
 			</a>
-			<Link path="game" textUnderline="Télécharger" text="(pdf)" />
+			<Download  path="game" textUnderline="télécharger" text="(pdf)" textSubtitle="325Mo"/>
 		</div>
 		<div class="box-docs">
 			<a href="/pdf/flyer_2.pdf" target="_blank">
 				<img src="images/flyers_2.png" alt="" />
 			</a>
-			<Link path="game" textUnderline="Télécharger" text="(pdf)" />
+			<Download  path="game" textUnderline="télécharger" text="(pdf)" textSubtitle="325Mo"/>
 		</div>
 		<div class="box-docs">
 			<a href="/pdf/flyer_3.pdf" target="_blank">
 				<img src="images/flyers_3.png" alt="" />
 			</a>
-			<Link path="game" textUnderline="Télécharger" text="(pdf)" />
+			<Download  path="game" textUnderline="télécharger" text="(pdf)" textSubtitle="325Mo"/>
 		</div>
 	</div>
   <h3 class="only-mobile">N’hésite pas à découvrir nos autres thématiques !</h3>
