@@ -28,7 +28,6 @@
 <style>
 	.container {
 		display: flex;
-		align-items: start;
 		gap: 10px;
 		cursor: pointer;
 	}
