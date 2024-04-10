@@ -9,7 +9,6 @@
     let footer: HTMLElement;
 
     function updatePoint(value: number){
-        console.log(value)
         points = points - value
     }
 

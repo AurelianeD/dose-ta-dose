@@ -18,7 +18,10 @@
 	$: leftPointToBet = 10 - bet.reduce((prev, curr) => prev + curr)
 	$: data = quizData[questionNumber] as QuizData;
 	$: goodAnswer = data.choices.find(item => item.isGoodAnswer === true)
-	$: goodAnswerIndex = data.choices.indexOf(goodAnswer)
+	$: goodAnswerIndex = data.choices.indexOf(goodAnswer);
+	$: betCopy = [...bet];
+	$: betCopy.splice(goodAnswerIndex, 1);
+	$: lostPoints = betCopy.reduce((prev, curr) => prev + curr)
 
 	function scrollToView(){
 		setTimeout(() => {
@@ -31,15 +34,16 @@
 		}, 300)
 	}
 
+
 	function onNextQuestion(){
 		showAnswer = false;
+		bet = [0,0,0];
 		if(questionNumber === 9){
 			onEnd()
 		}else {
-			onChangeQuestion();
+			onChangeQuestion(lostPoints);
 		}
 	}
-
 
 </script>
 
@@ -56,7 +60,7 @@
 					disabled={true}
 				/>
 				{#if !isPresentation}
-					<MisePoint {leftPointToBet} onBet={(value) => bet[index] = value} />
+					<MisePoint {leftPointToBet} {bet} misePointIndex={index} onBet={(value) => bet[index] = value} />
 				{/if}
 			</div>
 		{/each}
@@ -97,7 +101,7 @@
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
-		margin: 200px 100px 100px;
+		margin: 100px 100px 100px;
 	}
 	.choicesContainer {
 		display: flex;
