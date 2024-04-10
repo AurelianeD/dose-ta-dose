@@ -7,7 +7,7 @@
         <h1><span class="encadre">Thématique</span></h1>
         <div class="thematiques">
             <div class="sujet">
-                <img src="/images/illustration-intestin.svg" alt="">
+                <img src="/images/illu-ressources-1.svg" alt="">
                 <div class="contenu">
                     <h2>Les effets de l'alcool sur la santé</h2>
                     <p>Sous titre du thème</p>
@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div class="sujet">
-                <img src="/images/illustration-pression.svg" alt="">
+                <img src="/images/illu-ressources-2.svg" alt="">
                 <div class="contenu">
                     <h2>Pression sociale et alcool</h2>
                     <p>Sous titre du thème</p>
@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div class="sujet">
-                <img src="/images/illustration-accident.svg" alt="">
+                <img src="/images/illu-ressources-3.svg" alt="">
                 <div class="contenu">
                     <h2>Nos conseil</h2>
                     <p>Sous titre du thème</p>
@@ -31,7 +31,7 @@
                 </div>
             </div>
             <div class="sujet">
-                <img src="/images/illustration-aide.svg" alt="">
+                <img src="/images/illu-ressources-4.svg" alt="">
                 <div class="contenu">
                     <h2>Aide</h2>
                     <p>Sous titre du thème</p>
