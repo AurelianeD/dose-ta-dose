@@ -15,7 +15,7 @@
 
 </script>
 
-<div class="mise" class:borderYellow={active === true}>
+<div class="mise" class:borderYellow={bet[misePointIndex] !== 0}>
     <p>Je mise :</p>
     <div class="valeurs">
         {#each [0, 5, 10] as valeur, index}
@@ -49,7 +49,8 @@
         gap: 24px;
     }
     .borderYellow{
-        border: solid var(--yellow) 2px
+        border: solid var(--yellow) 2px;
+        box-sizing: border-box;
     }
 
     .mise p{
@@ -74,8 +75,8 @@
     }
 
     .valeurs-btn-act{
-        color: #fff;
-        background-color: var(--yellow-clicked);
+        color: var(--black);
+        background-color: var(--yellow);
     }
 
     .valeurs-btn-disable{
