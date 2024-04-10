@@ -1,14 +1,14 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
-    
+
     let isMenuOpen = false;
 	let arrowSvg = '/images/fleche-bas.svg';
-    
+
     function toggleMenu() {
         isMenuOpen = !isMenuOpen;
 		arrowSvg = isMenuOpen ? '/images/fleche-haut.svg' : '/images/fleche-bas.svg';
-        
+
         // Obtenir le menu
         const menu = document.querySelector('.menu') as HTMLElement | null;
         if (menu) {
@@ -77,11 +77,6 @@
 		margin: 0 auto 0 auto;
 	}
 
-	.btn-nav {
-		display: flex;
-		gap: 24px;
-	}
-
 	.nav-style {
 		background: none;
 		border: none;
@@ -141,14 +136,14 @@
 			width: 100%;
 			background-color: var(--white);
 			opacity: 0.95;
-			transition: top 0.5s ease; 
+			transition: top 0.5s ease;
 			padding-top: 32px;
-			z-index: -1; 
+			z-index: -1;
 		}
 
 		.menu.open {
 			top: 83px;
-			z-index: -1; 
+			z-index: -1;
 		}
 
 		.encadre{
