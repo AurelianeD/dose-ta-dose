@@ -8,18 +8,17 @@
 	import PointQuiz from "$lib/components/PointQuiz.svelte";
 	import MisePoint from "$lib/components/MisePoint.svelte";
 	import Modale from "$lib/components/Modale.svelte";
+
 	export let questionNumber: number;
 	export let onChangeQuestion: (value: number) => void;
 	export let onEnd: () => void;
 	export let isPresentation: boolean;
 	export let points: number;
 
-
-
-
 	let showAnswer = false;
 	let bet = [0,0,0];
 	let isModalOpen = false;
+	let innerWidth: number;
 
 	$: leftPointToBet = 10 - bet.reduce((prev, curr) => prev + curr)
 	$: data = quizData[questionNumber] as QuizData;
@@ -65,8 +64,12 @@
 		}
 	})
 
+	$: isModalOpen = innerWidth < 1000;
+
 
 </script>
+
+<svelte:window bind:innerWidth  />
 
 <div class="container">
 	<h3>Question {data.index} / 10</h3>
@@ -118,7 +121,15 @@
 	{/if}
 </div>
 
-<Modale {isModalOpen} on:close={closeModal} />
+<Modale
+	{isModalOpen}
+	on:close={closeModal}
+	title={isPresentation ? 'Prezz' : 'Quitter la partie en cours ?'}
+	description={isPresentation ? 'Prezzz' : 'Attention, votre progression ne sera pas sauvegardée.'}
+	linkText={isPresentation ? 'Prezz' : 'la partie'}
+	linkTextUnderline={isPresentation ? 'Prezz' : 'Je continue'}
+	mainButtonText={isPresentation ? 'Prezz' : "Je retourne à l'accueil"}
+/>
 
 <style>
 	.container {

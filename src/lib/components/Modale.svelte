@@ -3,9 +3,15 @@
   import MainButton from '$lib/components/MainButton.svelte';
   import { createEventDispatcher } from 'svelte';
   import {goto} from "$app/navigation";
-  const dispatch = createEventDispatcher();
 
   export let isModalOpen = false; // Propriété permettant de contrôler l'état de la modal
+  export let title: string = "Quitter la partie en cours ?";
+  export let description: string = "Attention, votre progression ne sera pas sauvegardée.";
+  export let linkTextUnderline: string = "Je continue";
+  export let linkText: string = "la partie";
+  export let mainButtonText: string = "Je retourne à l'accueil";
+
+  const dispatch = createEventDispatcher();
 
   // Cette fonction sera appelée pour fermer la modal
   export function closeModal() {
@@ -23,18 +29,18 @@
       </svg>
     </button>
 
-    <p class="modal-title">Quitter la partie en cours ?</p>
-    <p class="modal-desc">Attention, votre progression ne sera pas sauvegardée.</p>
+    <p class="modal-title">{title}</p>
+    <p class="modal-desc">{description}</p>
     <div class="flex-btn">
-      <MainButton onClick={() => goto('/')}>Je retourne à l'accueil</MainButton>
+      <MainButton onClick={() => goto('/')}>{mainButtonText}</MainButton>
       <button on:click={closeModal} class="link container">
         <div class="containerText">
           <div>
-            <p>Je continue</p>
+            <p>{linkTextUnderline}</p>
             <div class="underline"></div>
           </div>
           <div>
-            <p class="text">la partie</p>
+            <p class="text">{linkText}</p>
             <div class="underlineHover"></div>
           </div>
         </div>
