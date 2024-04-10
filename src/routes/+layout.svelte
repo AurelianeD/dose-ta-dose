@@ -22,5 +22,6 @@
         flex: 1;
         display: flex;
         flex-direction: column;
+        margin: 80px 0;
     }
 </style>

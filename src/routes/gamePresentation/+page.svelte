@@ -1,6 +1,7 @@
 <script>
 	import '$lib/styles/styles.css';
     import MainButton from '$lib/components/MainButton.svelte'
+    import {goto} from "$app/navigation";
 </script>
 
 
@@ -13,7 +14,7 @@
         <li><span class="circle">3</span><span class="ligne-instruction">À chaque question, miser l’ensemble des points restants de l’équipe.</span></li>
         <li><span class="circle">4</span><span class="ligne-instruction">L’équipe qui a le plus de points à la fin gagne !</span></li>
     </ul>
-    <MainButton>démarrer le jeu</MainButton>
+    <MainButton onClick={() => goto('/gamePresentation/presentation')}>démarrer le jeu</MainButton>
 </div>
 
 

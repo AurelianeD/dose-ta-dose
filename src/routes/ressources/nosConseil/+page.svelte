@@ -8,53 +8,43 @@
 		<Link path="" textUnderline="Nos" text="thématiques" />
 	</div>
 	<div class="nav-right">
-		<Link path="pressionSociale" textUnderline="Pression sociale" text="et alcool" />
+		<Link path="aide" textUnderline="" text="Aide" />
 	</div>
 </div>
 
 <section class="top-home-page">
 	<div class="left-part">
-		<h1>Les effets de l’alcool sur la <span class="yellow-bg">santé</span></h1>
+		<h1>Nos<span class="yellow-bg">conseils</span></h1>
 		<p class="subtitle">
-			Boire trop d'alcool, c'est comme jouer avec sa santé&nbsp;: ça peut vraiment mal tourner..
+			Il est important d’apprendre à savoir dire “non” même si sur le moment cela peut sembler difficile.
 		</p>
 	</div>
-	<img class="img-home" src="/images/illu-ressources-1.svg" alt="" />
+	<img class="img-home" src="/images/illu-ressources-3.svg" alt="" />
 </section>
 
 <section class="contenu">
 	<p>
-		En effet, la consommation excessive d'alcool peut avoir des répercussions graves sur la santé.<br
-		/>
-		Perturbations du cerveau, altération de l'humeur, du comportement, de la clarté de pensée.
+		Cependant, s’affirmer implique également d'oser exprimer ses opinions et ses préférences, et de prendre ses propres décisions en restant fidèle à soi-même. Dire non est une compétence qui se développe avec le temps, jour après jour. Pour y parvenir, tu peux :
+		<br /><br />
+		Si tu remarques dans ton entourage un comportement qui t’inquiète, il ne faut surtout pas que tu hésites à lui venir en aide, pour cela tu peux :
 	</p>
-	<h2>Mais voyons cela plus en détail :</h2>
-	<h3>Ton cerveau</h3>
+	<h2>Exprime lui ton soutien : </h2>
 	<p>
-		L'alcool, ça empêche ton cerveau de bien fonctionner, tu peux te sentir tout drôle, avoir du mal
-		à te concentrer ou à te souvenir des choses, et même voir ton humeur faire des montagnes russes
-		sans raison.
+		Dis-lui que tu t’inquiètes pour sa santé et son bien-être, et que tu es là pour l'aider.
 	</p>
-	<h3>Ton cœur</h3>
+	<h3>Dirige le/la vers des professionnels :</h3>
 	<p>
-		Ton cœur, c'est un peu le chef d'orchestre de ton corps. Avec trop d'alcool, il peut commencer à
-		battre de manière irrégulière, de manière trop fort ou trop faible. Cela peut même aller jusqu'à
-		causer des problèmes graves comme des accidents vasculaires cérébraux (quand un vaisseau sanguin
-		dans le cerveau se bloque ou éclate) ou de l'hypertension (quand la pression de ton sang contre
-		les parois de tes artères est trop forte).
+		Conseille lui de prendre contact avec des personnes professionnelles qui pourront lui apporter une véritable aide.
 	</p>
-	<h3>Des risques de cancers</h3>
+	<h3>Évite la consommation d’alcool :</h3>
 	<p>
-		Savais-tu que boire trop d'alcool peut aussi augmenter le risque d'avoir certains cancers ? <br
-		/>
-		Oui, même ceux qu'on n'imagine pas, comme ceux de la bouche, de la gorge, du foie, du sein, et d'autres
-		parties du corps.
+		Pendant les soirées ou les sorties, évite de l’inciter à boire, même juste un verre ! Propose lui plutôt d’autres alternatives d’une boisson alcoolisée.
 	</p>
-	<h3>Un système immunitaire fragilisé</h3>
+	<h3>Fais des activités :</h3>
 	<p>
-		L'alcool peut affaiblir ton armure contre les maladies, ce qui peut rendre ton corps plus
-		vulnérable face à des ennemis comme la pneumonie ou la tuberculose, qui sont des maladies
-		extrêmement dangereuses pour ton corps.
+		Tu peux lui proposer de sortir et de faire des activités alternatives qui n'impliquent pas la consommation d'alcool, comme faire du sport, se promener ou d’autres activités ludiques.
+		<br><br>
+		Cependant, s’affirmer implique également d'oser exprimer ses opinions et ses préférences, et de prendre ses propres décisions en restant fidèle à soi-même. Dire non est une compétence qui se développe avec le temps, jour après jour.
 	</p>
   <h3 class="only-mobile">N’hésite pas à découvrir nos autres thématiques !</h3>
 	<div class="flex-link only-mobile">
@@ -63,6 +53,8 @@
     <Link path="aide" textUnderline="Avoir de" text="l'aide" />
   </div>
 </section>
+
+
 <style>
   .only-mobile{
     display: none;

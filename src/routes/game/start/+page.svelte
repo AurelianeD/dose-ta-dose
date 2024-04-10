@@ -4,8 +4,14 @@
     import {goto} from "$app/navigation";
 
     let questionNumber = 0;
+    let points = 100;
 
     let footer: HTMLElement;
+
+    function updatePoint(value: number){
+        points = points - value
+    }
+
 
     onMount(() => {
         footer = document.getElementById('footer')
@@ -18,7 +24,8 @@
 
 <Quiz
     {questionNumber}
-    onChangeQuestion={() => (questionNumber = questionNumber + 1)}
-    onEnd={() => goto('/gamePresentation/end')}
-    isPresentation={true}
+    onChangeQuestion={(value) => {questionNumber = questionNumber + 1; updatePoint(value)}}
+    onEnd={() => goto(`/game/end?score=${points}`)}
+    isPresentation={false}
+    {points}
 />
