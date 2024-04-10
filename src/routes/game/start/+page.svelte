@@ -12,6 +12,7 @@
         points = points - value
     }
 
+
     onMount(() => {
         footer = document.getElementById('footer')
         if(footer){
@@ -24,7 +25,7 @@
 <Quiz
     {questionNumber}
     onChangeQuestion={(value) => {questionNumber = questionNumber + 1; updatePoint(value)}}
-    onEnd={() => goto('/gamePresentation/end')}
+    onEnd={() => goto(`/game/end?score=${points}`)}
     isPresentation={false}
     {points}
 />

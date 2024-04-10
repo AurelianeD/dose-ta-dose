@@ -65,16 +65,19 @@
 			</div>
 		{/each}
 	</div>
-	{#if !showAnswer}
-		<div class="button">
-			<MainButton onClick={() => {
-				showAnswer = true;
-				scrollToView();
-			}}>{isPresentation ? 'Voir la réponse' : 'Valider'}</MainButton>
-		</div>
-	{/if}
+	<div class="button">
+		{#if !showAnswer}
+				<MainButton
+					onClick={() => {
+						showAnswer = true;
+						scrollToView();
+					}}
+					disabled={leftPointToBet > 0}
+				>{isPresentation ? 'Voir la réponse' : 'Valider'}</MainButton>
+		{/if}
+	</div>
 	{#if !isPresentation}
-		<div class="points">
+		<div class="points" class:button={!showAnswer}>
 			<p class="textLeft">Tu as 10 points à miser par questions.</p>
 			<PointQuiz {points} />
 		</div>
