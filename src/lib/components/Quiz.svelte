@@ -7,7 +7,7 @@
 	import PointQuiz from "$lib/components/PointQuiz.svelte";
 	import MisePoint from "$lib/components/MisePoint.svelte";
 	export let questionNumber: number;
-	export let onChangeQuestion: () => void;
+	export let onChangeQuestion: (value: number) => void;
 	export let onEnd: () => void;
 	export let isPresentation: boolean;
 	export let points: number;
