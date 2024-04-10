@@ -1,5 +1,6 @@
 <script>
 	import Link from '$lib/components/Link.svelte';
+	import Download from '$lib/components/Download.svelte';
 	import '$lib/styles/styles.css';
 </script>
 
@@ -9,7 +10,8 @@
 		<p class="subtitle">
 			Je ne sais quoi mettre ici
 		</p>
-		<Link path="game" textUnderline="Tout" text="télécharger (pdf)" />
+		<Download  path="game" textUnderline="Tout" text="télécharger" textSubtitle="325Mo - pdf"/>
+		<!-- <Link path="game" textUnderline="Tout" text="télécharger (pdf)" /> -->
 	</div>
 	<img class="img-home" src="/images/illu-ressources-3.svg" alt="" />
 </section>
