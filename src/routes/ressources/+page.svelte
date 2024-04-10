@@ -42,7 +42,7 @@
               <img src="/images/illu-ressources-5.svg" alt="">
               <div class="contenu">
                   <h2>Ressources imprimables</h2>
-                  <p>Tu retrouvera toutes nos affiches</p>
+                  <p>Tu retrouveras toutes nos affiches</p>
                   <Link path="ressources/imprimable" textUnderline="S'" text="informer" />
               </div>
           </div>
