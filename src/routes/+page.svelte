@@ -80,9 +80,7 @@
 	<div class="left-part">
 		<h2>Ressources <span class="yellow-bg">imprimables</span></h2>
 		<p class="ressource-text">
-			Lorem ipsum dolor sit amet consectetur. Massa feugiat rhoncus mi congue fames mattis non nibh.
-			Lacus tellus aenean risus pellentesque risus massa faucibus nec nullam. Ornare viverra nibh
-			praesent sed pharetra rutrum ante maecenas. A amet.
+			Sur Dose ta Dose, vous trouvez toutes les ressources nécessaires pour sensibiliser aux sujets de l’alcool, que vous soyez professeur·e ou  infirmier·ère·s. Vous trouverez tout ce qu’il faut : un guide pour animer votre atelier, des quiz pour tester vos élèves sur le sujet de l’alcool, sans oublier les nombreuses affiches et guides à transmettre aux élèves. Tout est prêt à télécharger en PDF, ou à imprimer. Juste un clic et c'est parti !
 		</p>
 		<Link path="ressources/imprimable" textUnderline="Accès aux" text="documents (pdf)" />
 	</div>
@@ -100,9 +98,7 @@
 	<div class="about-box">
 		<h2>Pourquoi <span class="yellow-bg">Dose ta Dose ?</span></h2>
 		<p class="about-text">
-			Lorem ipsum dolor sit amet consectetur. Massa feugiat rhoncus mi congue fames mattis non nibh.
-			Lacus tellus aenean risus pellentesque risus massa faucibus nec nullam. Ornare viverra nibh
-			praesent sed pharetra rutrum ante maecenas. A amet.
+			Notre mission ? Pouvoir t’équiper des meilleurs conseils et informations au sujet de l’alcool. L’objectif ? Te donner les clés pour que tu puisses dès maintenant faire des choix rationnels et éviter les nombreux risques liés à l’alcool. Chez Dose ta Dose il n’y a aucun tabou ! Nous sommes avant tout là t’aider et te renseigner ! Notre site comprend une section Ressources où tu trouveras des informations fiables pour mieux comprendre les enjeux autour de l’alcool, et une partie Jeu pour tester tes connaissances à travers des quiz.
 		</p>
 		<Link path="about" textUnderline="A" text="propos" />
 	</div>
