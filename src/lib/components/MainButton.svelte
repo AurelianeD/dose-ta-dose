@@ -2,9 +2,14 @@
 	import '$lib/styles/fonts.css';
 	export let buttonSize: 'small' | 'big' = 'small';
 	export let onClick: () => void;
+	export let disabled: boolean;
 </script>
 
-<button class={`main-button-${buttonSize} container main-button`} on:click={onClick}>
+<button
+	class={`main-button-${buttonSize} container main-button`}
+	on:click={onClick}
+	{disabled}
+>
 	<slot />
 </button>
 
@@ -21,5 +26,10 @@
 	}
 	.container:active {
 		background-color: var(--yellow-clicked);
+	}
+	.container:disabled{
+		background-color: #B3B3B3;
+		opacity: 0.7;
+		cursor: not-allowed;
 	}
 </style>

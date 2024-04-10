@@ -16,4 +16,9 @@
 
 </script>
 
-<Quiz {questionNumber} onChangeQuestion={() => (questionNumber = questionNumber + 1)} onEnd={() => goto('/gamePresentation/end')} />
+<Quiz
+    {questionNumber}
+    onChangeQuestion={() => (questionNumber = questionNumber + 1)}
+    onEnd={() => goto('/gamePresentation/end')}
+    isPresentation={true}
+/>

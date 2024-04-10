@@ -1,20 +1,36 @@
 <script lang="ts">
-    import { goto } from "$app/navigation";
-    import { onMount } from "svelte";
 
-    let activeIndex = -1; 
+    let active: boolean = false;
+    export let misePointIndex: number
+    export let leftPointToBet: number;
+    export let bet: number[];
+    export let onBet: (value: number) => void;
 
-    function toggleMise(index:number) {
-        activeIndex = index; 
+    $: console.log(leftPointToBet)
+
+    function toggleMise() {
+        active = true;
     }
+
 
 </script>
 
-<div class="mise">
-    <p>Miser</p>
+<div class="mise" class:borderYellow={bet[misePointIndex] !== 0}>
+    <p>Je mise :</p>
     <div class="valeurs">
         {#each [0, 5, 10] as valeur, index}
-            <button class="valeurs-btn" class:valeurs-btn-act={activeIndex === index} on:click={() => toggleMise(index)}>{valeur}</button>
+            <button
+                class="valeurs-btn"
+                class:valeurs-btn-disable={leftPointToBet < valeur && bet[misePointIndex] !== valeur}
+                class:valeurs-btn-act={bet[misePointIndex] === valeur}
+                on:click={() => {
+                    toggleMise(index)
+                    onBet(valeur)
+                }}
+                disabled={leftPointToBet < valeur}
+            >
+                {valeur}
+            </button>
         {/each}
     </div>
     <p>points</p>
@@ -32,11 +48,14 @@
         background-color: var(--beige);
         gap: 24px;
     }
+    .borderYellow{
+        border: solid var(--yellow) 2px;
+        box-sizing: border-box;
+    }
 
     .mise p{
-        font-weight: 800;
-        font-size: 20px;
-        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 18px;
     }
 
     .valeurs{
@@ -56,8 +75,8 @@
     }
 
     .valeurs-btn-act{
-        color: #fff;
-        background-color: var(--yellow-clicked);
+        color: var(--black);
+        background-color: var(--yellow);
     }
 
     .valeurs-btn-disable{
@@ -78,5 +97,4 @@
         color: #fff;
 		background-color: var(--yellow-clicked);
 	}
-
 </style>
