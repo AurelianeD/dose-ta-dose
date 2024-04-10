@@ -6,7 +6,10 @@
 </script>
 
 <a href={path} class="link container">
-	<img src="/images/download-arrow.svg" alt="" />
+    <div class="download_arrow">
+        <img class="arrow" src="/images/download-arrow.svg" alt="" />
+        <img class="bar" src="/images/download-bar.svg" alt="" />
+    </div>
 	<div class="containerText">
         <div class="title">
             <div>
@@ -25,14 +28,19 @@
 <style>
 	.container {
 		display: flex;
-		align-items: center;
-		gap: 16px;
+		align-items: start;
+		gap: 10px;
 		cursor: pointer;
 	}
     .containerText{
         display: flex;
         flex-direction: column;
         gap: 5px;
+    }
+    .download_arrow{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 	.title {
 		display: flex;
@@ -61,12 +69,15 @@
 	.container:hover .underlineHover {
 		width: 100%;
 	}
-	img {
-        width: 20px;
+	.arrow {
 		margin-top: 0;
 		transition: 0.3s;
 	}
-	.container:hover img {
-		margin-top: 7px;
+    .bar{
+        position: fixed;
+		margin-top: 18px;
+    }
+	.container:hover .arrow {
+		margin-top: 3px;
 	}
 </style>
