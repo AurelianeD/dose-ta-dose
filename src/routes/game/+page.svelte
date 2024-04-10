@@ -2,30 +2,29 @@
 	import '$lib/styles/styles.css';
     import MainButton from '$lib/components/MainButton.svelte'
     import {goto} from "$app/navigation";
+
 </script>
 
 
 <div class="content">
-    <h1>Drop ta <span class="encadre">Dose.</span></h1>
-    <p class="intro-jeu"> Le jeu interactif sur la prévention de l’alcool, ludique et constructif, qui se joue en physique comme en ligne.</p>
-    <ul class="instruction">
-        <li><span class="circle">1</span><span class="ligne-instruction">Vous démarrez avec 100 points.</span></li>
-        <li><span class="circle">2</span><span class="ligne-instruction">Créer des équipes et leur fournir les jetons pour un total de 100 points.</span></li>
-        <li><span class="circle">3</span><span class="ligne-instruction">Ayez le plus haut score à la fin des dix questions !</span></li>
-    </ul>
-    <MainButton onClick={() => goto('/game/start/')}>démarrer le jeu</MainButton>
+  <h1>Drop ta <span class="encadre">Dose.</span></h1>
+  <p class="intro-jeu"> Le jeu interactif sur la prévention de l’alcool, ludique et constructif, qui se joue en physique comme en ligne.</p>
+  <ul class="instruction">
+    <li><span class="circle">1</span><span class="ligne-instruction">Vous démarrez avec 100 points.</span></li>
+    <li><span class="circle">2</span><span class="ligne-instruction">Créer des équipes et leur fournir les jetons pour un total de 100 points.</span></li>
+    <li><span class="circle">3</span><span class="ligne-instruction">Ayez le plus haut score à la fin des dix questions !</span></li>
+  </ul>
+  <MainButton onClick={() => goto('/game/start/')}>démarrer le jeu</MainButton>
 </div>
 
-
 <style>
-
-    .content{
-        display: flex;
-        flex-direction: column;
-        margin: 50px 20px;
-        gap: 50px;
-        justify-content: center;
-        align-items: center;
+  .content{
+      display: flex;
+      flex-direction: column;
+      margin: 50px 20px;
+      gap: 50px;
+      justify-content: center;
+      align-items: center;
         font-family: 'DM-Sans', sans-serif;
     }
 
