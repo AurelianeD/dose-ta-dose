@@ -7,7 +7,7 @@
 	import PointQuiz from "$lib/components/PointQuiz.svelte";
 	import MisePoint from "$lib/components/MisePoint.svelte";
 	export let questionNumber: number;
-	export let onChangeQuestion: (value: number) => void;
+	export let onChangeQuestion: () => void;
 	export let onEnd: () => void;
 	export let isPresentation: boolean;
 	export let points: number;
@@ -34,7 +34,6 @@
 		}, 300)
 	}
 
-
 	function onNextQuestion(){
 		showAnswer = false;
 		bet = [0,0,0];
@@ -44,6 +43,7 @@
 			onChangeQuestion(lostPoints);
 		}
 	}
+
 
 </script>
 
@@ -138,5 +138,20 @@
 	}
 	.textLeft{
 		text-align: left;
+	}
+	@media screen and (min-width: 0px) and (max-width: 1000px) {
+		.container {
+			margin-top: 60px;
+		}
+		.title{
+			margin-bottom: 32px
+		}
+		.choicesContainer {
+			flex-direction: column;
+			gap: 10px;
+		}
+		.answerContainer{
+			margin: 50px 0;
+		}
 	}
 </style>

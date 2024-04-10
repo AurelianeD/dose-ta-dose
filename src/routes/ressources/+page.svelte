@@ -7,24 +7,35 @@
         <h1><span class="encadre">Thématique</span></h1>
         <div class="thematiques">
             <div class="sujet">
-                <img src="/images/illustration-intestin.svg" alt="">
+                <img src="/images/illu-ressources-1.svg" alt="">
                 <div class="contenu">
                     <h2>Les effets de l'alcool sur la santé</h2>
-                    <Link path="ressources/effetAlcool" textUnderline="Je m'informe" text="sur l'alcool" />
+                    <p>Sous titre du thème</p>
+                    <Link path="ressources/effetAlcool" textUnderline="S'" text="informer" />
                 </div>
             </div>
             <div class="sujet">
-                <img src="/images/illustration-pression.svg" alt="">
+                <img src="/images/illu-ressources-2.svg" alt="">
                 <div class="contenu">
                     <h2>Pression sociale et alcool</h2>
-                    <Link path="ressources/pressionSociale" textUnderline="Je m'informe" text="sur l'alcool" />
+                    <p>Sous titre du thème</p>
+                    <Link path="ressources/pressionSociale" textUnderline="S'" text="informer" />
                 </div>
             </div>
             <div class="sujet">
-                <img src="/images/illustration-aide.svg" alt="">
+                <img src="/images/illu-ressources-3.svg" alt="">
+                <div class="contenu">
+                    <h2>Nos conseil</h2>
+                    <p>Sous titre du thème</p>
+                    <Link path="ressources/nosConseil" textUnderline="S'" text="informer" />
+                </div>
+            </div>
+            <div class="sujet">
+                <img src="/images/illu-ressources-4.svg" alt="">
                 <div class="contenu">
                     <h2>Aide</h2>
-                    <Link path="ressources/aide" textUnderline="Je m'informe" text="sur l'alcool" />
+                    <p>Sous titre du thème</p>
+                    <Link path="ressources/aide" textUnderline="S'" text="informer" />
                 </div>
             </div>
         </div>
@@ -65,7 +76,13 @@
     .contenu{
         display: flex;
         flex-direction: column;
-        gap: clamp(10px, 20vw, 25px);
+    }
+
+    p{
+        margin: 8px 0 24px 0;
+        font-weight: 200;
+        font-style: italic;
+        font-size: 16px;
     }
 
 </style>

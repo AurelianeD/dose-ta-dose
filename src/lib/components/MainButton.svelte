@@ -19,6 +19,7 @@
 		background-color: var(--yellow);
 		padding: 12px 32px;
 		border-radius: 8px;
+    cursor: pointer;
 	}
 	.container:hover {
 		background-color: var(--yellow-hover);

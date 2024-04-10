@@ -2,7 +2,8 @@
 	import '$lib/styles/styles.css';
 	import Link from '$lib/components/Link.svelte';
 	import ChoiceButton from '$lib/components/ChoiceButton.svelte';
-	import {onMount} from "svelte";
+	import { onMount } from "svelte";
+	import { goto } from '$app/navigation'; // Importez la fonction goto pour la navigation
 
 	let footer: HTMLElement;
 
@@ -58,22 +59,20 @@
 	<div class="box-stat">
 		<p class="number-stat">44%</p>
 		<p class="text-stat">
-			des élèves de 6ème ont déjà goûté à l’alcool <span class="source">(OFDT, 2020)</span>
+			des élèves de 6ème ont déjà goûté à l’alcool <a class="source" href="https://www.ofdt.fr/" target="_blank">(OFDT, 2020)</a>
 		</p>
 	</div>
 	<div class="box-stat">
 		<p class="number-stat">1 élève sur 5</p>
 		<p class="text-stat">
-			a connu une alcoolisation ponctuelle importante dans le mois. <span class="source"
-				>(drogues.gouv)</span
-			>
+			a connu une alcoolisation ponctuelle importante dans le mois. <a class="source" href="https://www.drogues.gouv.fr/" target="_blank">(drogues.gouv)</a>
 		</p>
 	</div>
 	<div class="box-stat">
 		<p class="number-stat">5 à 10 ans</p>
 		<p class="text-stat">
 			c’est la tranche d’âge de l’initiation à la consommation d’alcool chez les enfants par leur
-			famille. <span class="source">(drogues.gouv)</span>
+			famille. <a class="source" href="https://www.drogues.gouv.fr/" target="_blank">(drogues.gouv)</a>
 		</p>
 	</div>
 </section>
@@ -85,12 +84,16 @@
 			Lacus tellus aenean risus pellentesque risus massa faucibus nec nullam. Ornare viverra nibh
 			praesent sed pharetra rutrum ante maecenas. A amet.
 		</p>
-		<Link path="ressources" textUnderline="Accès aux ressources" text="(pdf)" />
+		<Link path="imprimable" textUnderline="Accès aux" text="documents (pdf)" />
 	</div>
 
 	<div class="right-part">
-		<img src="/images/infographie-1.jpg" alt="" />
-		<img src="/images/infographie-2.jpg" alt="" />
+		<a href="/pdf/Infographie_1.pdf" target="_blank">
+			<img src="/images/Infographie_1.png" alt="" />
+		</a>
+		<a href="/pdf/Infographie_2.pdf" target="_blank">
+			<img src="/images/Infographie_2.png" alt="" />
+		</a>
 	</div>
 </section>
 <section class="about">
@@ -169,6 +172,7 @@
 
 	.source {
 		font-weight: 200;
+		text-decoration: none;
 	}
 
 	.prevention {
@@ -214,6 +218,9 @@
 	.ressources .right-part {
 		display: flex;
 		gap: 32px;
+	}
+	.right-part img{
+		width: 200px;
 	}
 	.ressource-text {
 		margin: 50px 0;
