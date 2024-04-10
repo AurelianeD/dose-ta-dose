@@ -19,7 +19,7 @@
 			Boire trop d'alcool, c'est comme jouer avec sa santé&nbsp;: ça peut vraiment mal tourner..
 		</p>
 	</div>
-	<img class="img-home" src="/images/illu-ressources-1.png" alt="" />
+	<img class="img-home" src="/images/illu-ressources-1.svg" alt="" />
 </section>
 
 <section class="contenu">
@@ -63,7 +63,6 @@
     <Link path="aide" textUnderline="Avoir de" text="l'aide" />
   </div>
 </section>
-
 <style>
   .only-mobile{
     display: none;
@@ -136,7 +135,7 @@
     }
     /* Home Page */
     .top-home-page {
-        margin-top: 145px;
+        margin-top: 65px;
         padding: 0 5vw;
         flex-direction: column;
       }
@@ -147,8 +146,7 @@
 		}
 
 		.nav-ressource {
-			width: 90vw;
-			padding: 30px 5vw;
+      display: none;
 		}
 
 		.subtitle {

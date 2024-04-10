@@ -20,7 +20,7 @@
 			de la pression sociale, ici nous t’aidons à y faire face.
 		</p>
 	</div>
-	<img class="img-home" src="/images/illu-ressources-2.png" alt="" />
+	<img class="img-home" src="/images/illu-ressources-2.svg" alt="" />
 </section>
 
 <section class="contenu">
@@ -51,8 +51,9 @@
     <br><br>
     Mais attention, ne te fait pas voir, cette image est trompeuse. En réalité l’alcool agit directement sur le bon fonctionnement de ton cerveau. Des difficultés à se concentrer, changement brusque de l’humeur, hypertension, battements du cœur qui fluctuent, bref tu l’auras compris c’est tout sauf cool que de consommer de l’alcool aussi tôt.
 	</p>
-  <div class="flex-link only-mobile">
-    <Link path="pressionSociale" textUnderline="Pression sociale" text="et alcool" />
+  <h3 class="only-mobile">N’hésite pas à découvrir nos autres thématiques !</h3>
+	<div class="flex-link only-mobile">
+    <Link path="pressionSociale" textUnderline="Les effets de l’alcool" text="sur la santé" />
     <Link path="nosConseil" textUnderline="Nos" text="conseils" />
     <Link path="aide" textUnderline="Avoir de" text="l'aide" />
   </div>
@@ -130,7 +131,7 @@
     }
     /* Home Page */
     .top-home-page {
-        margin-top: 145px;
+        margin-top: 65px;
         padding: 0 5vw;
         flex-direction: column;
       }
@@ -141,8 +142,7 @@
 		}
 
 		.nav-ressource {
-			width: 90vw;
-			padding: 30px 5vw;
+      display: none;
 		}
 
 		.subtitle {
