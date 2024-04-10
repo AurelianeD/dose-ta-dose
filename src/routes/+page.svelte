@@ -83,7 +83,7 @@
 			Lacus tellus aenean risus pellentesque risus massa faucibus nec nullam. Ornare viverra nibh
 			praesent sed pharetra rutrum ante maecenas. A amet.
 		</p>
-		<Link path="ressources" textUnderline="Accès aux ressources" text="(pdf)" />
+		<Link path="imprimable" textUnderline="Accès aux" text="documents (pdf)" />
 	</div>
 
 	<div class="right-part">
