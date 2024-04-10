@@ -55,9 +55,17 @@
   <p>
     Il existe aussi des centres de traitement des dépendances ou des addictions dans ta région qui pourront t’aider dans ta démarche en te prenant en charge. Ces centres offrent souvent des programmes de désintoxication, de réadaptation et de thérapie pour des personnes souffrant de problèmes d'alcoolisme.
   </p>
+  <div class="flex-link only-mobile">
+    <Link path="pressionSociale" textUnderline="Pression sociale" text="et alcool" />
+    <Link path="nosConseil" textUnderline="Nos" text="conseils" />
+    <Link path="aide" textUnderline="Avoir de" text="l'aide" />
+  </div>
 </section>
 
 <style>
+  .only-mobile{
+    display: none;
+  }
 	.nav-ressource {
 		background-color: #fff;
 		width: 90vw;
@@ -109,9 +117,47 @@
 		padding: 0 5px;
 	}
 
-	@media screen and (max-width: 1000px) {
-		p {
-			max-width: 80vw;
+	@media screen and (min-width: 0px) and (max-width: 800px) {
+
+    .only-mobile{
+      display: block;
+    }
+    .flex-link {
+      margin-top: 32px;
+      gap: 16px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1{
+      text-align: center;
+    }
+    /* Home Page */
+    .top-home-page {
+        margin-top: 145px;
+        padding: 0 5vw;
+        flex-direction: column;
+      }
+		.img-home {
+			margin-top: 48px;
+			width: 90vw;
+      max-width: 500px;
+		}
+
+		.nav-ressource {
+			width: 90vw;
+			padding: 30px 5vw;
+		}
+
+		.subtitle {
+			width: 90%;
+		}
+
+		.contenu {
+			margin-left: 5vw;
+		}
+		.contenu p {
+			max-width: 90vw;
 		}
 	}
 </style>
