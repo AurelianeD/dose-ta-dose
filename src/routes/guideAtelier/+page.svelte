@@ -48,13 +48,8 @@ Vous êtes au bon endroit, voici quelques étapes pour savoir comment s’y pren
 		</div>
 		<div class="box-docs">
 			<p class="title-docs">Jetons (50 points)</p>
-<<<<<<< HEAD
-			<img src="/images/jetons-docs.jpg" alt="" />
-			<Link path="game" textUnderline="Télécharger" text="(pdf)" />
-=======
 			<img src="/images/jetons.png" alt="" />
 			<Download path="/pdf/jetons.pdf" textUnderline="Télécharger" text="(pdf)" textSubtitle={`${fileSizes.jetons} Mo`} />
->>>>>>> 624e2e2058663d0dd72cc2d962b3ad603fdd8636
 		</div>
 	</div>
 </section>
