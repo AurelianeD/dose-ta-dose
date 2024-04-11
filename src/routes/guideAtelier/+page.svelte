@@ -1,8 +1,25 @@
-<script>
+<script lang="ts">
 	import '$lib/styles/styles.css';
 	import Link from '$lib/components/Link.svelte';
 	import MainButton from '$lib/components/MainButton.svelte';
 	import {goto} from "$app/navigation";
+	import Download from "$lib/components/Download.svelte";
+	import {onMount} from "svelte";
+	import {getFileSize} from "$lib/helpers/index.js";
+
+	let fileSizes: Record<string, string | null> = {};
+
+
+	onMount(async () => {
+		const documents = [
+			{ url: '/pdf/Rules.pdf', key: 'rules' },
+			{ url: '/pdf/jetons.pdf', key: 'jetons' },
+		];
+
+		for (const doc of documents) {
+			fileSizes[doc.key] = await getFileSize(doc.url);
+		}
+	});
 </script>
 
 <section class="top-page">
@@ -26,13 +43,18 @@ Vous êtes au bon endroit, voici quelques étapes pour savoir comment s’y pren
 	<div class="flex-docs">
 		<div class="box-docs">
 			<p class="title-docs">Règles du jeu</p>
-			<img src="/images/jetons-docs.jpg" alt="" />
-			<Link path="game" textUnderline="Télécharger" text="(pdf)" />
+			<img src="/images/rules.png" alt="" />
+			<Download path="/pdf/Rules.pdf" textUnderline="Télécharger" text="(pdf)" textSubtitle={`${fileSizes.rules} Mo`} />
 		</div>
 		<div class="box-docs">
 			<p class="title-docs">Jetons (50 points)</p>
+<<<<<<< HEAD
 			<img src="/images/jetons-docs.jpg" alt="" />
 			<Link path="game" textUnderline="Télécharger" text="(pdf)" />
+=======
+			<img src="/images/jetons.png" alt="" />
+			<Download path="/pdf/jetons.pdf" textUnderline="Télécharger" text="(pdf)" textSubtitle={`${fileSizes.jetons} Mo`} />
+>>>>>>> 624e2e2058663d0dd72cc2d962b3ad603fdd8636
 		</div>
 	</div>
 </section>
@@ -140,7 +162,13 @@ Vous êtes au bon endroit, voici quelques étapes pour savoir comment s’y pren
   font-weight: 600;
 }
 
-@media screen and (min-width: 0px) and (max-width: 800px) {
+img{
+	max-width: 60%;
+}
 
+@media screen and (min-width: 0px) and (max-width: 800px) {
+	.top-page{
+		flex-direction: column;
+	}
 }
 </style>
