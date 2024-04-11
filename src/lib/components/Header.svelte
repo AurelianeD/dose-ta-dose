@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import { onMount } from 'svelte';
 
     let isMenuOpen = false;
 	let arrowSvg = '/images/fleche-bas.svg';
@@ -58,6 +57,9 @@
 		width: 100%;
 		z-index: 999;
 	}
+    .display-mobile{
+        display: none;
+    }
 	.flex-header {
 		background-color: var(--white);
 		display: flex;
@@ -149,5 +151,8 @@
 			width: 60%;
 			border: 1px solid var(--black);
 		}
+        .display-mobile{
+            display: block;
+        }
 	}
 </style>
