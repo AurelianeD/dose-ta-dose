@@ -57,9 +57,10 @@
   </p>
   <h3 class="only-mobile">N’hésite pas à découvrir nos autres thématiques !</h3>
 	<div class="flex-link only-mobile">
-    <Link path="pressionSociale" textUnderline="Pression sociale" text="et alcool" />
-    <Link path="nosConseil" textUnderline="Nos" text="conseils" />
-    <Link path="aide" textUnderline="Avoir de" text="l'aide" />
+		<Link path="pressionSociale" textUnderline="Les effets de l’alcool" text="sur la santé" />
+		<Link path="pressionSociale" textUnderline="Pression sociale" text="et alcool" />
+		<Link path="nosConseil" textUnderline="Nos petits" text="tips" />
+		<Link path="imprimable" textUnderline="Les ressources" text="imprimables" />
   </div>
 </section>
 <style>
