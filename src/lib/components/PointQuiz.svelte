@@ -3,16 +3,11 @@
 </script>
 
 <div class="pointsQuiz">
-    <div class="points">
-        <div class="nbPoints">
-            {points}
-        </div>
-        <div class="texte">
-            points restant
-        </div>
-    </div>
     <div class="barre">
         <div class="progress" style="width: {points}%;"></div>
+    </div>
+    <div class="texte">
+        {points} points restants
     </div>
 </div>
 
@@ -20,31 +15,23 @@
 
     .pointsQuiz{
         display: flex;
-        flex-direction: column;
-        gap: 10px;
-        width: 27vw;
-        padding: 10px;
+        align-items: center;
+        gap: 16px;
+        width: 35vw;
+        margin: 10px 0;
     }
 
-    .points{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    .texte{
+        width: 100%;
         font-family: 'DM-Sans', sans-serif;
-        font-weight: 600;
+        font-weight: 300;
         color: var(--black);
         font-size: 16px;
-        text-transform: uppercase;
-    }
-
-    .nbPoints{
-        background-color: var(--yellow);
-        padding: 8px 16px;
-        border-radius: 8px;
-        font-size: 20px;
+        text-align: start;
     }
 
     .barre {
+        width: 100%;
         border-radius: 10px;
         height: 10px;
         background-color: var(--black);
