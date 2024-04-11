@@ -1,11 +1,14 @@
 <script lang="ts">
 	import '$lib/styles/styles.css'
 	import  {quizData} from '$lib/data/quiz';
+	import {beforeNavigate} from "$app/navigation";
 	import type {QuizData} from '$lib/data/quiz'
 	import QuizButton from '$lib/components/QuizButton.svelte';
 	import MainButton from '$lib/components/MainButton.svelte';
 	import PointQuiz from "$lib/components/PointQuiz.svelte";
 	import MisePoint from "$lib/components/MisePoint.svelte";
+	import Modale from "$lib/components/Modale.svelte";
+
 	export let questionNumber: number;
 	export let onChangeQuestion: (value: number) => void;
 	export let onEnd: () => void;
@@ -14,6 +17,8 @@
 
 	let showAnswer = false;
 	let bet = [0,0,0];
+	let isModalOpen = false;
+	let innerWidth: number;
 
 	$: leftPointToBet = 10 - bet.reduce((prev, curr) => prev + curr)
 	$: data = quizData[questionNumber] as QuizData;
@@ -44,8 +49,27 @@
 		}
 	}
 
+	function openModal(){
+		isModalOpen = true;
+	}
+
+	function closeModal(){
+		isModalOpen = false;
+	}
+
+	beforeNavigate(navigation => {
+		if(!isPresentation && !isModalOpen){
+			navigation.cancel()
+			openModal();
+		}
+	})
+
+	$: isModalOpen = innerWidth < 1000;
+
 
 </script>
+
+<svelte:window bind:innerWidth  />
 
 <div class="container">
 	<h3>Question {data.index} / 10</h3>
@@ -96,6 +120,16 @@
 		</div>
 	{/if}
 </div>
+
+<Modale
+	{isModalOpen}
+	on:close={closeModal}
+	title={isPresentation ? 'Prezz' : 'Quitter la partie en cours ?'}
+	description={isPresentation ? 'Prezzz' : 'Attention, votre progression ne sera pas sauvegardée.'}
+	linkText={isPresentation ? 'Prezz' : 'la partie'}
+	linkTextUnderline={isPresentation ? 'Prezz' : 'Je continue'}
+	mainButtonText={isPresentation ? 'Prezz' : "Je retourne à l'accueil"}
+/>
 
 <style>
 	.container {
