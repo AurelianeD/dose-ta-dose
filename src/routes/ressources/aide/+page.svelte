@@ -4,11 +4,11 @@
 </script>
 
 <div class="nav-ressource">
-	<div class="nav-left">
-		<Link path="Nos conseils" textUnderline="Nos" text="conseils" />
+	<div class="nav-right">
+		<Link path="/ressources" textUnderline="Nos" text="thématiques" />
 	</div>
-  <div class="nav-right">
-		<Link path="" textUnderline="Nos" text="thématiques" />
+	<div class="nav-left">
+		<Link path="imprimable" textUnderline="Ressources" text="imprimables" />
 	</div>
 </div>
 

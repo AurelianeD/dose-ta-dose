@@ -5,7 +5,7 @@
 
 <div class="nav-ressource">
 	<div class="nav-left">
-		<Link path="" textUnderline="Nos" text="thématiques" />
+		<Link path="/ressources" textUnderline="Nos" text="thématiques" />
 	</div>
 	<div class="nav-right">
 		<Link path="aide" textUnderline="" text="Aide" />
@@ -14,7 +14,7 @@
 
 <section class="top-home-page">
 	<div class="left-part">
-		<h1>Nos<span class="yellow-bg">conseils</span></h1>
+		<h1>Nos petits <span class="yellow-bg">tips</span></h1>
 		<p class="subtitle">
 			Il est important d’apprendre à savoir dire “non” même si sur le moment cela peut sembler difficile.
 		</p>
