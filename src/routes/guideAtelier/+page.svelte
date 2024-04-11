@@ -1,6 +1,5 @@
 <script lang="ts">
 	import '$lib/styles/styles.css';
-	import Link from '$lib/components/Link.svelte';
 	import MainButton from '$lib/components/MainButton.svelte';
 	import {goto} from "$app/navigation";
 	import Download from "$lib/components/Download.svelte";

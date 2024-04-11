@@ -3,7 +3,6 @@
 	import Link from '$lib/components/Link.svelte';
 	import ChoiceButton from '$lib/components/ChoiceButton.svelte';
 	import { onMount } from 'svelte';
-	import { goto } from '$app/navigation'; // Importez la fonction goto pour la navigation
 
 	let footer: HTMLElement;
 

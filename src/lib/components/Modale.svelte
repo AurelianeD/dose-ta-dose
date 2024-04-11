@@ -10,6 +10,8 @@
   export let linkTextUnderline: string = "Je continue";
   export let linkText: string = "la partie";
   export let mainButtonText: string = "Je retourne à l'accueil";
+  export let isPresentation: boolean = false;
+  export let redirectPath: string = '/';
 
   const dispatch = createEventDispatcher();
 
@@ -23,16 +25,18 @@
 {#if isModalOpen} <!-- Utilisation de la variable booléenne pour conditionner l'affichage de la modal -->
 <div class="overlay">
   <div class="modal">
-    <button class="icon-close" on:click={closeModal}>
-      <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M26.9163 9.08081L24.9188 7.08331L16.9997 15.0025L9.08051 7.08331L7.08301 9.08081L15.0022 17L7.08301 24.9191L9.08051 26.9166L16.9997 18.9975L24.9188 26.9166L26.9163 24.9191L18.9972 17L26.9163 9.08081Z" fill="#1A1A1A"/>
-      </svg>
-    </button>
+    {#if !isPresentation}
+      <button class="icon-close" on:click={closeModal}>
+        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M26.9163 9.08081L24.9188 7.08331L16.9997 15.0025L9.08051 7.08331L7.08301 9.08081L15.0022 17L7.08301 24.9191L9.08051 26.9166L16.9997 18.9975L24.9188 26.9166L26.9163 24.9191L18.9972 17L26.9163 9.08081Z" fill="#1A1A1A"/>
+        </svg>
+      </button>
+    {/if}
 
     <p class="modal-title">{title}</p>
     <p class="modal-desc">{description}</p>
     <div class="flex-btn">
-      <MainButton onClick={() => goto('/')}>{mainButtonText}</MainButton>
+      <MainButton onClick={() => goto(redirectPath)}>{mainButtonText}</MainButton>
       <button on:click={closeModal} class="link container">
         <div class="containerText">
           <div>

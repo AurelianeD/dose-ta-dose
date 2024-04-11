@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '$lib/styles/styles.css'
 	import  {quizData} from '$lib/data/quiz';
-	import {beforeNavigate} from "$app/navigation";
+	import {beforeNavigate, goto} from "$app/navigation";
 	import type {QuizData} from '$lib/data/quiz'
 	import QuizButton from '$lib/components/QuizButton.svelte';
 	import MainButton from '$lib/components/MainButton.svelte';
@@ -44,7 +44,11 @@
 	}
 
 	function closeModal(){
-		isModalOpen = false;
+		if(isPresentation){
+			goto('/')
+		}else{
+			isModalOpen = false;
+		}
 	}
 
 	beforeNavigate(navigation => {
@@ -138,11 +142,13 @@
 <Modale
 	{isModalOpen}
 	on:close={closeModal}
-	title={isPresentation ? 'Prezz' : 'Quitter la partie en cours ?'}
-	description={isPresentation ? 'Prezzz' : 'Attention, votre progression ne sera pas sauvegardée.'}
-	linkText={isPresentation ? 'Prezz' : 'la partie'}
-	linkTextUnderline={isPresentation ? 'Prezz' : 'Je continue'}
-	mainButtonText={isPresentation ? 'Prezz' : "Je retourne à l'accueil"}
+	title={isPresentation ? 'Oups, on dirait que tu es sur téléphone' : 'Quitter la partie en cours ?'}
+	description={isPresentation ? 'Le mode d’atelier est prévu pour un affichage grand écran. Si tu veux toujours tester tes connaissances lance le test.' : 'Attention, la progression ne sera pas sauvegardée.'}
+	linkText={isPresentation ? "à l'accueil" : 'la partie'}
+	linkTextUnderline={isPresentation ? 'Je retourne' : 'Je continue'}
+	mainButtonText={isPresentation ? 'Je lance le test' : "Je retourne à l'accueil"}
+	{isPresentation}
+	redirectPath="/game"
 />
 
 <style>
