@@ -84,7 +84,9 @@
 		align-items: center;
 		justify-content: space-between;
 	}
-
+	.img-home {
+		width: 30vw;
+	}
 	.top-home-page .left-part {
 		display: flex;
 		flex-direction: column;

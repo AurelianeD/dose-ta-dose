@@ -98,6 +98,9 @@
 		flex-direction: column;
 		justify-content: start;
 	}
+	.img-home {
+		width: 30vw;
+	}
 	.contenu {
 		margin-left: 20vw;
 		margin-top: 50px;

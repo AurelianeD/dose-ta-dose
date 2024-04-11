@@ -91,7 +91,9 @@
 		align-items: center;
 		justify-content: space-between;
 	}
-
+	.img-home {
+		width: 30vw;
+	}
 	.top-home-page .left-part {
 		display: flex;
 		flex-direction: column;
@@ -141,7 +143,7 @@
 		.img-home {
 			margin-top: 48px;
 			width: 90vw;
-      max-width: 500px;
+			max-width: 500px;
 		}
 
 		.nav-ressource {
