@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import { onMount } from 'svelte';
 
     let isMenuOpen = false;
 	let arrowSvg = '/images/fleche-bas.svg';
@@ -36,7 +35,7 @@
 				<hr class="display-mobile">
                 <li><button class="nav-style underline" on:click={() => handleItemClick('/#jeu')}>Le test</button></li>
 				<hr class="display-mobile">
-                <li><button class="nav-style encadre" on:click={() => handleItemClick('/guideAtelier')}>organiser un atelier</button></li>
+                <li><button class="nav-style underline" on:click={() => handleItemClick('/guideAtelier')}>organiser un atelier</button></li>
 				<hr class="display-mobile">
             </ul>
             <button class="mobile" on:click={toggleMenu}>
@@ -54,6 +53,9 @@
 		width: 100%;
 		z-index: 999;
 	}
+    .display-mobile{
+        display: none;
+    }
 	.flex-header {
 		background-color: var(--white);
 		display: flex;
@@ -100,22 +102,6 @@
 		background-color: var(--yellow);
 	}
 
-	.encadre {
-		font-weight: 600;
-		background-color: var(--yellow);
-		padding: 8px 16px;
-		border-radius: 8px;
-	}
-
-	.encadre:hover {
-		background-color: #ffe279;
-		cursor: pointer;
-	}
-
-	.encadre:active {
-		background-color: #f3c10f;
-	}
-
 	.mobile {
 		display: none;
 	}
@@ -142,13 +128,6 @@
 			z-index: -1;
 		}
 
-		.encadre{
-			background: none;
-			font-weight: 500;
-		}
-		.encadre:hover{
-			background: none;
-		}
 		.underline::after {
 			display: none;
 		}
@@ -168,5 +147,8 @@
 			width: 60%;
 			border: 1px solid var(--black);
 		}
+        .display-mobile{
+            display: block;
+        }
 	}
 </style>

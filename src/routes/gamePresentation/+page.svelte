@@ -6,19 +6,28 @@
 
 
 <div class="content">
-    <h1>Drop ta <span class="encadre">Dose.</span></h1>
-    <p class="intro-jeu"> Le jeu interactif sur la prévention de l’alcool, ludique et constructif, qui se joue en physique comme en ligne.</p>
+    <h1>Atelier <span class="encadre">d’animation</span></h1>
+    <p class="intro-jeu">Vous souhaitez organiser un atelier de prévention contre l’alcool de façon ludique ? Pour cela, vous devez :</p>
     <ul class="instruction">
-        <li><span class="circle">1</span><span class="ligne-instruction">Télécharger les ressources (jetons, flyers...)</span></li>
-        <li><span class="circle">2</span><span class="ligne-instruction">Créer des équipes et leur fournir les jetons pour un total de 100 points.</span></li>
-        <li><span class="circle">3</span><span class="ligne-instruction">À chaque question, miser l’ensemble des points restants de l’équipe.</span></li>
-        <li><span class="circle">4</span><span class="ligne-instruction">L’équipe qui a le plus de points à la fin gagne !</span></li>
+        <li><span class="circle">1.</span><span class="ligne-instruction"><a href="/guideAtelier" class="btn"><span class="yellow-underline">Consulter le guide</span></a> d’organisation de l’atelier.</span></li>
+        <li><span class="ligne-instruction">2. Créer des équipes et leur fournir 20 billets pour un total de 100 points.</span></li>
+        <li><span class="ligne-instruction">3. À chaque question, miser 2 billets soit 10 points. Les billets placés sur les réponses fausses sont perdus.</span></li>
+        <li><span class="ligne-instruction">4. L’équipe qui a le plus de points à la fin gagne !</span></li>
     </ul>
     <MainButton onClick={() => goto('/gamePresentation/presentation')}>démarrer le jeu</MainButton>
 </div>
 
 
 <style>
+  .btn{
+    font-size: 18px;
+    background: none;
+    border: none;
+  }
+  .yellow-underline{
+		text-decoration: underline;
+	}
+
 
     .content{
         display: flex;

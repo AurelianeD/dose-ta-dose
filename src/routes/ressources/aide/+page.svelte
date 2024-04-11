@@ -5,7 +5,7 @@
 
 <div class="nav-ressource">
 	<div class="nav-right">
-		<Link path="/ressources" textUnderline="Nos" text="thématiques" />
+    <Link linkType="left" path="nosTips" textUnderline="Nos petits" text="tips" />
 	</div>
 	<div class="nav-left">
 		<Link path="imprimable" textUnderline="Ressources" text="imprimables" />

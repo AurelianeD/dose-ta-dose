@@ -1,11 +1,22 @@
 <script lang="ts">
-
     export let misePointIndex: number
     export let leftPointToBet: number;
     export let bet: number[];
     export let onBet: (value: number) => void;
 
+    $: disabled = (valeur: number) => {
+        let counter: number = 0;
 
+        bet.map((item) => {if (item === 5 ){counter = counter+1}})
+        if(bet[misePointIndex] === valeur){
+            return false;
+        }
+        if(counter === 2){
+            return leftPointToBet < valeur || bet[misePointIndex] === 0;
+        }else{
+            return leftPointToBet < valeur && bet[misePointIndex] === 0;
+        }
+    }
 
 </script>
 
@@ -15,12 +26,12 @@
         {#each [0, 5, 10] as valeur}
             <button
                 class="valeurs-btn"
-                class:valeurs-btn-disable={leftPointToBet < valeur && bet[misePointIndex] !== valeur}
+                class:valeurs-btn-disable={disabled(valeur)}
                 class:valeurs-btn-act={bet[misePointIndex] === valeur}
                 on:click={() => {
                     onBet(valeur)
                 }}
-                disabled={leftPointToBet < valeur}
+                disabled= {disabled(valeur)}
             >
                 {valeur}
             </button>

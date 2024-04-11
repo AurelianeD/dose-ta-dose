@@ -21,7 +21,11 @@
 
 <section class="top-home-page">
 	<div class="left-part">
-		<h1>Dose <br /> ta dose</h1>
+    <div class="logo-h1">
+      <h1>Dose <br /> &nbsp&nbsp;&nbspta dose</h1>
+      <img class="o-svg" src="/images/o.svg" alt="" />
+    </div>
+
 		<p class="subtitle">Le site pour s’informer et tester ses connaissances sur l’alcool.</p>
 		<div class="flex-top-link">
 			<Link path="/guideAtelier" textUnderline="Guide d’atelier" text="de prévention (animateur·rice)" />
@@ -55,7 +59,7 @@
 					bon endroit ! Retrouvez toutes les étapes détaillées afin de bien préparer votre
 					manifestation dans vos classes.
 				</p>
-				<ChoiceButton path="/gamePresentation" buttonType="secondary">
+				<ChoiceButton path="/guideAtelier" buttonType="secondary">
 					<span slot="title">Accéder au guide d’atelier</span>
 					<span slot="description">Cadre scolaire</span>
 				</ChoiceButton>
@@ -124,6 +128,16 @@
 </section>
 
 <style>
+  .logo-h1{
+    position: relative;
+  }
+  .o-svg{
+    width: 28px;
+    top: 94px;
+    left: 140px;
+    z-index: -1;
+    position: absolute;
+  }
 	h1 {
 		text-transform: uppercase;
 	}
@@ -256,7 +270,27 @@
 		margin: 48px 0;
 		line-height: 130%;
 	}
-
+  @media screen and (min-width: 0px) and (max-width: 300px) {
+  .o-svg{
+    width: 18px;
+    top: 58px;
+    left:89.5px;
+  }
+}
+@media screen and (min-width: 301px) and (max-width: 500px) {
+  .o-svg{
+    width: 20px;
+    top: 68px;
+    left:103.5px;
+  }
+}
+@media screen and (min-width: 501px) and (max-width: 800px) {
+  .o-svg{
+    width: 22px;
+    top: 88px;
+    left:132.5px;
+  }
+}
 	@media screen and (min-width: 0px) and (max-width: 800px) {
 		.subtitle {
 			width: 90%;

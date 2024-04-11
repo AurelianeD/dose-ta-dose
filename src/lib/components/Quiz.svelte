@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '$lib/styles/styles.css'
 	import  {quizData} from '$lib/data/quiz';
-	import {beforeNavigate, goto} from "$app/navigation";
+	import {beforeNavigate} from "$app/navigation";
 	import type {QuizData} from '$lib/data/quiz'
 	import QuizButton from '$lib/components/QuizButton.svelte';
 	import MainButton from '$lib/components/MainButton.svelte';
@@ -19,6 +19,7 @@
 	let bet = [0,0,0];
 	let isModalOpen = false;
 	let innerWidth: number;
+	let currentMiseIndex: number;
 
 	$: leftPointToBet = 10 - bet.reduce((prev, curr) => prev + curr)
 	$: data = quizData[questionNumber] as QuizData;
@@ -47,14 +48,25 @@
 	}
 
 	beforeNavigate(navigation => {
-		if(!isPresentation && !isModalOpen && questionNumber < 10){
+		if(!isPresentation && !isModalOpen && questionNumber < 9){
 			navigation.cancel()
 			openModal();
 		}
 	})
 
-	$: isModalOpen = innerWidth < 1000;
 
+	function scrollToView(){
+		setTimeout(() => {
+			let answerElement =	document.getElementById('top');
+
+			if(!answerElement){
+				return;
+			}
+			answerElement.scrollIntoView({behavior: 'smooth'})
+		}, 300)
+	}
+
+	$: isModalOpen = innerWidth < 1000;
 
 </script>
 
@@ -63,6 +75,9 @@
 <div class="container">
 	<h3>Question {data.index} / 10</h3>
 	<h2 class="title">{data.question}</h2>
+	{#if !isPresentation}
+		<div class="pointQuiz"><PointQuiz {points} /></div>
+	{/if}
 	<div class="choicesContainer">
 		{#each data.choices as choice, index}
 			<div>
@@ -77,33 +92,37 @@
 						{leftPointToBet}
 						{bet}
 						misePointIndex={index}
-						onBet={(value) => bet[index] = value}
+						onBet={(value) => {bet[index] = value; currentMiseIndex === index}}
 					/>
 				{/if}
 			</div>
 		{/each}
 	</div>
+
 	<div class="button">
+		{#if !isPresentation}
+			{#if !showAnswer}
+			<div class="resteMise">
+				<p>Tu as 10 points à miser par questions.</p>
+			</div>
+			{/if}
+		{/if}
 		{#if !showAnswer}
 				<MainButton
 					onClick={() => {
 						showAnswer = true;
+						scrollToView()
 					}}
 					disabled={leftPointToBet > 0 && !isPresentation}
 				>
-					<a href="#answer">{isPresentation ? 'Voir la réponse' : 'Valider'}</a>
+					{isPresentation ? 'Voir la réponse' : 'Valider'}
 				</MainButton>
 		{/if}
 	</div>
-	{#if !isPresentation}
-		<div class="points" class:button={!showAnswer}>
-			<p class="textLeft">Tu as 10 points à miser par questions.</p>
-			<PointQuiz {points} />
-		</div>
-	{/if}
+
 	{#if showAnswer}
-		<div class="answerContainer" id="answer">
-			<p class="answerTitle">Réponse</p>
+		<div class="answerContainer">
+			<p class="answerTitle" id="top">Réponse</p>
 			<div class="textContainer">
 				<p class="bigText">{data.answer}</p>
 			</div>
@@ -141,10 +160,20 @@
 	}
 	.title{
 		margin-top: 30px;
-		margin-bottom: 100px
+		max-width: 60vw;
+		margin-bottom: 24px;
+	}
+	.pointQuiz{
+		margin-bottom: 100px;
 	}
 	.button{
-		margin-top: 50px;
+		margin-top: 72px;
+	}
+	.resteMise{
+		margin-bottom: 16px;
+	}
+	.button a{
+		text-decoration: none;
 	}
 	.textContainer{
 		max-width: 60%;
@@ -161,12 +190,6 @@
 		gap: 50px;
 		flex-direction: column;
 		margin: 100px 0;
-	}
-	.points{
-		align-self: flex-start;
-	}
-	.textLeft{
-		text-align: left;
 	}
 	@media screen and (min-width: 0px) and (max-width: 1000px) {
 		.container {

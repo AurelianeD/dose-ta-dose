@@ -2,9 +2,10 @@
 	export let path: string;
 	export let textUnderline: string;
 	export let text: string;
+  export let linkType: 'right' | 'left' = 'right'
 </script>
 
-<a href={path} class="link container">
+<a href={path} class="link container {linkType}">
 	<div class="containerText">
 		<div>
 			<p>{textUnderline}</p>
@@ -19,6 +20,12 @@
 </a>
 
 <style>
+  .container.left img {
+    transform: rotate(180deg);
+  }
+  .left{
+    flex-direction: row-reverse;
+  }
 	.container {
 		display: inline-flex;
 		align-items: center;
