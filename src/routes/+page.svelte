@@ -40,7 +40,7 @@
 					Avec notre quiz, tu vas pouvoir vérifier ce que tu sais déjà au sujet de l’alcool et
 					découvrir de nouvelles infos !
 				</p>
-				<ChoiceButton path="/gamePresentation">
+				<ChoiceButton path="/game">
 					<span slot="title">Lancer le questionnaire</span>
 					<span slot="description">En autonomie</span>
 				</ChoiceButton>
@@ -55,7 +55,7 @@
 					bon endroit ! Retrouvez toutes les étapes détaillées afin de bien préparer votre
 					manifestation dans vos classes.
 				</p>
-				<ChoiceButton path="/game" buttonType="secondary">
+				<ChoiceButton path="/gamePresentation" buttonType="secondary">
 					<span slot="title">Accéder au guide d’atelier</span>
 					<span slot="description">Cadre scolaire</span>
 				</ChoiceButton>
