@@ -162,6 +162,9 @@
 		flex-wrap: wrap;
 		gap: 40px;
 	}
+	.flyers .box-docs img{
+		box-shadow: 0px 0px 5px 0px var(--black);
+	}
 	.flyers img {
 		height: 350px;
 		width: auto;
