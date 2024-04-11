@@ -1,15 +1,32 @@
-<script>
+<script lang="ts">
 	import '$lib/styles/styles.css';
 	import Link from '$lib/components/Link.svelte';
 	import MainButton from '$lib/components/MainButton.svelte';
 	import {goto} from "$app/navigation";
+	import Download from "$lib/components/Download.svelte";
+	import {onMount} from "svelte";
+	import {getFileSize} from "$lib/helpers/index.js";
+
+	let fileSizes: Record<string, string | null> = {};
+
+
+	onMount(async () => {
+		const documents = [
+			{ url: '/pdf/Rules.pdf', key: 'rules' },
+			{ url: '/pdf/jetons.pdf', key: 'jetons' },
+		];
+
+		for (const doc of documents) {
+			fileSizes[doc.key] = await getFileSize(doc.url);
+		}
+	});
 </script>
 
 <section class="top-page">
 	<div class="left-part">
 		<h1>Guide d’atelier de <span class="yellow-bg">prévention</span></h1>
 		<p class="subtitle">
-			Pizza ipsum dolor meat lovers buffalo. Lovers red Bianca anchovies deep large beef. Broccoli.
+			Retrouve ici LE guide simple et ludique de prévention contre l’alcool pour animer des classes de collégiens et de lycéens !
 		</p>
 	</div>
 	<img class="img-top" src="/images/illu-home.svg" alt="" />
@@ -17,13 +34,8 @@
 <section class="description">
 	<h2>Comment bien préparer un atelier</h2>
 	<p class="description-text">
-		Pizza ipsum dolor meat lovers buffalo. Sauce crust sausage melted pesto bacon parmesan. Rib
-		cheese pineapple crust beef. Tomato extra red ham Hawaiian parmesan Chicago mushrooms. Pizza
-		burnt meat pizza meatball. Sautéed banana extra bell banana ipsum Bianca meatball extra buffalo.
-		Burnt wing spinach mushrooms olives. <br /> <br />And mouth platter Hawaiian chicken pepperoni.
-		Meat sauce bbq black black hand mayo. Thin peppers ham extra spinach crust dolor olives.
-		Parmesan stuffed NY ricotta platter broccoli buffalo ricotta crust. Deep fresh lot bacon
-		Hawaiian marinara. Sautéed thin NY mushrooms sautéed peppers.
+		Vous souhaitez organiser un atelier de prévention ? 
+Vous êtes au bon endroit, voici quelques étapes pour savoir comment s’y prendre : <br><br> Télécharger toutes les ressources mises à disposition ci-dessous. Imprimer le nombre de planches de billets nécessaires pour toute la classe, chaque équipe doit posséder 100 points, soit 2 planches ! <br> Il suffit maintenant de découper les billets et de les répartir au sein de chaque équipe. Démarrer l’atelier en cliquant sur le bouton en bas de page et projeter les questions sur le tableau. Et c'est parti !
 	</p>
 </section>
 <section class="docs">
@@ -31,18 +43,13 @@
 	<div class="flex-docs">
 		<div class="box-docs">
 			<p class="title-docs">Règles du jeu</p>
-			<img src="/images/jetons-docs.jpg" alt="" />
-			<Link path="game" textUnderline="Télécharger" text="(pdf)" />
+			<img src="/images/rules.png" alt="" />
+			<Download path="/pdf/Rules.pdf" textUnderline="Télécharger" text="(pdf)" textSubtitle={`${fileSizes.rules} Mo`} />
 		</div>
 		<div class="box-docs">
 			<p class="title-docs">Jetons (50 points)</p>
-			<img src="/images/jetons-docs.jpg" alt="" />
-			<Link path="game" textUnderline="Télécharger" text="(pdf)" />
-		</div>
-		<div class="box-docs">
-			<p class="title-docs">Flyer</p>
-			<img src="/images/jetons-docs.jpg" alt="" />
-			<Link path="game" textUnderline="Télécharger" text="(pdf)" />
+			<img src="/images/jetons.png" alt="" />
+			<Download path="/pdf/jetons.pdf" textUnderline="Télécharger" text="(pdf)" textSubtitle={`${fileSizes.jetons} Mo`} />
 		</div>
 	</div>
 </section>
@@ -75,9 +82,6 @@
     <ul>
       <li><p>L’équipe qui aura le <span class="semibold">plus de points de sobriété</span> gagne la partie.</p></li>
     </ul>
-    <div style="margin-top: 32px;">
-      <Link path="#" textUnderline="Télécharger" text="les règles(pdf)" />
-    </div>
 	</div>
 </section>
 <div class="button-center">
@@ -153,7 +157,13 @@
   font-weight: 600;
 }
 
-@media screen and (min-width: 0px) and (max-width: 800px) {
+img{
+	max-width: 60%;
+}
 
+@media screen and (min-width: 0px) and (max-width: 800px) {
+	.top-page{
+		flex-direction: column;
+	}
 }
 </style>

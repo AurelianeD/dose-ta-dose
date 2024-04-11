@@ -8,7 +8,7 @@
 </script>
 
 <div class="contenu">
-    <h1>A <span class="encadre">propos</span></h1>
+    <h1>À <span class="encadre">propos</span></h1>
     <div class="paragraphe">
       <h2>Notre équipe</h2>
       <ul>

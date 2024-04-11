@@ -4,13 +4,13 @@
 </script>
 
     <div class="content">
-        <h1><span class="encadre">Thématique</span></h1>
+        <h1><span class="encadre">Thématiques</span></h1>
         <div class="thematiques">
             <div class="sujet">
                 <img src="/images/illu-ressources-1.svg" alt="">
                 <div class="contenu">
-                    <h2>Les effets de l'alcool sur la santé</h2>
-                    <p>Sous titre du thème</p>
+                    <h2>Les effets de l’alcool sur la santé</h2>
+                    <p>Comment l'alcool affecte ton corps ?</p>
                     <Link path="ressources/effetAlcool" textUnderline="S'" text="informer" />
                 </div>
             </div>
@@ -18,15 +18,15 @@
                 <img src="/images/illu-ressources-2.svg" alt="">
                 <div class="contenu">
                     <h2>Pression sociale et alcool</h2>
-                    <p>Sous titre du thème</p>
+                    <p>Suis-je moi aussi confronté(e) à la pression sociale ?</p>
                     <Link path="ressources/pressionSociale" textUnderline="S'" text="informer" />
                 </div>
             </div>
             <div class="sujet">
                 <img src="/images/illu-ressources-3.svg" alt="">
                 <div class="contenu">
-                    <h2>Nos conseil</h2>
-                    <p>Sous titre du thème</p>
+                    <h2>Nos petits tips</h2>
+                    <p>Tu t’inquiètes pour ton ami(e) ?</p>
                     <Link path="ressources/nosConseil" textUnderline="S'" text="informer" />
                 </div>
             </div>
@@ -34,10 +34,18 @@
                 <img src="/images/illu-ressources-4.svg" alt="">
                 <div class="contenu">
                     <h2>Aide</h2>
-                    <p>Sous titre du thème</p>
+                    <p>Comment dois-je m’y prendre pour aller mieux ?</p>
                     <Link path="ressources/aide" textUnderline="S'" text="informer" />
                 </div>
             </div>
+            <div class="sujet">
+              <img src="/images/illu-ressources-5.svg" alt="">
+              <div class="contenu">
+                  <h2>Ressources imprimables</h2>
+                  <p>Tu retrouveras toutes nos affiches</p>
+                  <Link path="ressources/imprimable" textUnderline="S'" text="informer" />
+              </div>
+          </div>
         </div>
     </div>
 

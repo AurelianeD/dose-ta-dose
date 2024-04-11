@@ -1,11 +1,14 @@
 <script lang="ts">
 	import '$lib/styles/styles.css'
 	import  {quizData} from '$lib/data/quiz';
+	import {beforeNavigate, goto} from "$app/navigation";
 	import type {QuizData} from '$lib/data/quiz'
 	import QuizButton from '$lib/components/QuizButton.svelte';
 	import MainButton from '$lib/components/MainButton.svelte';
 	import PointQuiz from "$lib/components/PointQuiz.svelte";
 	import MisePoint from "$lib/components/MisePoint.svelte";
+	import Modale from "$lib/components/Modale.svelte";
+
 	export let questionNumber: number;
 	export let onChangeQuestion: (value: number) => void;
 	export let onEnd: () => void;
@@ -14,6 +17,8 @@
 
 	let showAnswer = false;
 	let bet = [0,0,0];
+	let isModalOpen = false;
+	let innerWidth: number;
 
 	$: leftPointToBet = 10 - bet.reduce((prev, curr) => prev + curr)
 	$: data = quizData[questionNumber] as QuizData;
@@ -22,17 +27,6 @@
 	$: betCopy = [...bet];
 	$: betCopy.splice(goodAnswerIndex, 1);
 	$: lostPoints = betCopy.reduce((prev, curr) => prev + curr)
-
-	function scrollToView(){
-		setTimeout(() => {
-			let answerElement =	document.getElementById('top');
-
-			if(!answerElement){
-				return;
-			}
-			answerElement.scrollIntoView({behavior: 'smooth'})
-		}, 300)
-	}
 
 	function onNextQuestion(){
 		showAnswer = false;
@@ -44,8 +38,27 @@
 		}
 	}
 
+	function openModal(){
+		isModalOpen = true;
+	}
+
+	function closeModal(){
+		isModalOpen = false;
+	}
+
+	beforeNavigate(navigation => {
+		if(!isPresentation && !isModalOpen && questionNumber < 10){
+			navigation.cancel()
+			openModal();
+		}
+	})
+
+	$: isModalOpen = innerWidth < 1000;
+
 
 </script>
+
+<svelte:window bind:innerWidth  />
 
 <div class="container">
 	<h3>Question {data.index} / 10</h3>
@@ -60,7 +73,12 @@
 					disabled={true}
 				/>
 				{#if !isPresentation}
-					<MisePoint {leftPointToBet} {bet} misePointIndex={index} onBet={(value) => bet[index] = value} />
+					<MisePoint
+						{leftPointToBet}
+						{bet}
+						misePointIndex={index}
+						onBet={(value) => bet[index] = value}
+					/>
 				{/if}
 			</div>
 		{/each}
@@ -70,10 +88,11 @@
 				<MainButton
 					onClick={() => {
 						showAnswer = true;
-						scrollToView();
 					}}
 					disabled={leftPointToBet > 0 && !isPresentation}
-				>{isPresentation ? 'Voir la réponse' : 'Valider'}</MainButton>
+				>
+					<a href="#answer">{isPresentation ? 'Voir la réponse' : 'Valider'}</a>
+				</MainButton>
 		{/if}
 	</div>
 	{#if !isPresentation}
@@ -83,7 +102,7 @@
 		</div>
 	{/if}
 	{#if showAnswer}
-		<div class="answerContainer" id="top">
+		<div class="answerContainer" id="answer">
 			<p class="answerTitle">Réponse</p>
 			<div class="textContainer">
 				<p class="bigText">{data.answer}</p>
@@ -96,6 +115,16 @@
 		</div>
 	{/if}
 </div>
+
+<Modale
+	{isModalOpen}
+	on:close={closeModal}
+	title={isPresentation ? 'Prezz' : 'Quitter la partie en cours ?'}
+	description={isPresentation ? 'Prezzz' : 'Attention, votre progression ne sera pas sauvegardée.'}
+	linkText={isPresentation ? 'Prezz' : 'la partie'}
+	linkTextUnderline={isPresentation ? 'Prezz' : 'Je continue'}
+	mainButtonText={isPresentation ? 'Prezz' : "Je retourne à l'accueil"}
+/>
 
 <style>
 	.container {

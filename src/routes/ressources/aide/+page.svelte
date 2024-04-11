@@ -4,11 +4,11 @@
 </script>
 
 <div class="nav-ressource">
-	<div class="nav-left">
-		<Link path="Nos conseils" textUnderline="Nos" text="conseils" />
+	<div class="nav-right">
+		<Link path="/ressources" textUnderline="Nos" text="thématiques" />
 	</div>
-  <div class="nav-right">
-		<Link path="" textUnderline="Nos" text="thématiques" />
+	<div class="nav-left">
+		<Link path="imprimable" textUnderline="Ressources" text="imprimables" />
 	</div>
 </div>
 
@@ -57,9 +57,10 @@
   </p>
   <h3 class="only-mobile">N’hésite pas à découvrir nos autres thématiques !</h3>
 	<div class="flex-link only-mobile">
-    <Link path="pressionSociale" textUnderline="Pression sociale" text="et alcool" />
-    <Link path="nosConseil" textUnderline="Nos" text="conseils" />
-    <Link path="aide" textUnderline="Avoir de" text="l'aide" />
+		<Link path="pressionSociale" textUnderline="Les effets de l’alcool" text="sur la santé" />
+		<Link path="pressionSociale" textUnderline="Pression sociale" text="et alcool" />
+		<Link path="nosConseil" textUnderline="Nos petits" text="tips" />
+		<Link path="imprimable" textUnderline="Les ressources" text="imprimables" />
   </div>
 </section>
 <style>
@@ -91,7 +92,9 @@
 		align-items: center;
 		justify-content: space-between;
 	}
-
+	.img-home {
+		width: 30vw;
+	}
 	.top-home-page .left-part {
 		display: flex;
 		flex-direction: column;
@@ -141,7 +144,7 @@
 		.img-home {
 			margin-top: 48px;
 			width: 90vw;
-      max-width: 500px;
+			max-width: 500px;
 		}
 
 		.nav-ressource {

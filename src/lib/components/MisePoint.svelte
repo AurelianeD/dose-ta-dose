@@ -1,16 +1,10 @@
 <script lang="ts">
 
-    let active: boolean = false;
     export let misePointIndex: number
     export let leftPointToBet: number;
     export let bet: number[];
     export let onBet: (value: number) => void;
 
-    $: console.log(leftPointToBet)
-
-    function toggleMise() {
-        active = true;
-    }
 
 
 </script>
@@ -18,13 +12,12 @@
 <div class="mise" class:borderYellow={bet[misePointIndex] !== 0}>
     <p>Je mise :</p>
     <div class="valeurs">
-        {#each [0, 5, 10] as valeur, index}
+        {#each [0, 5, 10] as valeur}
             <button
                 class="valeurs-btn"
                 class:valeurs-btn-disable={leftPointToBet < valeur && bet[misePointIndex] !== valeur}
                 class:valeurs-btn-act={bet[misePointIndex] === valeur}
                 on:click={() => {
-                    toggleMise(index)
                     onBet(valeur)
                 }}
                 disabled={leftPointToBet < valeur}

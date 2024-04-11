@@ -5,7 +5,7 @@
 	export let textSubtitle: string;
 </script>
 
-<a href={path} class="link container">
+<a href={path} class="link container" download>
     <div class="download_arrow">
         <img class="arrow" src="/images/download-arrow.svg" alt="" />
         <img class="bar" src="/images/download-bar.svg" alt="" />
@@ -73,7 +73,7 @@
 		transition: 0.3s;
 	}
     .bar{
-        position: fixed;
+        position: absolute;
 		margin-top: 18px;
     }
 	.container:hover .arrow {
