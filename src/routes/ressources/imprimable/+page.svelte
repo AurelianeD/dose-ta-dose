@@ -10,7 +10,7 @@
 
   onMount(async () => {
     const documents = [
-      { url: '/pdf/infographie_1.zip', key: 'all' },
+      { url: '/pdf/imprimables-dosetadose.zip', key: 'all' },
       { url: '/pdf/infographie_1.pdf', key: 'infographie_1' },
       { url: '/pdf/infographie_2.pdf', key: 'infographie_2' },
       { url: '/pdf/affiche.pdf', key: 'affiche_1' },
@@ -38,7 +38,7 @@
 	<div class="left-part">
 		<h1>Documents <span class="yellow-bg">imprimables</span></h1>
 		<p class="subtitle">Je ne sais quoi mettre ici</p>
-		<Download path="game" textUnderline="Tout" text="télécharger" textSubtitle="325Mo - pdf" />
+		<Download path="/pdf/imprimables-dosetadose.zip" textUnderline="Tout" text="télécharger" textSubtitle="325Mo - pdf" />
 	</div>
 	<img class="img-home" src="/images/illu-ressources-5.svg" alt="" />
 </section>
