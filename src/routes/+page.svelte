@@ -87,10 +87,10 @@
 
 	<div class="right-part">
 		<a href="/pdf/Infographie_1.pdf" target="_blank">
-			<img src="/images/Infographie_1.png" alt="" />
+			<img src="/images/infographie_1.png" alt="" />
 		</a>
 		<a href="/pdf/Infographie_2.pdf" target="_blank">
-			<img src="/images/Infographie_2.png" alt="" />
+			<img src="/images/infographie_2.png" alt="" />
 		</a>
 	</div>
 </section>

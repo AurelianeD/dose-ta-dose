@@ -72,7 +72,7 @@
 	<div class="documents">
 		<div class="box-docs">
 			<a href="/pdf/affiche.pdf" target="_blank">
-				<img src="/images/affiche.jpg" alt="" />
+				<img src="/images/affiche_1.png" alt="" />
 			</a>
 			<Download path="/pdf/affiche.pdf" textUnderline="Télécharger" text="(pdf)" textSubtitle="{`${fileSizes.affiche_1} Mo`}" />
 		</div>
@@ -81,19 +81,19 @@
 	<div class="flyers">
 		<div class="box-docs">
 			<a href="/pdf/flyer_1.pdf" target="_blank">
-				<img src="/images/flyers_1.png" alt="" />
+				<img src="/images/flyer_1.png" alt="" />
 			</a>
 			<Download path="/pdf/flyer_1.pdf" textUnderline="Télécharger" text="(pdf)" textSubtitle="{`${fileSizes.flyer_1} Mo`}" />
 		</div>
 		<div class="box-docs">
 			<a href="/pdf/flyer_2.pdf" target="_blank">
-				<img src="/images/flyers_2.png" alt="" />
+				<img src="/images/flyer_2.png" alt="" />
 			</a>
 			<Download path="/pdf/flyer_2.pdf" textUnderline="Télécharger" text="(pdf)" textSubtitle="{`${fileSizes.flyer_2} Mo`}" />
 		</div>
 		<div class="box-docs">
 			<a href="/pdf/flyer_3.pdf" target="_blank">
-				<img src="/images/flyers_3.png" alt="" />
+				<img src="/images/flyer_3.png" alt="" />
 			</a>
 			<Download path="/pdf/flyer_3.pdf" textUnderline="Télécharger" text="(pdf)" textSubtitle="{`${fileSizes.flyer_3} Mo`}" />
 		</div>
