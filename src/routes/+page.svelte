@@ -119,7 +119,7 @@
 		<p class="about-text">
 			Notre mission ? Pouvoir t’équiper des meilleurs conseils et informations au sujet de l’alcool. L’objectif ? Te donner les clés pour que tu puisses dès maintenant faire des choix rationnels et éviter les nombreux risques liés à l’alcool. Chez Dose ta Dose il n’y a aucun tabou ! Nous sommes avant tout là t’aider et te renseigner ! Notre site comprend une section Ressources où tu trouveras des informations fiables pour mieux comprendre les enjeux autour de l’alcool, et une partie Jeu pour tester tes connaissances à travers des quiz.
 		</p>
-		<Link path="about" textUnderline="A" text="propos" />
+		<Link path="about" textUnderline="À" text="propos" />
 	</div>
 </section>
 

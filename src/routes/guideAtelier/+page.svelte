@@ -34,10 +34,8 @@
 <section class="description">
 	<h2>Comment bien préparer un atelier</h2>
 	<p class="description-text">
-		Vous souhaitez organiser un atelier de prévention ? Vous êtes au bon endroit, voici quelques étapes pour savoir comment s’y prendre :
-		<br /> <br />Télécharger toutes les ressources mises à disposition ci-dessous. <br />Imprimer le nombre de planches de billets nécessaires pour toute la classe, chaque équipe doit posséder 100 points, soit 2 planches !
-		<br />Il suffit maintenant de découper les billets et de les répartir au sein de chaque équipe.
-		Démarrer l’atelier en cliquant sur le bouton en bas de page et projeter les questions sur le tableau. Et c’est parti !
+		Vous souhaitez organiser un atelier de prévention ? 
+Vous êtes au bon endroit, voici quelques étapes pour savoir comment s’y prendre : <br><br> Télécharger toutes les ressources mises à disposition ci-dessous. Imprimer le nombre de planches de billets nécessaires pour toute la classe, chaque équipe doit posséder 100 points, soit 2 planches ! <br> Il suffit maintenant de découper les billets et de les répartir au sein de chaque équipe. Démarrer l’atelier en cliquant sur le bouton en bas de page et projeter les questions sur le tableau. Et c'est parti !
 	</p>
 </section>
 <section class="docs">
@@ -84,9 +82,6 @@
     <ul>
       <li><p>L’équipe qui aura le <span class="semibold">plus de points de sobriété</span> gagne la partie.</p></li>
     </ul>
-    <div style="margin-top: 32px;">
-      <Link path="#" textUnderline="Télécharger" text="les règles(pdf)" />
-    </div>
 	</div>
 </section>
 <div class="button-center">

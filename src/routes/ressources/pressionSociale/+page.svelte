@@ -5,10 +5,10 @@
 
 <div class="nav-ressource">
 	<div class="nav-left">
-		<Link path="" textUnderline="Nos" text="thématiques" />
+		<Link path="/ressources" textUnderline="Nos" text="thématiques" />
 	</div>
 	<div class="nav-right">
-		<Link path="Nos conseils" textUnderline="Nos" text="conseils" />
+		<Link path="nosConseil" textUnderline="Nos" text="conseils" />
 	</div>
 </div>
 
@@ -16,7 +16,7 @@
 	<div class="left-part">
 		<h1>Pression sociale et <span class="yellow-bg">alcool</span></h1>
 		<p class="subtitle">
-			Allez juste un verre ! Tu as sans doute déjà du entendre cette phrase, c’est ce qu’on appelle
+			Allez juste un verre ! Tu as sans doute déjà dû entendre cette phrase, c’est ce qu’on appelle
 			de la pression sociale, ici nous t’aidons à y faire face.
 		</p>
 	</div>

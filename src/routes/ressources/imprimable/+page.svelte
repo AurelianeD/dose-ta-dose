@@ -25,6 +25,14 @@
   });
 </script>
 
+<div class="nav-ressource">
+	<div class="nav-right">
+		<Link path="/ressources" textUnderline="Nos" text="thématiques" />
+	</div>
+	<div class="nav-left">
+		<Link path="effetAlcool" textUnderline="Les effets" text="de l'alcool" />
+	</div>
+</div>
 
 <section class="top-home-page">
 	<div class="left-part">
@@ -93,6 +101,15 @@
 <style>
 	.only-mobile {
 		display: none;
+	}
+	.nav-ressource {
+		background-color: #fff;
+		width: 90vw;
+		position: fixed;
+		padding: 30px 5vw;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 	}
 
 	.subtitle {

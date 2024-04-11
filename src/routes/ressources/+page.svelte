@@ -4,7 +4,7 @@
 </script>
 
     <div class="content">
-        <h1><span class="encadre">Thématique</span></h1>
+        <h1><span class="encadre">Thématiques</span></h1>
         <div class="thematiques">
             <div class="sujet">
                 <img src="/images/illu-ressources-1.svg" alt="">
