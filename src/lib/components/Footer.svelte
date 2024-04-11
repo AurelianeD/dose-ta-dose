@@ -7,14 +7,27 @@
 <footer id="footer">
 	<p class="copyright">© Dose ta dose {currentYear}</p>
 	<div class="flex-nav">
-		<button class="nav-style" on:click={() => goto('about')}>À propos</button>
-		<button class="nav-style" on:click={() => goto('planSite')}>Plan du site</button>
-		<button class="nav-style" on:click={() => goto('legalNotice')}>Mentions légales</button>
+		<button class="nav-style underline" on:click={() => goto('about')}>À propos</button>
+		<button class="nav-style underline" on:click={() => goto('planSite')}>Plan du site</button>
+		<button class="nav-style underline" on:click={() => goto('legalNotice')}>Mentions légales</button>
 	</div>
 	<img class="logo-footer" src="/images/logo-footer.svg" alt="logo dose ta dose" />
 </footer>
 
 <style>
+  	.underline::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: -8px;
+		width: 100%;
+		height: 3px;
+		transition: background-color 0.3s ease;
+	}
+
+	.underline:hover::after {
+		background-color: var(--yellow);
+	}
 	footer {
 		background-color: var(--white);
 		display: flex;
@@ -40,6 +53,7 @@
 		cursor: pointer;
 		font-size: 16px;
 		text-align: left;
+    position: relative;
 	}
 
 	.nav-style:hover {

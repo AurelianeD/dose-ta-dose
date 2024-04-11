@@ -7,9 +7,25 @@
 <a href={path} class="container-choice {buttonType}">
   <span class="title-choice"><slot name="title">Titre</slot></span>
   <slot class="description-choice" name="description">Description</slot>
+  <img class="deco-choicebtn" src="/images/deco-choicebutton.svg" alt="" />
 </a>
 
 <style>
+  .deco-choicebtn{
+    position: absolute;
+    left: -15px;
+    bottom: -15px;
+    width: 150px;
+    height: 150px;
+  }
+  @media screen and (max-width:800px){
+    .deco-choicebtn{
+      width: 120px;
+      height: 120px;
+      left: -10px;
+    bottom: -10px;
+  }
+  }
   .container-choice.main{
     background-color: var(--yellow);
   }
@@ -29,6 +45,7 @@
     background-color: var(--white);
   }
   .container-choice {
+    position: relative;
     width: 100%;
     height: 150px;
     border-radius: 8px;

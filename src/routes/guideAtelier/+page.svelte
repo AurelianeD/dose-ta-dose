@@ -12,7 +12,7 @@
 
 	onMount(async () => {
 		const documents = [
-			{ url: '/pdf/Rules.pdf', key: 'rules' },
+			{ url: '/pdf/regle_du_jeu-dosetadose.pdf', key: 'rules' },
 			{ url: '/pdf/jetons.pdf', key: 'jetons' },
 		];
 
@@ -29,12 +29,12 @@
 			Retrouve ici LE guide simple et ludique de prévention contre l’alcool pour animer des classes de collégiens et de lycéens !
 		</p>
 	</div>
-	<img class="img-top" src="/images/illu-home.svg" alt="" />
+	<img class="img-top" src="/images/illu-guide.svg" alt="" />
 </section>
 <section class="description">
 	<h2>Comment bien préparer un atelier</h2>
 	<p class="description-text">
-		Vous souhaitez organiser un atelier de prévention ? 
+		Vous souhaitez organiser un atelier de prévention ?
 Vous êtes au bon endroit, voici quelques étapes pour savoir comment s’y prendre : <br><br> Télécharger toutes les ressources mises à disposition ci-dessous. Imprimer le nombre de planches de billets nécessaires pour toute la classe, chaque équipe doit posséder 100 points, soit 2 planches ! <br> Il suffit maintenant de découper les billets et de les répartir au sein de chaque équipe. Démarrer l’atelier en cliquant sur le bouton en bas de page et projeter les questions sur le tableau. Et c'est parti !
 	</p>
 </section>
@@ -44,7 +44,7 @@ Vous êtes au bon endroit, voici quelques étapes pour savoir comment s’y pren
 		<div class="box-docs">
 			<p class="title-docs">Règles du jeu</p>
 			<img src="/images/rules.png" alt="" />
-			<Download path="/pdf/Rules.pdf" textUnderline="Télécharger" text="(pdf)" textSubtitle={`${fileSizes.rules} Mo`} />
+			<Download path="/pdf/regle_du_jeu-dosetadose.pdf" textUnderline="Télécharger" text="(pdf)" textSubtitle={`${fileSizes.rules} Mo`} />
 		</div>
 		<div class="box-docs">
 			<p class="title-docs">Jetons (50 points)</p>

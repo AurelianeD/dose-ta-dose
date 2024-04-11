@@ -13,7 +13,7 @@
       { url: '/pdf/imprimables-dosetadose.zip', key: 'all' },
       { url: '/pdf/infographie_1.pdf', key: 'infographie_1' },
       { url: '/pdf/infographie_2.pdf', key: 'infographie_2' },
-      { url: '/pdf/affiche.pdf', key: 'affiche_1' },
+      { url: '/pdf/affiche_1.pdf', key: 'affiche_1' },
       { url: '/pdf/flyer_1.pdf', key: 'flyer_1' },
       { url: '/pdf/flyer_2.pdf', key: 'flyer_2' },
       { url: '/pdf/flyer_3.pdf', key: 'flyer_3' }
@@ -27,7 +27,7 @@
 
 <div class="nav-ressource">
 	<div class="nav-right">
-		<Link path="/ressources" textUnderline="Nos" text="thématiques" />
+    <Link linkType="left" path="aide" textUnderline="" text="Aide" />
 	</div>
 	<div class="nav-left">
 		<Link path="effetAlcool" textUnderline="Les effets" text="de l'alcool" />
@@ -37,7 +37,7 @@
 <section class="top-home-page">
 	<div class="left-part">
 		<h1>Documents <span class="yellow-bg">imprimables</span></h1>
-		<p class="subtitle">Je ne sais quoi mettre ici</p>
+		<p class="subtitle">Retrouvez tous les documents à imprimer ici, en format pdf, à distribuer à vos élèves ou à afficher dans les salles de classe !</p>
 		<Download path="/pdf/imprimables-dosetadose.zip" textUnderline="Tout" text="télécharger" textSubtitle="{`${fileSizes.all} Mo`}" />
 	</div>
 	<img class="img-home" src="/images/illu-ressources-5.svg" alt="" />
@@ -66,7 +66,7 @@
 			<a href="/pdf/affiche_1.pdf" target="_blank">
 				<img src="/images/affiche_1.png" alt="" />
 			</a>
-			<Download path="/pdf/affiche.pdf" textUnderline="Télécharger" text="(pdf)" textSubtitle="{`${fileSizes.affiche_1} Mo`}" />
+			<Download path="/pdf/affiche_1.pdf" textUnderline="Télécharger" text="(pdf)" textSubtitle="{`${fileSizes.affiche_1} Mo`}" />
 		</div>
 	</div>
 	<h2>Les flyers</h2>
@@ -166,8 +166,8 @@
 		flex-wrap: wrap;
 		gap: 40px;
 	}
-	.flyers .box-docs img{
-		box-shadow: 0px 0px 5px 0px var(--black);
+	.contenu img{
+		box-shadow: 0px 0px 8px 0px rgb(26, 26, 26, 0.20);
 	}
 	.flyers img {
 		height: 350px;
