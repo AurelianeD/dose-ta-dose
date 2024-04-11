@@ -26,10 +26,11 @@
 
   onMount(async () => {
     const documents = [
-      { url: '/pdf/Infographie_1.pdf', key: 'infographie_1' },
-      { url: '/pdf/Infographie_2.pdf', key: 'infographie_2' },
-      { url: '/pdf/Affiche.pdf', key: 'affiche_1' },
-      { url: '/pdf/Flyer_1.pdf', key: 'flyer_1' },
+      { url: '/pdf/infographie_1.zip', key: 'all' },
+      { url: '/pdf/infographie_1.pdf', key: 'infographie_1' },
+      { url: '/pdf/infographie_2.pdf', key: 'infographie_2' },
+      { url: '/pdf/affiche.pdf', key: 'affiche_1' },
+      { url: '/pdf/flyer_1.pdf', key: 'flyer_1' },
       { url: '/pdf/flyer_2.pdf', key: 'flyer_2' },
       { url: '/pdf/flyer_3.pdf', key: 'flyer_3' }
     ];
@@ -54,47 +55,47 @@
 	<h2>Les infographies</h2>
 	<div class="documents">
 		<div class="box-docs">
-			<a href="/pdf/Infographie_1.pdf" target="_blank">
-				<img src="/images/Infographie_1.png" alt="" />
+			<a href="/pdf/infographie_1.pdf" target="_blank">
+				<img src="/images/infographie_1.png" alt="" />
 			</a>
-			<Download path="game" textUnderline="Télécharger" text="(pdf)" textSubtitle="{`${fileSizes.infographie_1} Mo`}"
+			<Download path="/pdf/infographie_1.pdf" textUnderline="Télécharger" text="(pdf)" textSubtitle="{`${fileSizes.infographie_1} Mo`}"
 			/>
 		</div>
 		<div class="box-docs">
-			<a href="/pdf/Infographie_2.pdf" target="_blank">
-				<img src="/images/Infographie_2.png" alt="" />
+			<a href="/pdf/infographie_2.pdf" target="_blank">
+				<img src="/images/infographie_2.png" alt="" />
 			</a>
-			<Download path="game" textUnderline="Télécharger" text="(pdf)" textSubtitle="{`${fileSizes.infographie_2} Mo`}"/>
+			<Download path="/pdf/infographie_2.pdf" textUnderline="Télécharger" text="(pdf)" textSubtitle="{`${fileSizes.infographie_2} Mo`}"/>
 		</div>
 	</div>
 	<h2>Affiche</h2>
 	<div class="documents">
 		<div class="box-docs">
-			<a href="/pdf/Affiche.pdf" target="_blank">
-				<img src="/images/Affiche.jpg" alt="" />
+			<a href="/pdf/affiche.pdf" target="_blank">
+				<img src="/images/affiche.jpg" alt="" />
 			</a>
-			<Download path="game" textUnderline="Télécharger" text="(pdf)" textSubtitle="{`${fileSizes.affiche_1} Mo`}" />
+			<Download path="/pdf/affiche.pdf" textUnderline="Télécharger" text="(pdf)" textSubtitle="{`${fileSizes.affiche_1} Mo`}" />
 		</div>
 	</div>
 	<h2>Les flyers</h2>
 	<div class="flyers">
 		<div class="box-docs">
-			<a href="/pdf/Flyer_1.pdf" target="_blank">
+			<a href="/pdf/flyer_1.pdf" target="_blank">
 				<img src="/images/flyers_1.png" alt="" />
 			</a>
-			<Download path="game" textUnderline="Télécharger" text="(pdf)" textSubtitle="{`${fileSizes.flyer_1} Mo`}" />
+			<Download path="/pdf/flyer_1.pdf" textUnderline="Télécharger" text="(pdf)" textSubtitle="{`${fileSizes.flyer_1} Mo`}" />
 		</div>
 		<div class="box-docs">
 			<a href="/pdf/flyer_2.pdf" target="_blank">
 				<img src="/images/flyers_2.png" alt="" />
 			</a>
-			<Download path="game" textUnderline="Télécharger" text="(pdf)" textSubtitle="{`${fileSizes.flyer_2} Mo`}" />
+			<Download path="/pdf/flyer_2.pdf" textUnderline="Télécharger" text="(pdf)" textSubtitle="{`${fileSizes.flyer_2} Mo`}" />
 		</div>
 		<div class="box-docs">
 			<a href="/pdf/flyer_3.pdf" target="_blank">
 				<img src="/images/flyers_3.png" alt="" />
 			</a>
-			<Download path="game" textUnderline="Télécharger" text="(pdf)" textSubtitle="{`${fileSizes.flyer_3} Mo`}" />
+			<Download path="/pdf/flyer_3.pdf" textUnderline="Télécharger" text="(pdf)" textSubtitle="{`${fileSizes.flyer_3} Mo`}" />
 		</div>
 	</div>
 	<h3 class="only-mobile">N’hésite pas à découvrir nos autres thématiques !</h3>
