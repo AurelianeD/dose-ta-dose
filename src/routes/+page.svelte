@@ -2,17 +2,17 @@
 	import '$lib/styles/styles.css';
 	import Link from '$lib/components/Link.svelte';
 	import ChoiceButton from '$lib/components/ChoiceButton.svelte';
-	import { onMount } from "svelte";
+	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation'; // Importez la fonction goto pour la navigation
 
 	let footer: HTMLElement;
 
 	onMount(() => {
-		footer = document.getElementById('footer')
-		if(footer){
-			footer.style.display = 'flex'
+		footer = document.getElementById('footer');
+		if (footer) {
+			footer.style.display = 'flex';
 		}
-	})
+	});
 </script>
 
 <svelte:head>
@@ -24,34 +24,43 @@
 		<h1>Dose <br /> ta dose</h1>
 		<p class="subtitle">Le site pour s’informer et tester ses connaissances sur l’alcool.</p>
 		<div class="flex-top-link">
-			<Link path="/guideAtelier" textUnderline="Guide d’atelier" text="de prévention" />
+			<Link path="/guideAtelier" textUnderline="Guide d’atelier" text="de prévention (animateur·rice)" />
 			<Link path="/ressources" textUnderline="Je me renseigne" text="(élève)" />
 		</div>
 	</div>
 	<img class="img-home" src="/images/illu-home.svg" alt="" />
 </section>
 <section class="prevention" id="jeu">
-	<h2>Prévenir pour mieux <span class="yellow-bg">agir.</span></h2>
 	<div class="flex-prevention">
 		<div class="box-prevention">
-			<h3>J’anime un <span class="yellow-bg">atelier</span> de prévention</h3>
-			<p class="instruction-text">
-				<span class="underline-span">Téléchargez et imprimez les imprimables</span> nécessaires au préalable.
-			</p>
-			<ChoiceButton path="/gamePresentation">
-				<span slot="title">Démarrer l’atelier</span>
-				<span slot="description">Animation</span>
-			</ChoiceButton>
+			<div class="text-prevention">
+        <h2>Je <span class="yellow-bg">teste</span> mes connaissances</h2>
+				<p class="instruction-text">
+					Prêt à booster tes connaissances sur l’alcool ? Le jeu “Drop ta Dose” est fait pour toi.
+					Avec notre quiz, tu vas pouvoir vérifier ce que tu sais déjà au sujet de l’alcool et
+					découvrir de nouvelles infos !
+				</p>
+				<ChoiceButton path="/game">
+					<span slot="title">Lancer le questionnaire</span>
+					<span slot="description">En autonomie</span>
+				</ChoiceButton>
+			</div>
+			<img class="img-home" src="/images/illu-home-2.svg" alt="" />
 		</div>
 		<div class="box-prevention">
-			<h3>Je teste mes <span class="yellow-bg">connaissances</span></h3>
-			<p class="instruction-text">
-				<span class="underline-span">Consultez les ressources</span> présentes sur le site.
-			</p>
-			<ChoiceButton path="/game" buttonType="secondary">
-				<span slot="title">Tester mes connaissances</span>
-				<span slot="description">Autonomie</span>
-			</ChoiceButton>
+			<div class="text-prevention">
+				<h2>Je suis <span class="yellow-bg">animateur·rice</span></h2>
+				<p class="instruction-text">
+					Vous souhaitez organiser un atelier de prévention contre l’alcool ? Bingo, vous êtes au
+					bon endroit ! Retrouvez toutes les étapes détaillées afin de bien préparer votre
+					manifestation dans vos classes.
+				</p>
+				<ChoiceButton path="/gamePresentation" buttonType="secondary">
+					<span slot="title">Accéder au guide d’atelier</span>
+					<span slot="description">Cadre scolaire</span>
+				</ChoiceButton>
+			</div>
+			<img class="img-home" src="/images/illu-home-3.svg" alt="" />
 		</div>
 	</div>
 </section>
@@ -59,20 +68,30 @@
 	<div class="box-stat">
 		<p class="number-stat">44%</p>
 		<p class="text-stat">
-			des élèves de 6ème ont déjà goûté à l’alcool <a class="source" href="https://www.ofdt.fr/" target="_blank">(OFDT, 2020)</a>
+			des élèves de 6ème ont déjà goûté à l’alcool <a
+				class="source"
+				href="https://www.ofdt.fr/"
+				target="_blank">(OFDT, 2020)</a
+			>
 		</p>
 	</div>
 	<div class="box-stat">
 		<p class="number-stat">1 élève sur 5</p>
 		<p class="text-stat">
-			a connu une alcoolisation ponctuelle importante dans le mois. <a class="source" href="https://www.drogues.gouv.fr/" target="_blank">(drogues.gouv)</a>
+			a connu une alcoolisation ponctuelle importante dans le mois.<a
+				class="source"
+				href="https://www.drogues.gouv.fr/"
+				target="_blank">(drogues.gouv)</a
+			>
 		</p>
 	</div>
 	<div class="box-stat">
 		<p class="number-stat">5 à 10 ans</p>
 		<p class="text-stat">
 			c’est la tranche d’âge de l’initiation à la consommation d’alcool chez les enfants par leur
-			famille. <a class="source" href="https://www.drogues.gouv.fr/" target="_blank">(drogues.gouv)</a>
+			famille. <a class="source" href="https://www.drogues.gouv.fr/" target="_blank"
+				>(drogues.gouv)</a
+			>
 		</p>
 	</div>
 </section>
@@ -80,9 +99,9 @@
 	<div class="left-part">
 		<h2>Ressources <span class="yellow-bg">imprimables</span></h2>
 		<p class="ressource-text">
-			Sur Dose ta Dose, vous trouvez toutes les ressources nécessaires pour sensibiliser aux sujets de l’alcool, que vous soyez professeur·e ou  infirmier·ère·s. Vous trouverez tout ce qu’il faut : un guide pour animer votre atelier, des quiz pour tester vos élèves sur le sujet de l’alcool, sans oublier les nombreuses affiches et guides à transmettre aux élèves. Tout est prêt à télécharger en PDF, ou à imprimer. Juste un clic et c'est parti !
+      Sur Dose ta Dose, vous trouvez toutes les ressources nécessaires pour sensibiliser aux sujets de l’alcool, que vous soyez professeur·e ou  infirmier·ère·s. Vous trouverez tout ce qu’il faut : un guide pour animer votre atelier, des quiz pour tester vos élèves sur le sujet de l’alcool, sans oublier les nombreuses affiches et guides à transmettre aux élèves. Tout est prêt à télécharger en PDF, ou à imprimer. Juste un clic et c'est parti !
 		</p>
-		<Link path="ressources/imprimable" textUnderline="Accès aux" text="documents (pdf)" />
+		<Link path="ressources/imprimable" textUnderline="Accès aux" text="documents" />
 	</div>
 
 	<div class="right-part">
@@ -103,7 +122,6 @@
 		<Link path="about" textUnderline="A" text="propos" />
 	</div>
 </section>
-
 
 <style>
 	h1 {
@@ -175,33 +193,28 @@
 		margin-top: 128px;
 	}
 
-	.prevention h2 {
-		text-align: center;
-	}
-
 	.flex-prevention {
 		margin-top: 64px;
 		display: flex;
-		padding: 0 20vw;
-		gap: 48px;
+    flex-direction: column;
+		padding: 0 10vw;
+		gap: 128px;
 	}
-
+  .text-prevention{
+    width: 32vw;
+  }
 	.instruction-text {
 		line-height: 130%;
-		height: 20px;
 		margin-left: 5px;
 		margin-top: 24px;
-		margin-bottom: 50px;
+		margin-bottom: 80px;
 	}
 	.box-prevention {
-		width: 30vw;
+    display: flex;
+    justify-content: space-between;
 	}
-	.box-prevention h3 {
-		text-align: center;
-	}
-
-	.underline-span {
-		text-decoration: underline;
+  .box-prevention:nth-child(2) {
+		flex-direction: row-reverse;
 	}
 
 	.ressources {
@@ -215,7 +228,7 @@
 		display: flex;
 		gap: 32px;
 	}
-	.right-part img{
+	.right-part img {
 		width: 200px;
 	}
 	.ressource-text {
@@ -259,30 +272,26 @@
 		.img-home {
 			margin-top: 48px;
 			width: 90vw;
-      max-width: 500px;
+			max-width: 500px;
 		}
 
 		.prevention {
 			margin-top: 64px;
 		}
-    .box-prevention h3 {
-		text-align: left;
+    .flex-prevention {
+      padding: 0 5vw;
+      gap: 64px;
+    }
+  .text-prevention{
+    width: 90vw;
+  }
+	.instruction-text {
+		margin-left: 5px;
+		margin-bottom: 40px;
 	}
-		.flex-prevention {
-			margin-top: 48px;
-			flex-direction: column;
-			padding: 0 5vw;
-		}
-
-		.instruction-text {
-			height: 70px;
-			margin-left: 5px;
-			margin-top: 24px;
-			margin-bottom: 10px;
-		}
-		.box-prevention {
-			width: 90vw;
-		}
+  .box-prevention img {
+		display: none;
+	}
 		.statistique {
 			margin-top: 64px;
 			padding: 0 5vw;
@@ -304,45 +313,44 @@
 		.ressources .right-part {
 			flex-wrap: wrap;
 		}
-    .ressources .right-part img{
-      width: 30vw;
-      min-width: 300px;
-    }
+		.ressources .right-part img {
+			width: 30vw;
+			min-width: 300px;
+		}
 		.about {
 			margin-top: 64px;
 		}
 		.about-box {
 			width: 90vw;
 		}
-    .about h2{
-      text-align: left;
-    }
+		.about h2 {
+			text-align: left;
+		}
 		.about-text {
 			margin: 32px 0;
 		}
 	}
 
-  @media screen and (min-width: 800px) and (max-width: 1250px) {
+	@media screen and (min-width: 800px) and (max-width: 1250px) {
 		.img-home {
 			width: 40vw;
 		}
-    .top-home-page {
-		  padding: 0 5vw;
-	}
+		.top-home-page {
+			padding: 0 5vw;
+		}
 
     .flex-prevention {
-      justify-content: space-between;
-      margin-top: 64px;
-      padding: 0 10vw;
-	}
-  .box-prevention {
-		width: 50vw;
-	}
-  .instruction-text {
-		height: 50px;
-	}
-  .box-prevention h3 {
-    height: 70px;
-	}
+      padding: 0 15vw;
+    }
+  .text-prevention{
+    width: 90vw;
   }
+	.instruction-text {
+		margin-left: 5px;
+		margin-bottom: 40px;
+	}
+  .box-prevention img {
+		display: none;
+	}
+	}
 </style>
