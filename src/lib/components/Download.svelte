@@ -2,7 +2,7 @@
 	export let path: string;
 	export let textUnderline: string;
 	export let text: string;
-	export let textSubtitle: string;
+	export let textSubtitle: string  = '';
 </script>
 
 <a href={path} class="link container" download>
