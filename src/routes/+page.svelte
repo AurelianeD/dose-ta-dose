@@ -105,10 +105,10 @@
 	</div>
 
 	<div class="right-part">
-		<a href="/pdf/Infographie_1.pdf" target="_blank">
+		<a href="/pdf/infographie_1.pdf" target="_blank">
 			<img src="/images/infographie_1.png" alt="" />
 		</a>
-		<a href="/pdf/Infographie_2.pdf" target="_blank">
+		<a href="/pdf/infographie_2.pdf" target="_blank">
 			<img src="/images/infographie_2.png" alt="" />
 		</a>
 	</div>

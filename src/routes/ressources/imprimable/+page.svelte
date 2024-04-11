@@ -63,7 +63,7 @@
 	<h2>Affiche</h2>
 	<div class="documents">
 		<div class="box-docs">
-			<a href="/pdf/affiche.pdf" target="_blank">
+			<a href="/pdf/affiche_1.pdf" target="_blank">
 				<img src="/images/affiche_1.png" alt="" />
 			</a>
 			<Download path="/pdf/affiche.pdf" textUnderline="Télécharger" text="(pdf)" textSubtitle="{`${fileSizes.affiche_1} Mo`}" />
