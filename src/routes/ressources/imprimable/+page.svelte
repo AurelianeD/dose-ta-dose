@@ -38,7 +38,7 @@
 	<div class="left-part">
 		<h1>Documents <span class="yellow-bg">imprimables</span></h1>
 		<p class="subtitle">Je ne sais quoi mettre ici</p>
-		<Download path="/pdf/imprimables-dosetadose.zip" textUnderline="Tout" text="télécharger" textSubtitle="325Mo - pdf" />
+		<Download path="/pdf/imprimables-dosetadose.zip" textUnderline="Tout" text="télécharger" textSubtitle="{`${fileSizes.all} Mo`}" />
 	</div>
 	<img class="img-home" src="/images/illu-ressources-5.svg" alt="" />
 </section>
