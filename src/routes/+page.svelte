@@ -59,7 +59,7 @@
 					bon endroit ! Retrouvez toutes les étapes détaillées afin de bien préparer votre
 					manifestation dans vos classes.
 				</p>
-				<ChoiceButton path="/gamePresentation" buttonType="secondary">
+				<ChoiceButton path="/guideAtelier" buttonType="secondary">
 					<span slot="title">Accéder au guide d’atelier</span>
 					<span slot="description">Cadre scolaire</span>
 				</ChoiceButton>
