@@ -19,6 +19,7 @@
 	let bet = [0,0,0];
 	let isModalOpen = false;
 	let innerWidth: number;
+	let currentMiseIndex: number;
 
 	$: leftPointToBet = 10 - bet.reduce((prev, curr) => prev + curr)
 	$: data = quizData[questionNumber] as QuizData;
@@ -80,7 +81,8 @@
 						{leftPointToBet}
 						{bet}
 						misePointIndex={index}
-						onBet={(value) => bet[index] = value}
+						onBet={(value) => {bet[index] = value; currentMiseIndex === index}}
+						{currentMiseIndex}
 					/>
 				{/if}
 			</div>
