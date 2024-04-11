@@ -5,7 +5,7 @@
 
 <div class="nav-ressource">
 	<div class="nav-left">
-		<Link path="/ressources" textUnderline="Nos" text="thématiques" />
+    <Link linkType="left" path="imprimable" textUnderline="Ressources" text="imprimables" />
 	</div>
 	<div class="nav-right">
 		<Link path="pressionSociale" textUnderline="Pression sociale" text="et alcool" />

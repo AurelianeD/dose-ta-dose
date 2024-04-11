@@ -27,7 +27,7 @@
 
 <div class="nav-ressource">
 	<div class="nav-right">
-		<Link path="/ressources" textUnderline="Nos" text="thématiques" />
+    <Link linkType="left" path="aide" textUnderline="" text="Aide" />
 	</div>
 	<div class="nav-left">
 		<Link path="effetAlcool" textUnderline="Les effets" text="de l'alcool" />

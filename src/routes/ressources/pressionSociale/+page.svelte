@@ -5,10 +5,10 @@
 
 <div class="nav-ressource">
 	<div class="nav-left">
-		<Link path="/ressources" textUnderline="Nos" text="thématiques" />
+		<Link linkType="left" path="effetAlcool" textUnderline="Les effets" text="de l’alcool" />
 	</div>
 	<div class="nav-right">
-		<Link path="nosConseil" textUnderline="Nos" text="conseils" />
+		<Link path="nosTips" textUnderline="Nos petits" text="tips" />
 	</div>
 </div>
 
@@ -61,6 +61,7 @@
 </section>
 
 <style>
+
   .only-mobile{
     display: none;
   }
