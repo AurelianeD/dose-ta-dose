@@ -7,12 +7,12 @@
 
 
 <div class="content">
-  <h1>Drop ta <span class="encadre">Dose.</span></h1>
-  <p class="intro-jeu"> Le jeu interactif sur la prévention de l’alcool, ludique et constructif, qui se joue en physique comme en ligne.</p>
+  <h1>Teste tes <span class="encadre">connaissances</span></h1>
+  <p class="intro-jeu">Tu veux évaluer ta culture sur le thème de l'alcool ? Démarre le jeu et remporte le plus de points !</p>
   <ul class="instruction">
-    <li><span class="circle">1</span><span class="ligne-instruction">Vous démarrez avec 100 points.</span></li>
-    <li><span class="circle">2</span><span class="ligne-instruction">Créer des équipes et leur fournir les jetons pour un total de 100 points.</span></li>
-    <li><span class="circle">3</span><span class="ligne-instruction">Ayez le plus haut score à la fin des dix questions !</span></li>
+    <li><span class="ligne-instruction">1. Tu démarres avec 100 points.</span></li>
+    <li><span class="ligne-instruction">2. À chaque question, mise 10 points sur une ou deux réponses.</span></li>
+    <li><span class="ligne-instruction">3. Aie le plus haut score à la fin des dix questions !</span></li>
   </ul>
   <MainButton onClick={() => goto('/game/start/')}>démarrer le jeu</MainButton>
 </div>
@@ -40,16 +40,6 @@
         font-size: clamp(16px, 3vw, 28px);
         max-width: 500px;
         line-height: 1.5;
-    }
-
-    .circle {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 28px;
-        height: 28px;
-        border: 2px solid var(--yellow);
-        border-radius: 50%;
     }
 
     .instruction li{
