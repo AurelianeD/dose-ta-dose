@@ -215,8 +215,5 @@
 		.contenu {
 			margin-left: 5vw;
 		}
-		.contenu p {
-			max-width: 90vw;
-		}
 	}
 </style>

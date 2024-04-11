@@ -8,7 +8,7 @@
 	<p class="copyright">© Dose ta dose {currentYear}</p>
 	<div class="flex-nav">
 		<button class="nav-style" on:click={() => goto('about')}>À propos</button>
-		<button class="nav-style" on:click={() => goto('')}>Plan du site</button>
+		<button class="nav-style" on:click={() => goto('planSite')}>Plan du site</button>
 		<button class="nav-style" on:click={() => goto('legalNotice')}>Mentions légales</button>
 	</div>
 	<img class="logo-footer" src="/images/logo-footer.svg" alt="logo dose ta dose" />
