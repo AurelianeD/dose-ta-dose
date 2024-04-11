@@ -7,7 +7,7 @@
         <div class="progress" style="width: {points}%;"></div>
     </div>
     <div class="texte">
-        {points} points restants
+       <p> {points} points restants</p>
     </div>
 </div>
 
@@ -16,13 +16,13 @@
     .pointsQuiz{
         display: flex;
         align-items: center;
+        justify-content: center;
         gap: 16px;
-        width: 35vw;
+        width: 400px;
         margin: 10px 0;
     }
 
     .texte{
-        width: 100%;
         font-family: 'DM-Sans', sans-serif;
         font-weight: 300;
         color: var(--black);
@@ -31,7 +31,7 @@
     }
 
     .barre {
-        width: 100%;
+        width: 50%;
         border-radius: 10px;
         height: 10px;
         background-color: var(--black);
