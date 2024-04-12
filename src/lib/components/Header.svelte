@@ -1,6 +1,6 @@
 <script lang="ts">
+    import '$lib/styles/fonts.css'
 	import { goto } from '$app/navigation';
-	import { onMount } from 'svelte';
 
     let isMenuOpen = false;
 	let arrowSvg = '/images/fleche-bas.svg';
@@ -58,6 +58,9 @@
 		width: 100%;
 		z-index: 999;
 	}
+    .display-mobile{
+        display: none;
+    }
 	.flex-header {
 		background-color: var(--white);
 		display: flex;
@@ -119,10 +122,10 @@
 			left: 0;
 			width: 100%;
 			background-color: var(--white);
-			opacity: 0.95;
 			transition: top 0.5s ease;
-			padding-top: 32px;
 			z-index: -1;
+      height: 100%;
+      padding-top: 32px;
 		}
 
 		.menu.open {
@@ -146,8 +149,11 @@
 			text-transform: uppercase;
 		}
 		hr {
-			width: 60%;
+			width: 80%;
 			border: 1px solid var(--black);
 		}
+    .display-mobile{
+      display: block;
+    }
 	}
 </style>

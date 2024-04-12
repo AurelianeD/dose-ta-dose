@@ -26,14 +26,14 @@
 </script>
 
 <div class="container">
-    <h3><span>{score}</span> points restant</h3>
+    <h3><span>{score}</span> points restants</h3>
     <h1>Vous avez terminé !</h1>
     <div class="textContainer">
         <p class="bigText">{getEndMessage(parseInt(score, 10))}</p>
     </div>
     <div class="linkContainer">
         <Link textUnderline="Accéder" text="aux ressources" path="/ressources" />
-        <Link text="le text" textUnderline="Refaire" path="/game" />
+        <Link text="le test" textUnderline="Refaire" path="/game" />
     </div>
 </div>
 

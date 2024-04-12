@@ -1,17 +1,13 @@
 <script lang="ts">
-
     export let misePointIndex: number
     export let leftPointToBet: number;
     export let bet: number[];
     export let onBet: (value: number) => void;
-    export let currentMiseIndex: number;
-
 
     $: disabled = (valeur: number) => {
         let counter: number = 0;
 
         bet.map((item) => {if (item === 5 ){counter = counter+1}})
-        console.log(counter)
         if(bet[misePointIndex] === valeur){
             return false;
         }
@@ -21,9 +17,6 @@
             return leftPointToBet < valeur && bet[misePointIndex] === 0;
         }
     }
-
-
-
 
 </script>
 

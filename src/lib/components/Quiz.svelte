@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '$lib/styles/styles.css'
 	import  {quizData} from '$lib/data/quiz';
-	import {beforeNavigate, goto} from "$app/navigation";
+	import {beforeNavigate} from "$app/navigation";
 	import type {QuizData} from '$lib/data/quiz'
 	import QuizButton from '$lib/components/QuizButton.svelte';
 	import MainButton from '$lib/components/MainButton.svelte';
@@ -48,14 +48,25 @@
 	}
 
 	beforeNavigate(navigation => {
-		if(!isPresentation && !isModalOpen && questionNumber < 10){
+		if(!isPresentation && !isModalOpen && questionNumber < 9){
 			navigation.cancel()
 			openModal();
 		}
 	})
 
-	$: isModalOpen = innerWidth < 1000;
 
+	function scrollToView(){
+		setTimeout(() => {
+			let answerElement =	document.getElementById('top');
+
+			if(!answerElement){
+				return;
+			}
+			answerElement.scrollIntoView({behavior: 'smooth'})
+		}, 300)
+	}
+
+	$: isModalOpen = innerWidth < 1000;
 
 </script>
 
@@ -82,13 +93,12 @@
 						{bet}
 						misePointIndex={index}
 						onBet={(value) => {bet[index] = value; currentMiseIndex === index}}
-						{currentMiseIndex}
 					/>
 				{/if}
 			</div>
 		{/each}
 	</div>
-	
+
 	<div class="button">
 		{#if !isPresentation}
 			{#if !showAnswer}
@@ -101,17 +111,18 @@
 				<MainButton
 					onClick={() => {
 						showAnswer = true;
+						scrollToView()
 					}}
 					disabled={leftPointToBet > 0 && !isPresentation}
 				>
-					<a href="#answer">{isPresentation ? 'Voir la réponse' : 'Valider'}</a>
+					{isPresentation ? 'Voir la réponse' : 'Valider'}
 				</MainButton>
 		{/if}
 	</div>
-	
+
 	{#if showAnswer}
-		<div class="answerContainer" id="answer">
-			<p class="answerTitle">Réponse</p>
+		<div class="answerContainer">
+			<p class="answerTitle" id="top">Réponse</p>
 			<div class="textContainer">
 				<p class="bigText">{data.answer}</p>
 			</div>

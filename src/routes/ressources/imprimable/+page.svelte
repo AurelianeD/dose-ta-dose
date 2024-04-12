@@ -24,16 +24,6 @@
     }
   });
 </script>
-
-<div class="nav-ressource">
-	<div class="nav-right">
-    <Link linkType="left" path="aide" textUnderline="" text="Aide" />
-	</div>
-	<div class="nav-left">
-		<Link path="effetAlcool" textUnderline="Les effets" text="de l'alcool" />
-	</div>
-</div>
-
 <section class="top-home-page">
 	<div class="left-part">
 		<h1>Documents <span class="yellow-bg">imprimables</span></h1>
@@ -48,14 +38,14 @@
 	<div class="documents">
 		<div class="box-docs">
 			<a href="/pdf/infographie_1.pdf" target="_blank">
-				<img src="/images/infographie_1.png" alt="" />
+				<img src="/images/Infographie_1.png" alt="" />
 			</a>
 			<Download path="/pdf/infographie_1.pdf" textUnderline="Télécharger" text="(pdf)" textSubtitle="{`${fileSizes.infographie_1} Mo`}"
 			/>
 		</div>
 		<div class="box-docs">
 			<a href="/pdf/infographie_2.pdf" target="_blank">
-				<img src="/images/infographie_2.png" alt="" />
+				<img src="/images/Infographie_2.png" alt="" />
 			</a>
 			<Download path="/pdf/infographie_2.pdf" textUnderline="Télécharger" text="(pdf)" textSubtitle="{`${fileSizes.infographie_2} Mo`}"/>
 		</div>
@@ -102,15 +92,6 @@
 <style>
 	.only-mobile {
 		display: none;
-	}
-	.nav-ressource {
-		background-color: #fff;
-		width: 90vw;
-		position: fixed;
-		padding: 30px 5vw;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
 	}
 
 	.subtitle {
@@ -173,10 +154,26 @@
 		height: 350px;
 		width: auto;
 	}
-	.yellow-bg {
-		background-color: var(--yellow);
-		padding: 0 5px;
-	}
+  .yellow-bg {
+    position: relative;
+    display: inline-block;
+}
+
+.yellow-bg::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--yellow);
+    animation: highlight 0.5s;
+}
+
+@keyframes highlight {
+    0% { width: 0;}
+    100% { width: 100%; }
+}
 
 	@media screen and (min-width: 0px) and (max-width: 800px) {
 		.only-mobile {
@@ -203,11 +200,6 @@
 			width: 90vw;
 			max-width: 500px;
 		}
-
-		.nav-ressource {
-			display: none;
-		}
-
 		.subtitle {
 			width: 90%;
 		}

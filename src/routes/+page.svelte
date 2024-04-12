@@ -3,7 +3,6 @@
 	import Link from '$lib/components/Link.svelte';
 	import ChoiceButton from '$lib/components/ChoiceButton.svelte';
 	import { onMount } from 'svelte';
-	import { goto } from '$app/navigation'; // Importez la fonction goto pour la navigation
 
 	let footer: HTMLElement;
 
@@ -29,7 +28,7 @@
 		<p class="subtitle">Le site pour s’informer et tester ses connaissances sur l’alcool.</p>
 		<div class="flex-top-link">
 			<Link path="/guideAtelier" textUnderline="Guide d’atelier" text="de prévention (animateur·rice)" />
-			<Link path="/ressources" textUnderline="Je me renseigne" text="(élève)" />
+			<Link path="/ressources" textUnderline="En savoir plus" text="le sujet" />
 		</div>
 	</div>
 	<img class="img-home" src="/images/illu-home.svg" alt="" />
@@ -45,7 +44,7 @@
 					découvrir de nouvelles infos !
 				</p>
 				<ChoiceButton path="/game">
-					<span slot="title">Lancer le questionnaire</span>
+					<span slot="title">Lancer le test</span>
 					<span slot="description">En autonomie</span>
 				</ChoiceButton>
 			</div>
@@ -59,9 +58,9 @@
 					bon endroit ! Retrouvez toutes les étapes détaillées afin de bien préparer votre
 					manifestation dans vos classes.
 				</p>
-				<ChoiceButton path="/guideAtelier" buttonType="secondary">
-					<span slot="title">Accéder au guide d’atelier</span>
-					<span slot="description">Cadre scolaire</span>
+				<ChoiceButton path="/guideAtelier">
+					<span slot="title">Organiser un atelier</span>
+					<span slot="description">Guide d’atelier en milieu scolaire</span>
 				</ChoiceButton>
 			</div>
 			<img class="img-home" src="/images/illu-home-3.svg" alt="" />
@@ -101,7 +100,7 @@
 </section>
 <section class="ressources">
 	<div class="left-part">
-		<h2>Ressources <span class="yellow-bg">imprimables</span></h2>
+		<h2>Documents <span class="yellow-bg">imprimables</span></h2>
 		<p class="ressource-text">
       Sur Dose ta Dose, vous trouvez toutes les ressources nécessaires pour sensibiliser aux sujets de l’alcool, que vous soyez professeur·e ou  infirmier·ère·s. Vous trouverez tout ce qu’il faut : un guide pour animer votre atelier, des quiz pour tester vos élèves sur le sujet de l’alcool, sans oublier les nombreuses affiches et guides à transmettre aux élèves. Tout est prêt à télécharger en PDF, ou à imprimer. Juste un clic et c'est parti !
 		</p>
@@ -110,10 +109,10 @@
 
 	<div class="right-part">
 		<a href="/pdf/infographie_1.pdf" target="_blank">
-			<img src="/images/infographie_1.png" alt="" />
+			<img src="/images/Infographie_1.png" alt="" />
 		</a>
 		<a href="/pdf/infographie_2.pdf" target="_blank">
-			<img src="/images/infographie_2.png" alt="" />
+			<img src="/images/Infographie_2.png" alt="" />
 		</a>
 	</div>
 </section>

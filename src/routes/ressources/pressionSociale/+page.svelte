@@ -112,12 +112,29 @@
 		max-width: 40vw;
 		line-height: 130%;
 	}
-
-	.yellow-bg {
-		background-color: var(--yellow);
-		padding: 0 5px;
+  h1 .yellow-bg {
+		position: relative !important;
+    display: inline-block;
 	}
 
+	h1 .yellow-bg::before {
+		content: '';
+		z-index: -1;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: var(--yellow);
+		animation: highlight 0.5s;
+	}
+  @keyframes highlight {
+		0% {
+			width: 0;
+		}
+		100% {
+			width: 100%;
+		}
+	}
 	@media screen and (min-width: 0px) and (max-width: 800px) {
 
     .only-mobile{
