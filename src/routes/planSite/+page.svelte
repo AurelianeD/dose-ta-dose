@@ -25,7 +25,7 @@
 			<a href="/ressources/effetAlcool" class="underline">Les effets de l'alcool sur la santé</a>
 			<a href="/ressources/pressionSociale" class="underline">Pression sociale de alcool</a>
 			<a href="/ressources/imprimable" class="underline">Documents imprimables</a>
-			<a href="/ressources/nosConseils" class="underline">Nos petits tips</a>
+			<a href="/ressources/nosTips" class="underline">Nos petits tips</a>
 			<a href="/resssources/aide" class="underline">Aide</a>
 		</div>
 	</div>
