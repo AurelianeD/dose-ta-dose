@@ -15,7 +15,7 @@
 			<a href="/gamePresentation" class="underline">Atelier d'animation</a>
 			<a href="/game" class="underline">Tester ses connaissances</a>
 			<a href="/ressources/imprimable" class="underline">Documents imprimables</a>
-			<a href="/legalNotice" class="underline">Mentions légales</a>
+			<a href="/mentionsLegales" class="underline">Mentions légales</a>
 		</div>
 	</div>
 	<div>
