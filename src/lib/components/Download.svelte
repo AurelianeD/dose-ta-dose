@@ -3,6 +3,7 @@
 	export let textUnderline: string;
 	export let text: string;
 	export let textSubtitle: string  = '';
+    export let size: number;
 </script>
 
 <a href={path} class="link container" download>
@@ -21,7 +22,9 @@
                 <div class="underlineHover"></div>
             </div>
         </div>
-        <p class="subtitle">{textSubtitle}</p>
+        {#if size}
+            <p class="subtitle">{size} Mo</p>
+        {/if}
 	</div>
 </a>
 

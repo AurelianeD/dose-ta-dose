@@ -225,6 +225,13 @@
 		}
 		.answerContainer{
 			margin: 50px 0;
+      width: 90vw;
 		}
+    .textContainer{
+		max-width: 90vw;
+	  }
+    .textContainer p {
+      font-size: 16px;
+    }
 	}
 </style>

@@ -1,6 +1,13 @@
-<script>
+<script lang="ts">
 	import '$lib/styles/styles.css';
-	import Link from '$lib/components/Link.svelte';
+	import Download from "$lib/components/Download.svelte";
+	import {onMount} from "svelte";
+	import {getFileSize} from "$lib/helpers";
+	let fileSize: any = {};
+
+	onMount(async () => {
+		fileSize = await getFileSize('/pdf/communique-presse.pdf')
+	})
 </script>
 
 <div class="contenu">
@@ -21,7 +28,8 @@
 			pourtant au collège ce sujet est très tabou ! C'est pourquoi sur ce site, vous trouverez
 			également un jeu afin de vous évaluer sur vos connaissances !
 		</p>
-		<Link path="" textUnderline="Communiqué" text="de presse" />
+<!--		<Link path="" textUnderline="Communiqué" text="de presse" />-->
+		<Download path="/pdf/communique-press.pdf" text="le communiqué de presse" textUnderline="Télécharger" size={fileSize}  />
 	</div>
 	<div class="paragraphe">
 		<h2>Notre équipe</h2>

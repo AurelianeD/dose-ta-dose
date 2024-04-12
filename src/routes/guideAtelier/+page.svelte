@@ -44,12 +44,12 @@ Vous êtes au bon endroit, voici quelques étapes pour savoir comment s’y pren
 		<div class="box-docs">
 			<p class="title-docs">Règles du jeu</p>
 			<img src="/images/rules.png" alt="" />
-			<Download path="/pdf/regle_du_jeu-dosetadose.pdf" textUnderline="Télécharger" text="(pdf)" textSubtitle={`${fileSizes.rules} Mo`} />
+			<Download path="/pdf/regle_du_jeu-dosetadose.pdf" textUnderline="Télécharger" text="(pdf)" size={fileSizes.rules} />
 		</div>
 		<div class="box-docs">
 			<p class="title-docs">Jetons (50 points)</p>
 			<img src="/images/jetons.png" alt="" />
-			<Download path="/pdf/jetons.pdf" textUnderline="Télécharger" text="(pdf)" textSubtitle={`${fileSizes.jetons} Mo`} />
+			<Download path="/pdf/jetons.pdf" textUnderline="Télécharger" text="(pdf)" size={fileSizes.jetons} />
 		</div>
 	</div>
 </section>
@@ -165,22 +165,27 @@ Vous êtes au bon endroit, voici quelques étapes pour savoir comment s’y pren
   .rules-text ul li {
     line-height: 130%;
   }
-.button-center{
-  margin-top: 98px;
-  display: flex;
-  justify-content: center;
-}
-.semibold{
-  font-weight: 600;
-}
+  .semibold{
+    font-weight: 600;
+  }
 
-img{
-	max-width: 60%;
-}
+  img{
+    max-width: 60%;
+  }
 
 @media screen and (min-width: 0px) and (max-width: 800px) {
+  img{
+	margin-top: 32px;
+}
+
 	.top-page{
 		flex-direction: column;
 	}
+  .subtitle {
+	width: 90vw;
+	}
+  .description, .docs, .rules{
+    width: 90vw;
+  }
 }
 </style>
