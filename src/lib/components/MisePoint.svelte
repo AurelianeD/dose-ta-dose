@@ -54,7 +54,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 28vw;
+        width: 100%;
         height: 50px;
         background-color: var(--beige);
         gap: 24px;
@@ -108,4 +108,10 @@
         color: #fff;
 		background-color: var(--yellow-clicked);
 	}
+    
+	@media screen and (min-width: 0px) and (max-width: 1000px) {
+        .mise p{
+            font-size: clamp(12px, 16px, 18px);
+        }
+    }
 </style>

@@ -187,6 +187,9 @@
 		.title{
 			margin-bottom: 32px
 		}
+		.pointQuiz{
+			margin-bottom: 50px;
+		}
 		.choicesContainer {
 			flex-direction: column;
 			gap: 10px;
