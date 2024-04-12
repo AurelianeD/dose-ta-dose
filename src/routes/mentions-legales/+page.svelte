@@ -15,7 +15,7 @@
       Mentions légales, d'après la Loi pour la confiance dans l'économie du numérique (LCEN) de <br>
       Responsable éditorial : Safiya SEDDIKI <br>
       Adresse :  1 Rue Jacques Ellul, 33800 Bordeaux <br>
-      Adresse e-mail : arnaud.levy@mmibordeaux.com <br>
+      Adresse e-mail : <a href="mailto:arnaud.levy@mmibordeaux.com">arnaud.levy@mmibordeaux.com</a> <br>
       Numéro de téléphone :  +33 5 57 12 20 44 <br>
       Hébergement : Mmibordeaux
 		</p>
