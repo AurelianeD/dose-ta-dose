@@ -12,11 +12,11 @@ export const quizData: QuizData[] = [
 	{
 		index: 1,
 		question:
-			'A partir de combien de verres par jour observe-t-on une consommation d’alcool à risque ?',
+			'À partir de combien de verres par jour observe-t-on une consommation d’alcool à risque ?',
 		choices: [
 			{ text: 'Dès le premier verre', isGoodAnswer: true },
-			{ text: 'Dès deux verre', isGoodAnswer: false },
-			{ text: 'Dès trois verre', isGoodAnswer: false }
+			{ text: 'Dès deux verres', isGoodAnswer: false },
+			{ text: 'Dès trois verres', isGoodAnswer: false }
 		],
 		answer:
 			'Il n’existe pas de consommation d’alcool sans risque : les risques pour la santé et de dépendance existent dès le premier verre. Les autorités sanitaires ont ainsi établi une valeur repère de consommation d’alcool, quotidienne et hebdomadaire, pour limiter ces risques.'
