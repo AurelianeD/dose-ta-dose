@@ -7,7 +7,7 @@
 
 
 <div class="content">
-  <h1>Teste tes <span class="encadre">connaissances</span></h1>
+  <h1>Teste tes <span class="yellow-bg">connaissances</span></h1>
   <p class="intro-jeu">Tu veux évaluer ta culture sur le thème de l'alcool ? Démarre le jeu et remporte le plus de points !</p>
   <ul class="instruction">
     <li><span class="ligne-instruction">1. Tu démarres avec 100 points.</span></li>
@@ -28,10 +28,28 @@
         font-family: 'DM-Sans', sans-serif;
     }
 
-    .encadre{
-        background-color: var(--yellow);
-        padding: 0 5px;
-    }
+    h1 .yellow-bg {
+		position: relative !important;
+	}
+
+	h1 .yellow-bg::before {
+		content: '';
+		z-index: -1;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: var(--yellow);
+		animation: highlight 0.5s;
+	}
+  @keyframes highlight {
+		0% {
+			width: 0;
+		}
+		100% {
+			width: 100%;
+		}
+	}
 
     .intro-jeu{
         text-align: center;

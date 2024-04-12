@@ -173,10 +173,25 @@
 		height: 350px;
 		width: auto;
 	}
-	.yellow-bg {
-		background-color: var(--yellow);
-		padding: 0 5px;
-	}
+  .yellow-bg {
+    position: relative;
+}
+
+.yellow-bg::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--yellow);
+    animation: highlight 0.5s;
+}
+
+@keyframes highlight {
+    0% { width: 0;}
+    100% { width: 100%; }
+}
 
 	@media screen and (min-width: 0px) and (max-width: 800px) {
 		.only-mobile {

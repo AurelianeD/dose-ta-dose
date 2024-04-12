@@ -4,7 +4,7 @@
 </script>
 
     <div class="content">
-        <h1><span class="encadre">Thématiques</span></h1>
+        <h1><span class="yellow-bg">Thématiques</span></h1>
         <div class="thematiques">
             <div class="sujet">
                 <img src="/images/illu-ressources-1.svg" alt="">
@@ -56,12 +56,28 @@
         margin: auto;
         margin-top: 80px;
     }
+    h1 .yellow-bg {
+		position: relative !important;
+	}
 
-    .encadre{
-        background-color: var(--yellow);
-        padding: 0 5px;
-    }
-
+	h1 .yellow-bg::before {
+		content: '';
+		z-index: -1;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: var(--yellow);
+		animation: highlight 0.5s;
+	}
+  @keyframes highlight {
+		0% {
+			width: 0;
+		}
+		100% {
+			width: 100%;
+		}
+	}
     .thematiques{
         display: flex;
         flex-wrap: wrap;
