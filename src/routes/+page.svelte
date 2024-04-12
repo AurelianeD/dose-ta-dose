@@ -3,7 +3,6 @@
 	import Link from '$lib/components/Link.svelte';
 	import ChoiceButton from '$lib/components/ChoiceButton.svelte';
 	import { onMount } from 'svelte';
-	import { goto } from '$app/navigation'; // Importez la fonction goto pour la navigation
 
 	let footer: HTMLElement;
 
@@ -110,10 +109,10 @@
 
 	<div class="right-part">
 		<a href="/pdf/infographie_1.pdf" target="_blank">
-			<img src="/images/infographie_1.png" alt="" />
+			<img src="/images/Infographie_1.png" alt="" />
 		</a>
 		<a href="/pdf/infographie_2.pdf" target="_blank">
-			<img src="/images/infographie_2.png" alt="" />
+			<img src="/images/Infographie_2.png" alt="" />
 		</a>
 	</div>
 </section>
