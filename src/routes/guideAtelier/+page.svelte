@@ -25,8 +25,9 @@
 	<div class="left-part">
 		<h1>Guide d’atelier de <span class="yellow-bg">prévention</span></h1>
 		<p class="subtitle">
-			Retrouve ici LE guide simple et ludique de prévention contre l’alcool pour animer des classes de collégiens et de lycéens !
+			Retrouve ici LE guide simple et ludique de prévention contre l’alcool pour animer des classes de collégiens et de &nbsp lycéens !
 		</p>
+		<MainButton onClick={() => goto('/gamePresentation/presentation')} buttonSize="small">démarrer l’atelier</MainButton>
 	</div>
 	<img class="img-top" src="/images/illu-guide.svg" alt="" />
 </section>
@@ -83,9 +84,6 @@ Vous êtes au bon endroit, voici quelques étapes pour savoir comment s’y pren
     </ul>
 	</div>
 </section>
-<div class="button-center">
-  <MainButton onClick={() => goto('/gamePresentation/presentation')} buttonSize="big">démarrer l’atelier</MainButton>
-</div>
 
 <style>
 	h1 {
@@ -96,14 +94,34 @@ Vous êtes au bon endroit, voici quelques étapes pour savoir comment s’y pren
 		margin-bottom: 24px;
 		width: 70%;
 		font-weight: 600;
-		line-height: 130%;
+		line-height: 150%;
 		font-size: 20px;
 	}
 
 	/* Home Page */
-	.yellow-bg {
+
+  h1 .yellow-bg {
+		position: relative !important;
+    display: inline-block;
+	}
+
+	h1 .yellow-bg::before {
+		content: '';
+		z-index: -1;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
 		background-color: var(--yellow);
-		padding: 0 5px;
+		animation: highlight 0.5s;
+	}
+  @keyframes highlight {
+		0% {
+			width: 0;
+		}
+		100% {
+			width: 100%;
+		}
 	}
 	.top-page {
 		margin-top: 128px;

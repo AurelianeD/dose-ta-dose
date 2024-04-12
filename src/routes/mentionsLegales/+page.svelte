@@ -3,7 +3,7 @@
 </script>
 
 <div class="contenu">
-	<h1>Mentions <span class="encadre">légales</span></h1>
+	<h1>Mentions <span class="yellow-bg">légales</span></h1>
 	<div class="paragraphe">
     <p>
 			L’utilisateur s’engage à lire attentivement les Conditions générales d’utilisation détaillées ci-dessous et à les accepter.<br>
@@ -15,7 +15,7 @@
       Mentions légales, d'après la Loi pour la confiance dans l'économie du numérique (LCEN) de <br>
       Responsable éditorial : Safiya SEDDIKI <br>
       Adresse :  1 Rue Jacques Ellul, 33800 Bordeaux <br>
-      Adresse e-mail : arnaud.levy@mmibordeaux.com <br>
+      Adresse e-mail : <a href="mailto:arnaud.levy@mmibordeaux.com">arnaud.levy@mmibordeaux.com</a> <br>
       Numéro de téléphone :  +33 5 57 12 20 44 <br>
       Hébergement : Mmibordeaux
 		</p>
@@ -76,9 +76,28 @@
 		line-height: 140%;
 	}
 
-	.encadre {
+  h1 .yellow-bg {
+		position: relative !important;
+    display: inline-block;
+	}
+
+	h1 .yellow-bg::before {
+		content: '';
+		z-index: -1;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
 		background-color: var(--yellow);
-		padding: 0 5px;
+		animation: highlight 0.5s;
+	}
+  @keyframes highlight {
+		0% {
+			width: 0;
+		}
+		100% {
+			width: 100%;
+		}
 	}
 
 	.paragraphe {

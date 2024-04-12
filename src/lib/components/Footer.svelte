@@ -9,7 +9,7 @@
 	<div class="flex-nav">
 		<button class="nav-style underline" on:click={() => goto('about')}>À propos</button>
 		<button class="nav-style underline" on:click={() => goto('planSite')}>Plan du site</button>
-		<button class="nav-style underline" on:click={() => goto('legalNotice')}>Mentions légales</button>
+		<button class="nav-style underline" on:click={() => goto('mentionsLegales')}>Mentions légales</button>
 	</div>
 	<img class="logo-footer" src="/images/logo-footer.svg" alt="logo dose ta dose" />
 </footer>

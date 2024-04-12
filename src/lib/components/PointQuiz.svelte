@@ -44,4 +44,10 @@
         transition: width 0.5s ease;
     }
 
+    @media screen and (min-width: 0px) and (max-width: 500px) {
+        .pointsQuiz{
+            flex-direction: column-reverse;
+        }
+    }
+
 </style>

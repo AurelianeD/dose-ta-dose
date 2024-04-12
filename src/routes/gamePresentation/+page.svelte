@@ -6,7 +6,7 @@
 
 
 <div class="content">
-    <h1>Atelier <span class="encadre">d’animation</span></h1>
+    <h1>Atelier <span class="yellow-bg">d’animation</span></h1>
     <p class="intro-jeu">Vous souhaitez organiser un atelier de prévention contre l’alcool de façon ludique ? Pour cela, vous devez :</p>
     <ul class="instruction">
         <li><span class="circle">1.</span><span class="ligne-instruction"><a href="/guideAtelier" class="btn"><span class="yellow-underline">Consulter le guide</span></a> d’organisation de l’atelier.</span></li>
@@ -14,7 +14,7 @@
         <li><span class="ligne-instruction">3. À chaque question, miser 2 billets soit 10 points. Les billets placés sur les réponses fausses sont perdus.</span></li>
         <li><span class="ligne-instruction">4. L’équipe qui a le plus de points à la fin gagne !</span></li>
     </ul>
-    <MainButton onClick={() => goto('/gamePresentation/presentation')}>démarrer le jeu</MainButton>
+    <MainButton onClick={() => goto('/gamePresentation/presentation')}>démarrer l'atelier</MainButton>
 </div>
 
 
@@ -39,10 +39,29 @@
         font-family: 'DM-Sans', sans-serif;
     }
 
-    .encadre{
-        background-color: var(--yellow);
-        padding: 0 5px;
-    }
+    h1 .yellow-bg {
+		position: relative !important;
+    display: inline-block;
+	}
+
+	h1 .yellow-bg::before {
+		content: '';
+		z-index: -1;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: var(--yellow);
+		animation: highlight 0.5s;
+	}
+  @keyframes highlight {
+		0% {
+			width: 0;
+		}
+		100% {
+			width: 100%;
+		}
+	}
 
     .intro-jeu{
         text-align: center;

@@ -27,7 +27,6 @@
 
 		<p class="subtitle">Le site pour s’informer et tester ses connaissances sur l’alcool.</p>
 		<div class="flex-top-link">
-			<Link path="/guideAtelier" textUnderline="Guide d’atelier" text="de prévention (animateur·rice)" />
 			<Link path="/ressources" textUnderline="Je me renseigne" text="(élève)" />
 		</div>
 	</div>
@@ -44,7 +43,7 @@
 					découvrir de nouvelles infos !
 				</p>
 				<ChoiceButton path="/game">
-					<span slot="title">Lancer le questionnaire</span>
+					<span slot="title">Lancer le test</span>
 					<span slot="description">En autonomie</span>
 				</ChoiceButton>
 			</div>
@@ -58,9 +57,9 @@
 					bon endroit ! Retrouvez toutes les étapes détaillées afin de bien préparer votre
 					manifestation dans vos classes.
 				</p>
-				<ChoiceButton path="/guideAtelier" buttonType="secondary">
-					<span slot="title">Accéder au guide d’atelier</span>
-					<span slot="description">Cadre scolaire</span>
+				<ChoiceButton path="/guideAtelier">
+					<span slot="title">Organiser un atelier</span>
+					<span slot="description">Guide d’atelier en milieu scolaire</span>
 				</ChoiceButton>
 			</div>
 			<img class="img-home" src="/images/illu-home-3.svg" alt="" />
@@ -100,7 +99,7 @@
 </section>
 <section class="ressources">
 	<div class="left-part">
-		<h2>Ressources <span class="yellow-bg">imprimables</span></h2>
+		<h2>Documents <span class="yellow-bg">imprimables</span></h2>
 		<p class="ressource-text">
       Sur Dose ta Dose, vous trouvez toutes les ressources nécessaires pour sensibiliser aux sujets de l’alcool, que vous soyez professeur·e ou  infirmier·ère·s. Vous trouverez tout ce qu’il faut : un guide pour animer votre atelier, des quiz pour tester vos élèves sur le sujet de l’alcool, sans oublier les nombreuses affiches et guides à transmettre aux élèves. Tout est prêt à télécharger en PDF, ou à imprimer. Juste un clic et c'est parti !
 		</p>
@@ -120,7 +119,7 @@
 	<div class="about-box">
 		<h2>Pourquoi <span class="yellow-bg">Dose ta Dose ?</span></h2>
 		<p class="about-text">
-			Notre mission ? Pouvoir t’équiper des meilleurs conseils et informations au sujet de l’alcool. L’objectif ? Te donner les clés pour que tu puisses dès maintenant faire des choix rationnels et éviter les nombreux risques liés à l’alcool. Chez Dose ta Dose il n’y a aucun tabou ! Nous sommes avant tout là t’aider et te renseigner ! Notre site comprend une section Ressources où tu trouveras des informations fiables pour mieux comprendre les enjeux autour de l’alcool, et une partie Jeu pour tester tes connaissances à travers des quiz.
+			Notre mission ? Pouvoir t’équiper des meilleurs conseils et informations au sujet de l’alcool. L’objectif ? Te donner les clés pour que tu puisses dès maintenant faire des choix rationnels et éviter les nombreux risques liés à l’alcool. Chez Dose ta Dose il n’y a aucun tabou ! Nous sommes avant tout là t’aider et te renseigner ! Notre site comprend une section Ressources où tu trouveras des informations fiables pour mieux comprendre les enjeux autour de l’alcool, et une partie Test pour tester tes connaissances à travers des quiz.
 		</p>
 		<Link path="about" textUnderline="À" text="propos" />
 	</div>
