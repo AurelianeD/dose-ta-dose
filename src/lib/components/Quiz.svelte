@@ -158,7 +158,7 @@
 	linkTextUnderline={isPresentation ? 'Je retourne' : 'Je continue'}
 	mainButtonText={isPresentation ? 'Je lance le test' : "Je retourne à l'accueil"}
 	{isPresentation}
-	redirectPath="/game"
+	redirectPath="/"
 />
 
 <style>

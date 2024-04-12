@@ -1,6 +1,7 @@
 <script>
 	import '$lib/styles/styles.css';
 	import Link from '$lib/components/Link.svelte';
+	import {goto} from "$app/navigation";
 </script>
 
 <div class="content">
@@ -10,36 +11,36 @@
 		<Link path="/ressources/imprimable" textUnderline="Accès aux" text="documents" />
 	</div>
 	<div class="ressources">
-		<div class="sujet">
+		<div class="sujet" on:click={() => goto('/ressources/effetAlcool')}>
 			<img src="/images/illu-ressources-1.svg" alt="" />
 			<div class="contenu">
 				<h2>Les effets de l’alcool sur la santé</h2>
 				<p>Comment l'alcool affecte ton corps ?</p>
-				<Link path="/ressources/effetAlcool" textUnderline="S'" text="informer" />
+				<Link path="/ressources/effetAlcool" textUnderline="S'informer" />
 			</div>
 		</div>
-		<div class="sujet">
+		<div class="sujet" on:click={() => goto('/ressources/pressionSociale')}>
 			<img src="/images/illu-ressources-2.svg" alt="" />
 			<div class="contenu">
 				<h2>Pression sociale et alcool</h2>
 				<p>Suis-je moi aussi confronté(e) à la pression sociale ?</p>
-				<Link path="/ressources/pressionSociale" textUnderline="S'" text="informer" />
+				<Link path="/ressources/pressionSociale" textUnderline="S'informer" />
 			</div>
 		</div>
-		<div class="sujet">
+		<div class="sujet" on:click={() => goto('/ressources/nosTips')}>
 			<img src="/images/illu-ressources-3.svg" alt="" />
 			<div class="contenu">
 				<h2>Nos petits tips</h2>
 				<p>Tu t’inquiètes pour ton ami(e) ?</p>
-				<Link path="/ressources/nosTips" textUnderline="S'" text="informer" />
+				<Link path="/ressources/nosTips" textUnderline="S'informer"  />
 			</div>
 		</div>
-		<div class="sujet">
+		<div class="sujet" on:click={() => goto('/ressources/aide')}>
 			<img src="/images/illu-ressources-4.svg" alt="" />
 			<div class="contenu">
 				<h2>Aide</h2>
 				<p>Comment dois-je m’y prendre pour aller mieux ?</p>
-				<Link path="/ressources/aide" textUnderline="S'" text="informer" />
+				<Link path="/ressources/aide" textUnderline="S'informer" />
 			</div>
 		</div>
 	</div>
@@ -86,6 +87,7 @@
 		gap: 30px;
 		align-items: center;
 		width: 500px;
+		cursor: pointer;
 	}
 
 	.sujet img {
