@@ -80,7 +80,7 @@
 		background: none;
 		border: none;
 		line-height: 100%;
-		font-family: 'DM-Sans', sans-serif;
+		font-family: 'DM Sans', sans-serif;
 		font-weight: 500;
 		color: var(--black);
 		font-size: 16px;
