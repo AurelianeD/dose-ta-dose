@@ -45,12 +45,12 @@ Vous êtes au bon endroit, voici quelques étapes pour savoir comment s’y pren
 		<div class="box-docs">
 			<p class="title-docs">Règles du jeu</p>
 			<img src="/images/rules.png" alt="" />
-			<Download path="/pdf/regle_du_jeu-dosetadose.pdf" textUnderline="Télécharger" text="(pdf)" textSubtitle={`${fileSizes.rules} Mo`} />
+			<Download path="/pdf/regle_du_jeu-dosetadose.pdf" textUnderline="Télécharger" text="(pdf)" size={fileSizes.rules} />
 		</div>
 		<div class="box-docs">
 			<p class="title-docs">Jetons (50 points)</p>
 			<img src="/images/jetons.png" alt="" />
-			<Download path="/pdf/jetons.pdf" textUnderline="Télécharger" text="(pdf)" textSubtitle={`${fileSizes.jetons} Mo`} />
+			<Download path="/pdf/jetons.pdf" textUnderline="Télécharger" text="(pdf)" size={fileSizes.jetons} />
 		</div>
 	</div>
 </section>
