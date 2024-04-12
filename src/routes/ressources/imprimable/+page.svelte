@@ -48,14 +48,14 @@
 	<div class="documents">
 		<div class="box-docs">
 			<a href="/pdf/infographie_1.pdf" target="_blank">
-				<img src="/images/infographie_1.png" alt="" />
+				<img src="/images/Infographie_1.png" alt="" />
 			</a>
 			<Download path="/pdf/infographie_1.pdf" textUnderline="Télécharger" text="(pdf)" textSubtitle="{`${fileSizes.infographie_1} Mo`}"
 			/>
 		</div>
 		<div class="box-docs">
 			<a href="/pdf/infographie_2.pdf" target="_blank">
-				<img src="/images/infographie_2.png" alt="" />
+				<img src="/images/Infographie_2.png" alt="" />
 			</a>
 			<Download path="/pdf/infographie_2.pdf" textUnderline="Télécharger" text="(pdf)" textSubtitle="{`${fileSizes.infographie_2} Mo`}"/>
 		</div>
