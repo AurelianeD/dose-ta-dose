@@ -2,7 +2,6 @@
 	import '$lib/styles/styles.css';
     import MainButton from '$lib/components/MainButton.svelte'
     import {goto} from "$app/navigation";
-
 </script>
 
 
@@ -25,7 +24,7 @@
       gap: 50px;
       justify-content: center;
       align-items: center;
-        font-family: 'DM-Sans', sans-serif;
+      font-family: 'DM Sans', sans-serif;
     }
 
     h1 .yellow-bg {
@@ -68,6 +67,7 @@
         font-size: clamp(12px, 3vw, 18px);
         gap: 15px;
         margin: 25px 0;
+        font-family: 'DM Sans', sans-serif;
     }
 
     .ligne-instruction{

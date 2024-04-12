@@ -112,7 +112,7 @@
 		{#if !isPresentation}
 			{#if !showAnswer}
 			<div class="resteMise">
-				<p>Tu as 10 points à miser par questions.</p>
+				<p>Tu as 10 points à miser par question.</p>
 			</div>
 			{/if}
 		{/if}
