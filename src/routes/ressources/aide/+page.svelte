@@ -41,7 +41,7 @@
 	</p>
 	<h3>En parler à son médecin traitant :</h3>
 	<p>
-		Tu peux tout d’abord commencer par aller voir ton médecin généraliste, c’est un bon point de départ ! Il pourra alors évaluer ton état de santé et t’orienter vers les bonnes personnes ou vers des programmes de traitement adaptés à ta situation.
+		Tu peux commencer par aller voir ton médecin généraliste, c’est un bon point de départ ! Il pourra alors évaluer ton état de santé et t’orienter vers les bonnes personnes ou vers des programmes de traitement adaptés à ta situation.
   </p>
   <h3>Intégrer des groupes d’entraide :</h3>
 	<p>
