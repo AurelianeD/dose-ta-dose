@@ -37,16 +37,16 @@
 	<h2>Les infographies</h2>
 	<div class="documents">
 		<div class="box-docs">
-			<a href="/pdf/infographie_1.pdf" target="_blank">
+			<a href="/pdf/Infographie_1.pdf" target="_blank">
 				<img src="/images/Infographie_1.png" alt="" />
 			</a>
-			<Download path="/pdf/infographie_1.pdf" textUnderline="Télécharger" text="(pdf)" size={fileSizes.infographie_1}/>
+			<Download path="/pdf/Infographie_1.pdf" textUnderline="Télécharger" text="(pdf)" size={fileSizes.infographie_1}/>
 		</div>
 		<div class="box-docs">
-			<a href="/pdf/infographie_2.pdf" target="_blank">
+			<a href="/pdf/Infographie_2.pdf" target="_blank">
 				<img src="/images/Infographie_2.png" alt="" />
 			</a>
-			<Download path="/pdf/infographie_2.pdf" textUnderline="Télécharger" text="(pdf)" size={fileSizes.infographie_2}/>
+			<Download path="/pdf/Infographie_2.pdf" textUnderline="Télécharger" text="(pdf)" size={fileSizes.infographie_2}/>
 		</div>
 	</div>
 	<h2>Affiche</h2>
@@ -61,22 +61,22 @@
 	<h2>Les flyers</h2>
 	<div class="flyers">
 		<div class="box-docs">
-			<a href="/pdf/flyer_1.pdf" target="_blank">
+			<a href="/pdf/flyer-1.pdf" target="_blank">
 				<img src="/images/flyer_1.png" alt="" />
 			</a>
-			<Download path="/pdf/flyer_1.pdf" textUnderline="Télécharger" text="(pdf)" size={fileSizes.flyer_1}/>
+			<Download path="/pdf/flyer-1.pdf" textUnderline="Télécharger" text="(pdf)" size={fileSizes.flyer_1}/>
 		</div>
 		<div class="box-docs">
-			<a href="/pdf/flyer_2.pdf" target="_blank">
+			<a href="/pdf/flyer-2.pdf" target="_blank">
 				<img src="/images/flyer_2.png" alt="" />
 			</a>
-			<Download path="/pdf/flyer_2.pdf" textUnderline="Télécharger" text="(pdf)" size={fileSizes.flyer_2} />
+			<Download path="/pdf/flyer-2.pdf" textUnderline="Télécharger" text="(pdf)" size={fileSizes.flyer_2} />
 		</div>
 		<div class="box-docs">
-			<a href="/pdf/flyer_3.pdf" target="_blank">
+			<a href="/pdf/flyer-3.pdf" target="_blank">
 				<img src="/images/flyer_3.png" alt="" />
 			</a>
-			<Download path="/pdf/flyer_3.pdf" textUnderline="Télécharger" text="(pdf)" size={fileSizes.flyer_3} />
+			<Download path="/pdf/flyer-3.pdf" textUnderline="Télécharger" text="(pdf)" size={fileSizes.flyer_3} />
 		</div>
 	</div>
 	<h3 class="only-mobile">N’hésite pas à découvrir nos autres thématiques !</h3>
