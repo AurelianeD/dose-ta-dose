@@ -30,6 +30,7 @@
 
     h1 .yellow-bg {
 		position: relative !important;
+    display: inline-block;
 	}
 
 	h1 .yellow-bg::before {

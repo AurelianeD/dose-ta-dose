@@ -110,6 +110,7 @@
 
   .yellow-bg {
     position: relative;
+    display: inline-block;
 }
 
 .yellow-bg::before {

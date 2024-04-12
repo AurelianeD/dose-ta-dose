@@ -105,6 +105,7 @@ Vous êtes au bon endroit, voici quelques étapes pour savoir comment s’y pren
 
   h1 .yellow-bg {
 		position: relative !important;
+    display: inline-block;
 	}
 
 	h1 .yellow-bg::before {

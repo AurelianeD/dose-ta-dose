@@ -24,16 +24,6 @@
     }
   });
 </script>
-
-<div class="nav-ressource">
-	<div class="nav-right">
-    <Link linkType="left" path="aide" textUnderline="" text="Aide" />
-	</div>
-	<div class="nav-left">
-		<Link path="effetAlcool" textUnderline="Les effets" text="de l'alcool" />
-	</div>
-</div>
-
 <section class="top-home-page">
 	<div class="left-part">
 		<h1>Documents <span class="yellow-bg">imprimables</span></h1>
@@ -103,15 +93,6 @@
 	.only-mobile {
 		display: none;
 	}
-	.nav-ressource {
-		background-color: #fff;
-		width: 90vw;
-		position: fixed;
-		padding: 30px 5vw;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
 
 	.subtitle {
 		margin-top: 32px;
@@ -175,6 +156,7 @@
 	}
   .yellow-bg {
     position: relative;
+    display: inline-block;
 }
 
 .yellow-bg::before {
@@ -218,11 +200,6 @@
 			width: 90vw;
 			max-width: 500px;
 		}
-
-		.nav-ressource {
-			display: none;
-		}
-
 		.subtitle {
 			width: 90%;
 		}
