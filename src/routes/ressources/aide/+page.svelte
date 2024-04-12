@@ -8,7 +8,7 @@
     <Link linkType="left" path="nosTips" textUnderline="Nos petits" text="tips" />
 	</div>
 	<div class="nav-left">
-		<Link path="imprimable" textUnderline="Ressources" text="imprimables" />
+		<Link path="effetAlcool" textUnderline="Les effets" text="de l'alcool sur la santé" />
 	</div>
 </div>
 

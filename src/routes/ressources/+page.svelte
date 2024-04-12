@@ -7,7 +7,7 @@
 	<h1><span class="yellow-bg">Ressources</span></h1>
 	<div class="imprimables">
 		<h2>Ressources imprimables</h2>
-		<Link path="ressources/imprimable" textUnderline="Accès aux" text="documents" />
+		<Link path="/ressources/imprimable" textUnderline="Accès aux" text="documents" />
 	</div>
 	<div class="ressources">
 		<div class="sujet">
@@ -15,7 +15,7 @@
 			<div class="contenu">
 				<h2>Les effets de l’alcool sur la santé</h2>
 				<p>Comment l'alcool affecte ton corps ?</p>
-				<Link path="ressources/effetAlcool" textUnderline="S'" text="informer" />
+				<Link path="/ressources/effetAlcool" textUnderline="S'" text="informer" />
 			</div>
 		</div>
 		<div class="sujet">
@@ -23,7 +23,7 @@
 			<div class="contenu">
 				<h2>Pression sociale et alcool</h2>
 				<p>Suis-je moi aussi confronté(e) à la pression sociale ?</p>
-				<Link path="ressources/pressionSociale" textUnderline="S'" text="informer" />
+				<Link path="/ressources/pressionSociale" textUnderline="S'" text="informer" />
 			</div>
 		</div>
 		<div class="sujet">
@@ -31,7 +31,7 @@
 			<div class="contenu">
 				<h2>Nos petits tips</h2>
 				<p>Tu t’inquiètes pour ton ami(e) ?</p>
-				<Link path="ressources/nosTips" textUnderline="S'" text="informer" />
+				<Link path="/ressources/nosTips" textUnderline="S'" text="informer" />
 			</div>
 		</div>
 		<div class="sujet">
@@ -39,7 +39,7 @@
 			<div class="contenu">
 				<h2>Aide</h2>
 				<p>Comment dois-je m’y prendre pour aller mieux ?</p>
-				<Link path="ressources/aide" textUnderline="S'" text="informer" />
+				<Link path="/ressources/aide" textUnderline="S'" text="informer" />
 			</div>
 		</div>
 	</div>
