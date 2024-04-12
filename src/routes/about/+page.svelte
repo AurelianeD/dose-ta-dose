@@ -24,8 +24,7 @@
 		<p>
 			Dose ta dose c'est un projet étudiant, à but non lucratif ! Notre but : sensibiliser les
 			collégiens au sujet de l'alcoolisme. Nous connaissons tous quelqu'un qui est concerné par des
-			problèmes d'alcool et même depuis le collège sans savoir comment l'accompagner au mieux. Et
-			pourtant au collège ce sujet est très tabou ! C'est pourquoi sur ce site, vous trouverez
+			problèmes d'alcool et même depuis le collège sans savoir comment l'accompagner au mieux. C'est pourquoi sur ce site, vous trouverez
 			également un jeu afin de vous évaluer sur vos connaissances !
 		</p>
 <!--		<Link path="" textUnderline="Communiqué" text="de presse" />-->
