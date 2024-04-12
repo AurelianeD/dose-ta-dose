@@ -1,4 +1,5 @@
 <script lang="ts">
+    import '$lib/styles/fonts.css'
 	import { goto } from '$app/navigation';
 
     let isMenuOpen = false;
