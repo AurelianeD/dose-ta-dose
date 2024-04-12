@@ -27,8 +27,7 @@
 
 		<p class="subtitle">Le site pour s’informer et tester ses connaissances sur l’alcool.</p>
 		<div class="flex-top-link">
-			<Link path="/guideAtelier" textUnderline="Guide d’atelier" text="de prévention (animateur·rice)" />
-			<Link path="/ressources" textUnderline="En savoir plus" text="le sujet" />
+			<Link path="/ressources" textUnderline="Je me renseigne" text="(élève)" />
 		</div>
 	</div>
 	<img class="img-home" src="/images/illu-home.svg" alt="" />
@@ -120,7 +119,7 @@
 	<div class="about-box">
 		<h2>Pourquoi <span class="yellow-bg">Dose ta Dose ?</span></h2>
 		<p class="about-text">
-			Notre mission ? Pouvoir t’équiper des meilleurs conseils et informations au sujet de l’alcool. L’objectif ? Te donner les clés pour que tu puisses dès maintenant faire des choix rationnels et éviter les nombreux risques liés à l’alcool. Chez Dose ta Dose il n’y a aucun tabou ! Nous sommes avant tout là t’aider et te renseigner ! Notre site comprend une section Ressources où tu trouveras des informations fiables pour mieux comprendre les enjeux autour de l’alcool, et une partie Jeu pour tester tes connaissances à travers des quiz.
+			Notre mission ? Pouvoir t’équiper des meilleurs conseils et informations au sujet de l’alcool. L’objectif ? Te donner les clés pour que tu puisses dès maintenant faire des choix rationnels et éviter les nombreux risques liés à l’alcool. Chez Dose ta Dose il n’y a aucun tabou ! Nous sommes avant tout là t’aider et te renseigner ! Notre site comprend une section Ressources où tu trouveras des informations fiables pour mieux comprendre les enjeux autour de l’alcool, et une partie Test pour tester tes connaissances à travers des quiz.
 		</p>
 		<Link path="about" textUnderline="À" text="propos" />
 	</div>

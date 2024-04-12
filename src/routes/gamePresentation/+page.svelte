@@ -14,7 +14,7 @@
         <li><span class="ligne-instruction">3. À chaque question, miser 2 billets soit 10 points. Les billets placés sur les réponses fausses sont perdus.</span></li>
         <li><span class="ligne-instruction">4. L’équipe qui a le plus de points à la fin gagne !</span></li>
     </ul>
-    <MainButton onClick={() => goto('/gamePresentation/presentation')}>démarrer le jeu</MainButton>
+    <MainButton onClick={() => goto('/gamePresentation/presentation')}>démarrer l'atelier</MainButton>
 </div>
 
 
