@@ -38,7 +38,7 @@
 			<div class="text-prevention">
         <h2>Je <span class="yellow-bg">teste</span> mes connaissances</h2>
 				<p class="instruction-text">
-					Prêt à booster tes connaissances sur l’alcool ? Le jeu “Drop ta Dose” est fait pour toi.
+					Prêt à booster tes connaissances sur l’alcool ?
 					Avec notre quiz, tu vas pouvoir vérifier ce que tu sais déjà au sujet de l’alcool et
 					découvrir de nouvelles infos !
 				</p>
