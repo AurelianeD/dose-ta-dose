@@ -185,6 +185,7 @@
 			margin-top: 60px;
 		}
 		.title{
+			width: 85vw;
 			margin-bottom: 32px
 		}
 		.pointQuiz{
@@ -193,6 +194,7 @@
 		.choicesContainer {
 			flex-direction: column;
 			gap: 10px;
+			width: 85vw;
 		}
 		.answerContainer{
 			margin: 50px 0;

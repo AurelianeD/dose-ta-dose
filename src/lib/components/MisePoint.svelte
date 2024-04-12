@@ -109,9 +109,22 @@
 		background-color: var(--yellow-clicked);
 	}
     
-	@media screen and (min-width: 0px) and (max-width: 1000px) {
-        .mise p{
-            font-size: clamp(12px, 16px, 18px);
+	@media screen and (min-width: 1000px) and (max-width: 1300px) {
+        .mise{
+            gap: 10px;
+        }
+        .valeurs-btn{
+            width: 40px;
         }
     }
+
+    @media screen and (min-width: 0px) and (max-width: 500px) {
+        .mise{
+            gap: 10px;
+        }
+        .valeurs-btn{
+            width: 40px;
+        }
+    }
+    
 </style>
