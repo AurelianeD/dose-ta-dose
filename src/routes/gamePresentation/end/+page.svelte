@@ -17,7 +17,7 @@
     <p class="bigText">On fait une description giga cool, un petit texte</p>
     <div class="linkContainer">
         <Link textUnderline="Accéder" text="aux ressources" path="/ressources" />
-        <Link text="le text" textUnderline="Refaire" path="/gamePresentation" />
+        <Link textUnderline="Refaire" text="le test" path="/gamePresentation" />
     </div>
 </div>
 

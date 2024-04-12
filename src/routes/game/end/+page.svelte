@@ -33,7 +33,7 @@
     </div>
     <div class="linkContainer">
         <Link textUnderline="Accéder" text="aux ressources" path="/ressources" />
-        <Link text="le text" textUnderline="Refaire" path="/game" />
+        <Link text="le test" textUnderline="Refaire" path="/game" />
     </div>
 </div>
 
