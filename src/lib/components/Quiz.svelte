@@ -66,13 +66,22 @@
 		}, 300)
 	}
 
+	function resetScroll(){
+		let container = document.getElementById('container')
+
+		if(!container){
+			return
+		}
+		container.scrollIntoView({behavior: 'smooth'})
+	}
+
 	$: isModalOpen = innerWidth < 1000;
 
 </script>
 
 <svelte:window bind:innerWidth  />
 
-<div class="container">
+<div class="container" id="container">
 	<h3>Question {data.index} / 10</h3>
 	<h2 class="title">{data.question}</h2>
 	{#if !isPresentation}
@@ -121,14 +130,15 @@
 	</div>
 
 	{#if showAnswer}
-		<div class="answerContainer">
-			<p class="answerTitle" id="top">Réponse</p>
+		<div class="answerContainer" id="top">
+			<p class="answerTitle" >Réponse</p>
 			<div class="textContainer">
 				<p class="bigText">{data.answer}</p>
 			</div>
 			<MainButton
 				onClick={() => {
-					onNextQuestion()
+					onNextQuestion();
+					resetScroll();
 				}}>{questionNumber === 9 ? 'Terminer' : 'Question suivante'}</MainButton
 			>
 		</div>
@@ -152,7 +162,7 @@
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
-		margin: 100px 100px 100px;
+		padding: 100px 100px 100px;
 	}
 	.choicesContainer {
 		display: flex;
@@ -189,7 +199,7 @@
 		align-items: center;
 		gap: 50px;
 		flex-direction: column;
-		margin: 100px 0;
+		padding: 100px 0;
 	}
 	@media screen and (min-width: 0px) and (max-width: 1000px) {
 		.container {
