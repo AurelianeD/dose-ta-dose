@@ -25,9 +25,9 @@
       <img class="o-svg" src="/images/o.svg" alt="" />
     </div>
 
-		<p class="subtitle">Le site pour s’informer et tester ses connaissances sur l’alcool.</p>
+		<p class="subtitle">Le site de prévention à l'alcool pour s'éduquer et tester ses connaissances.</p>
 		<div class="flex-top-link">
-			<Link path="/ressources" textUnderline="Je me renseigne" text="(élève)" />
+			<Link path="/ressources" textUnderline="En savoir plus" text="sur le sujet" />
 		</div>
 	</div>
 	<img class="img-home" src="/images/illu-home.svg" alt="" />
