@@ -47,7 +47,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 28vw;
+        width: 100%;
         height: 50px;
         background-color: var(--beige);
         gap: 24px;
@@ -101,4 +101,23 @@
         color: #fff;
 		background-color: var(--yellow-clicked);
 	}
+    
+	@media screen and (min-width: 1000px) and (max-width: 1300px) {
+        .mise{
+            gap: 10px;
+        }
+        .valeurs-btn{
+            width: 40px;
+        }
+    }
+
+    @media screen and (min-width: 0px) and (max-width: 500px) {
+        .mise{
+            gap: 10px;
+        }
+        .valeurs-btn{
+            width: 40px;
+        }
+    }
+    
 </style>
