@@ -11,10 +11,10 @@
   onMount(async () => {
     const documents = [
       { url: '/pdf/imprimables-dosetadose.zip', key: 'all' },
-      { url: '/pdf/infographie_1.pdf', key: 'infographie_1' },
-      { url: '/pdf/infographie_2.pdf', key: 'infographie_2' },
+      { url: '/pdf/Infographie_1.pdf', key: 'infographie_1' },
+      { url: '/pdf/Infographie_2.pdf', key: 'infographie_2' },
       { url: '/pdf/affiche_1.pdf', key: 'affiche_1' },
-      { url: '/pdf/flyer_1.pdf', key: 'flyer_1' },
+      { url: '/pdf/Flyer_1.pdf', key: 'flyer_1' },
       { url: '/pdf/flyer_2.pdf', key: 'flyer_2' },
       { url: '/pdf/flyer_3.pdf', key: 'flyer_3' }
     ];
